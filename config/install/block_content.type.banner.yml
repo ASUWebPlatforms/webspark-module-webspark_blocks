@@ -1,0 +1,12 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - webspark_blocks
+_core:
+  default_config_hash: Xh4Nk77y5HEWccoKYuxH1Em9IxXDWCFqUlBb5nUhJZY
+id: banner
+label: 'Notification Banner'
+revision: 0
+description: ''

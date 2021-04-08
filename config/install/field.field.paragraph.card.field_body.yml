@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body
+    - paragraphs.paragraphs_type.card
+  enforced:
+    module:
+      - webspark_blocks
+  module:
+    - text
+_core:
+  default_config_hash: IRPSt4NljOY5YIKb698LhfBvWGqhZW_NoAPGeZ8da3Y
+id: paragraph.card.field_body
+field_name: field_body
+entity_type: paragraph
+bundle: card
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

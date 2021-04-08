@@ -1,0 +1,79 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.card_degree.field_body
+    - field.field.paragraph.card_degree.field_cta
+    - field.field.paragraph.card_degree.field_heading
+    - field.field.paragraph.card_degree.field_link
+    - field.field.paragraph.card_degree.field_media
+    - field.field.paragraph.card_degree.field_tags
+    - paragraphs.paragraphs_type.card_degree
+  enforced:
+    module:
+      - webspark_blocks
+  module:
+    - entity_reference_revisions
+    - link
+    - text
+_core:
+  default_config_hash: WxW23Z-aYwtV62wx4SaPlRy8fWP5wXVvXnxRJvUh2BQ
+id: paragraph.card_degree.default
+targetEntityType: paragraph
+bundle: card_degree
+mode: default
+content:
+  field_body:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_cta:
+    type: entity_reference_revisions_entity_view
+    weight: 6
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_heading:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_link:
+    weight: 5
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_media:
+    weight: 7
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_tags:
+    weight: 3
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden: {  }

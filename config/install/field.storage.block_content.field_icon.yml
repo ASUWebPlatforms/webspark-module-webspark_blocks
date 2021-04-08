@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - fontawesome
+_core:
+  default_config_hash: GhAkJDj5zQOUwmxOzUjBXxT5QLNPuI32sPR8MuNrEkA
+id: block_content.field_icon
+field_name: field_icon
+entity_type: block_content
+type: fontawesome_icon
+settings: {  }
+module: fontawesome
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

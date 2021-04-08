@@ -1,0 +1,65 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.card_arrangement
+    - field.storage.block_content.field_cards
+    - paragraphs.paragraphs_type.card
+    - paragraphs.paragraphs_type.card_degree
+    - paragraphs.paragraphs_type.card_event
+    - paragraphs.paragraphs_type.card_media
+    - paragraphs.paragraphs_type.card_story
+  module:
+    - entity_reference_revisions
+id: block_content.card_arrangement.field_cards
+field_name: field_cards
+entity_type: block_content
+bundle: card_arrangement
+label: Cards
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      card_media: card_media
+      card: card
+      card_degree: card_degree
+      card_event: card_event
+      card_story: card_story
+    target_bundles_drag_drop:
+      accordion_panel:
+        weight: 10
+        enabled: false
+      card:
+        enabled: true
+        weight: 11
+      card_degree:
+        enabled: true
+        weight: 12
+      card_event:
+        enabled: true
+        weight: 13
+      card_media:
+        enabled: true
+        weight: 11
+      card_story:
+        enabled: true
+        weight: 14
+      carousel_card:
+        weight: 15
+        enabled: false
+      cta:
+        weight: 16
+        enabled: false
+      gallery_image:
+        weight: 17
+        enabled: false
+      tab_content:
+        weight: 18
+        enabled: false
+field_type: entity_reference_revisions

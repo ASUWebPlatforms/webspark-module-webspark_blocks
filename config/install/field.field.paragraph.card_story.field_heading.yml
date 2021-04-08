@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_heading
+    - paragraphs.paragraphs_type.card_story
+  enforced:
+    module:
+      - webspark_blocks
+_core:
+  default_config_hash: hPe0-MY9PizGge1kS5TjwxVZYaWaZ1n7Gm1766HM57Q
+id: paragraph.card_story.field_heading
+field_name: field_heading
+entity_type: paragraph
+bundle: card_story
+label: Heading
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

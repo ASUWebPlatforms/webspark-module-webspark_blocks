@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.text_content
+    - field.storage.block_content.field_formatted_text
+  module:
+    - text
+id: block_content.text_content.field_formatted_text
+field_name: field_formatted_text
+entity_type: block_content
+bundle: text_content
+label: 'Formatted Text'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

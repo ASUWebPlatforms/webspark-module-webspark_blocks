@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body
+    - paragraphs.paragraphs_type.card_degree
+  enforced:
+    module:
+      - webspark_blocks
+  module:
+    - text
+_core:
+  default_config_hash: hhh833OTZe9zH1rQAoAjn-Bhydkd8BFI4WfLV36Xkak
+id: paragraph.card_degree.field_body
+field_name: field_body
+entity_type: paragraph
+bundle: card_degree
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
