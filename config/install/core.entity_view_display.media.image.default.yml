@@ -1,0 +1,46 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.image.field_image_caption
+    - field.field.media.image.field_media_image
+    - media.type.image
+    - responsive_image.styles.thumbnail
+  module:
+    - responsive_image
+    - user
+id: media.image.default
+targetEntityType: media
+bundle: image
+mode: default
+content:
+  created:
+    label: hidden
+    type: timestamp
+    weight: 1
+    region: content
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
+  thumbnail:
+    type: responsive_image
+    weight: 2
+    label: hidden
+    settings:
+      responsive_image_style: thumbnail
+      image_link: ''
+    region: content
+    third_party_settings: {  }
+  uid:
+    label: hidden
+    type: author
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_image_caption: true
+  field_media_image: true
+  name: true

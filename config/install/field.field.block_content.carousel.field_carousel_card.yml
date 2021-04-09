@@ -1,0 +1,67 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.carousel
+    - field.storage.block_content.field_carousel_card
+    - paragraphs.paragraphs_type.card
+    - paragraphs.paragraphs_type.card_degree
+    - paragraphs.paragraphs_type.card_event
+    - paragraphs.paragraphs_type.card_media
+    - paragraphs.paragraphs_type.card_story
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: amCXUUCgf2Q-GSAP31vW2OTcZb7kFavxPIJxw1cha1Q
+id: block_content.carousel.field_carousel_card
+field_name: field_carousel_card
+entity_type: block_content
+bundle: carousel
+label: 'Carousel Card'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      card: card
+      card_degree: card_degree
+      card_event: card_event
+      card_story: card_story
+      card_media: card_media
+    target_bundles_drag_drop:
+      accordion_panel:
+        weight: 11
+        enabled: false
+      card:
+        enabled: true
+        weight: 6
+      card_degree:
+        enabled: true
+        weight: 7
+      card_event:
+        enabled: true
+        weight: 8
+      card_media:
+        enabled: true
+        weight: 15
+      card_story:
+        enabled: true
+        weight: 9
+      carousel_card:
+        weight: 10
+        enabled: false
+      cta:
+        weight: 18
+        enabled: false
+      gallery_image:
+        weight: 19
+        enabled: false
+      tab_content:
+        weight: 20
+        enabled: false
+field_type: entity_reference_revisions

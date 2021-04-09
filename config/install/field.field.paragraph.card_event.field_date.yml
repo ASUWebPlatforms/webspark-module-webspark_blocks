@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_date
+    - paragraphs.paragraphs_type.card_event
+  enforced:
+    module:
+      - webspark_blocks
+  module:
+    - datetime
+_core:
+  default_config_hash: nMmeGEayyJAqvvOkR9PQs7AM0-S6me_nZPu77jnfaco
+id: paragraph.card_event.field_date
+field_name: field_date
+entity_type: paragraph
+bundle: card_event
+label: Date
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.gallery
+    - field.storage.block_content.field_type
+  module:
+    - options
+id: block_content.gallery.field_type
+field_name: field_type
+entity_type: block_content
+bundle: gallery
+label: Type
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

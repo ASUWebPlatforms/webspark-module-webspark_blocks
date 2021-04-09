@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - webspark_blocks
+  module:
+    - datetime
+    - paragraphs
+_core:
+  default_config_hash: a3YpguJ972itg5cegKT7GeQiWLzKq2uBlRMbZFt0JPY
+id: paragraph.field_date
+field_name: field_date
+entity_type: paragraph
+type: datetime
+settings:
+  datetime_type: datetime
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
