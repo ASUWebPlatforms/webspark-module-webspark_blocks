@@ -1,16 +1,11 @@
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - webspark_blocks
   module:
     - block_content
     - options
-_core:
-  default_config_hash: GRlc4fcPs_gMxTMuoB7OUzQ5yvjmNPIcMVwpCYfmFGE
-id: block_content.field_background_color
-field_name: field_background_color
+id: block_content.field_banner_background_color
+field_name: field_banner_background_color
 entity_type: block_content
 type: list_string
 settings:
