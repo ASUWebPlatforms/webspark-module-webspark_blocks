@@ -13,71 +13,64 @@ dependencies:
     module:
       - webspark_blocks
   module:
-    - fontawesome_iconpicker_widget
-    - paragraphs
+    - entity_reference_revisions
+    - fontawesome
+    - options
     - text
-    - webspark_utility
 _core:
-  default_config_hash: VpPhxQ37Oex7JI8A-zT_9eJMOMeuTfmcirRLCuqsmuI
+  default_config_hash: 0t1_tNnK2qqXvinQZCUWzll1xVgVC8o_yfCOSpbjl7o
 id: block_content.banner.default
 targetEntityType: block_content
 bundle: banner
 mode: default
 content:
   field_anchor:
-    weight: 0
+    weight: 14
+    label: above
     settings:
-      display_label: true
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
     third_party_settings: {  }
-    type: boolean_checkbox
+    type: boolean
     region: content
   field_banner_background_color:
-    weight: 5
-    settings:
-      width: 100%
+    weight: 16
+    label: hidden
+    settings: {  }
     third_party_settings: {  }
-    type: select2_colour
+    type: list_key
     region: content
   field_banner_text:
-    weight: 3
-    settings:
-      rows: 5
-      placeholder: ''
+    weight: 9
+    label: hidden
+    settings: {  }
     third_party_settings: {  }
-    type: text_textarea
+    type: text_default
     region: content
   field_ctas:
-    type: entity_reference_paragraphs
-    weight: 7
+    type: entity_reference_revisions_entity_view
+    weight: 15
+    label: hidden
     settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: open
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: ''
+      view_mode: default
+      link: ''
     third_party_settings: {  }
     region: content
   field_heading:
-    weight: 2
+    weight: 11
+    label: hidden
     settings:
-      size: 60
-      placeholder: ''
+      link_to_entity: false
     third_party_settings: {  }
-    type: string_textfield
+    type: string
     region: content
   field_icon:
-    weight: 6
-    settings: {  }
-    third_party_settings: {  }
-    type: fontawesome_iconpicker_widget
-    region: content
-  info:
-    type: string_textfield
-    weight: 1
-    region: content
+    weight: 12
+    label: hidden
     settings:
-      size: 60
-      placeholder: ''
+      layers: false
     third_party_settings: {  }
+    type: fontawesome_icon_formatter
+    region: content
 hidden: {  }

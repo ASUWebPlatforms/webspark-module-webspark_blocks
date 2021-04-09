@@ -19,9 +19,6 @@ settings:
     -
       value: white
       label: 'White background'
-    -
-      value: black
-      label: 'Black background'
   allowed_values_function: ''
 module: options
 locked: false

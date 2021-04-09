@@ -1,0 +1,35 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.paragraph.styled
+    - field.field.paragraph.cta.field_cta_link
+    - field.field.paragraph.cta.field_icon
+    - paragraphs.paragraphs_type.cta
+  module:
+    - webspark_utility
+id: paragraph.cta.styled
+targetEntityType: paragraph
+bundle: cta
+mode: styled
+content:
+  field_cta_link:
+    type: styled_link
+    weight: 0
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      available_styles:
+        - ' btn-gold btn'
+        - ' btn-maroon btn'
+        - ' btn-gray btn'
+        - ' btn-dark btn'
+      allow_style_selection: true
+      default_style: 'btn-dark btn'
+      size: btn-default
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_icon: true
+  status: true

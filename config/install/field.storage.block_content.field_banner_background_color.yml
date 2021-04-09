@@ -1,0 +1,35 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - options
+id: block_content.field_banner_background_color
+field_name: field_banner_background_color
+entity_type: block_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: banner-green
+      label: banner-green
+    -
+      value: banner-orange
+      label: banner-orange
+    -
+      value: banner-blue
+      label: banner-blue
+    -
+      value: banner-gray
+      label: banner-gray
+    -
+      value: banner-black
+      label: banner-black
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
