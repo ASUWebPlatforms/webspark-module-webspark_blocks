@@ -1,0 +1,61 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.card_arrangement
+    - core.entity_view_mode.block_content.card_arrangement_vertical
+    - field.field.block_content.card_arrangement.field_anchor
+    - field.field.block_content.card_arrangement.field_cards
+    - field.field.block_content.card_arrangement.field_cta
+    - field.field.block_content.card_arrangement.field_formatted_text
+    - field.field.block_content.card_arrangement.field_heading
+    - field.field.block_content.card_arrangement.field_media
+  module:
+    - entity_reference_revisions
+    - layout_builder
+    - text
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: block_content.card_arrangement.card_arrangement_vertical
+targetEntityType: block_content
+bundle: card_arrangement
+mode: card_arrangement_vertical
+content:
+  field_cards:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_cta:
+    type: entity_reference_revisions_entity_view
+    weight: 4
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_formatted_text:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_heading:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_anchor: true
+  field_media: true
