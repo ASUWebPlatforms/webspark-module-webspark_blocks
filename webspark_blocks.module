@@ -26,3 +26,10 @@ function _webspark_blocks_title(&$form){
   $form['settings']['label_display']['#default_value'] = FALSE;
   $form['settings']['label']['#title'] = t('Block admin title');
 }
+
+/**
+ * Implements hook_page_attachments().
+ */
+function webspark_blocks_page_attachments(array &$attachments) {
+  $attachments['#attached']['library'][] = 'webspark_blocks/webspark_blocks';
+}
