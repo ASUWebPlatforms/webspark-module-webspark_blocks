@@ -1,10 +1,11 @@
+uuid: ea190626-44f8-4882-8fba-53cc69bdc023
 langcode: en
 status: true
 dependencies:
   module:
     - media
-id: media.field_image_caption
-field_name: field_image_caption
+id: media.field_caption
+field_name: field_caption
 entity_type: media
 type: string
 settings:

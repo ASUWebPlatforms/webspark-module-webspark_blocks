@@ -1,17 +1,18 @@
+uuid: 32058493-0d00-403e-8564-b96c59614247
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.media.field_image_caption
+    - field.storage.media.field_caption
     - media.type.image
-id: media.image.field_image_caption
-field_name: field_image_caption
+id: media.image.field_caption
+field_name: field_caption
 entity_type: media
 bundle: image
 label: Caption
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }
