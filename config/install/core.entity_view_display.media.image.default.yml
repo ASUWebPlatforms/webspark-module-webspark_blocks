@@ -1,4 +1,3 @@
-uuid: 3a01b9e0-c358-4de3-90a2-8b4c2211ccd6
 langcode: en
 status: true
 dependencies:
@@ -10,8 +9,6 @@ dependencies:
   module:
     - responsive_image
     - user
-_core:
-  default_config_hash: 0V5XxwZ6UiQdU-cYHBfRv7EGC640PtFJ4dLapb8XdY0
 id: media.image.default
 targetEntityType: media
 bundle: image
