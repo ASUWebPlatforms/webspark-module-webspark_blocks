@@ -1,4 +1,3 @@
-uuid: 0c600c9c-09b6-4cd2-be1d-f33dcb9eea35
 langcode: en
 status: true
 dependencies:
@@ -8,8 +7,6 @@ dependencies:
     - editor
     - linkit
     - media
-_core:
-  default_config_hash: fPUiLDsBFV0-DzD93BCVRdctf92WT7kT4Z2SYpdfiW8
 name: 'Full HTML'
 format: full_html
 weight: 2
