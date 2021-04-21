@@ -6,8 +6,6 @@ dependencies:
       - webspark_blocks
   module:
     - media
-_core:
-  default_config_hash: 0Xed8sG92mxWvg81DVReWbRsBXSxzXY8TiZp2ZKk5oE
 id: media.field_media_oembed_video
 field_name: field_media_oembed_video
 entity_type: media
