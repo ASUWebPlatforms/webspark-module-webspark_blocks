@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.media.with_caption
-    - field.field.media.image.field_caption
+    - field.field.media.image.field_image_caption
     - field.field.media.image.field_media_image
     - media.type.image
   module:
@@ -18,7 +18,7 @@ targetEntityType: media
 bundle: image
 mode: with_caption
 content:
-  field_caption:
+  field_image_caption:
     type: string
     weight: 1
     region: content
