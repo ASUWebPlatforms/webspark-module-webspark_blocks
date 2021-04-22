@@ -3,8 +3,8 @@ status: true
 dependencies:
   module:
     - media
-id: media.field_caption
-field_name: field_caption
+id: media.field_image_caption
+field_name: field_image_caption
 entity_type: media
 type: string
 settings:
