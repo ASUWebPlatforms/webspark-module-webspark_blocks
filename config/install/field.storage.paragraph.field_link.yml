@@ -8,7 +8,7 @@ dependencies:
     - link
     - paragraphs
 _core:
-  default_config_hash: xHbZn339PFEgoq7zHpe8ZfglTrZRvvoPVcraHXffky8
+  default_config_hash: _ywBb7HWkBtM3M4u8u3fHMojftfTmN-Ymx1lHvlzWcE
 id: paragraph.field_link
 field_name: field_link
 entity_type: paragraph
@@ -16,7 +16,7 @@ type: link
 settings: {  }
 module: link
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

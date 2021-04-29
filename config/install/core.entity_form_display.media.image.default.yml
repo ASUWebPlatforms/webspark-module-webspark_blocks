@@ -2,19 +2,21 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.media.image.field_image_caption
+    - field.field.media.image.field_caption
     - field.field.media.image.field_media_image
     - image.style.thumbnail
     - media.type.image
   module:
     - image
+_core:
+  default_config_hash: PvaGpjeRSbEaYf0ITM_bzT_492c6w58hbYXrDhnfTI8
 id: media.image.default
 targetEntityType: media
 bundle: image
 mode: default
 content:
-  field_image_caption:
-    weight: 2
+  field_caption:
+    weight: 26
     settings:
       size: 60
       placeholder: ''

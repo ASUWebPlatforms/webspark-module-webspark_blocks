@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.card_media.field_cta
+    - field.field.paragraph.card_media.field_cta_secondary
     - field.field.paragraph.card_media.field_formatted_text
     - field.field.paragraph.card_media.field_heading
     - field.field.paragraph.card_media.field_icon
@@ -11,10 +12,13 @@ dependencies:
     - field.field.paragraph.card_media.field_tags
     - paragraphs.paragraphs_type.card_media
   module:
+    - entity_reference_revisions
     - fontawesome
     - link
     - paragraphs
     - text
+_core:
+  default_config_hash: UQ0pI4lp61m89nXnAiOKkKCBYMuNMG1e1q7Q-Yn6Ffw
 id: paragraph.card_media.default
 targetEntityType: paragraph
 bundle: card_media
@@ -38,6 +42,16 @@ content:
         duplicate: duplicate
     third_party_settings: {  }
     type: paragraphs
+    region: content
+  field_cta_secondary:
+    weight: 7
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_autocomplete
     region: content
   field_formatted_text:
     weight: 3

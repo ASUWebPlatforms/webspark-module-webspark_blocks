@@ -5,24 +5,34 @@ dependencies:
     - block_content.type.accordion
     - field.field.block_content.accordion.field_anchor
     - field.field.block_content.accordion.field_color
+    - field.field.block_content.accordion.field_icon
     - field.field.block_content.accordion.field_paragraph
   module:
+    - fontawesome_iconpicker_widget
     - paragraphs
+_core:
+  default_config_hash: 5a603WH1WwAwzF2VSkEKBTjfGFu24PszXcSzWh9I05E
 id: block_content.accordion.default
 targetEntityType: block_content
 bundle: accordion
 mode: default
 content:
   field_anchor:
-    weight: 0
+    weight: 1
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
+  field_icon:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: fontawesome_iconpicker_widget
+    region: content
   field_paragraph:
     type: entity_reference_paragraphs
-    weight: 2
+    weight: 3
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -34,7 +44,7 @@ content:
     region: content
   info:
     type: string_textfield
-    weight: 1
+    weight: 0
     region: content
     settings:
       size: 60

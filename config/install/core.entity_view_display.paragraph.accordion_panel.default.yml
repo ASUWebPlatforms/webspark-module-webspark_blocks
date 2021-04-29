@@ -2,18 +2,29 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.accordion_panel.field_color_options
     - field.field.paragraph.accordion_panel.field_formatted_text
     - field.field.paragraph.accordion_panel.field_heading
     - field.field.paragraph.accordion_panel.field_icon
     - paragraphs.paragraphs_type.accordion_panel
   module:
     - fontawesome
+    - options
     - text
+_core:
+  default_config_hash: uc7jte6OfoaH3HFLXyPqlLUIz4w1gRZswtO-3xiqdO0
 id: paragraph.accordion_panel.default
 targetEntityType: paragraph
 bundle: accordion_panel
 mode: default
 content:
+  field_color_options:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
   field_formatted_text:
     weight: 1
     label: above

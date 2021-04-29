@@ -4,6 +4,7 @@ dependencies:
   config:
     - field.field.paragraph.card_degree.field_body
     - field.field.paragraph.card_degree.field_cta
+    - field.field.paragraph.card_degree.field_cta_secondary
     - field.field.paragraph.card_degree.field_heading
     - field.field.paragraph.card_degree.field_link
     - field.field.paragraph.card_degree.field_media
@@ -17,14 +18,14 @@ dependencies:
     - link
     - text
 _core:
-  default_config_hash: WxW23Z-aYwtV62wx4SaPlRy8fWP5wXVvXnxRJvUh2BQ
+  default_config_hash: CX1ygdCQyhEZvqsafdvc-h7DMlulzGnF1K2TdyNI4yQ
 id: paragraph.card_degree.default
 targetEntityType: paragraph
 bundle: card_degree
 mode: default
 content:
   field_body:
-    weight: 2
+    weight: 1
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -32,7 +33,16 @@ content:
     region: content
   field_cta:
     type: entity_reference_revisions_entity_view
-    weight: 6
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_cta_secondary:
+    type: entity_reference_revisions_entity_view
+    weight: 5
     label: hidden
     settings:
       view_mode: default
@@ -40,7 +50,7 @@ content:
     third_party_settings: {  }
     region: content
   field_heading:
-    weight: 1
+    weight: 0
     label: hidden
     settings:
       link_to_entity: false
@@ -48,7 +58,7 @@ content:
     type: string
     region: content
   field_link:
-    weight: 5
+    weight: 2
     label: hidden
     settings:
       trim_length: 80
@@ -60,7 +70,7 @@ content:
     type: link
     region: content
   field_media:
-    weight: 7
+    weight: 4
     label: hidden
     settings:
       link: true
@@ -69,7 +79,7 @@ content:
     type: entity_reference_entity_view
     region: content
   field_tags:
-    weight: 3
+    weight: 6
     label: hidden
     settings:
       link: true

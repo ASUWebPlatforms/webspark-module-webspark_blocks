@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.images_block
+  module:
+    - crop
+name: block_image_med
+label: 'Block Image MED'
+effects:
+  e7abfc1f-4db7-4259-bcf6-0bb940e8f7df:
+    uuid: e7abfc1f-4db7-4259-bcf6-0bb940e8f7df
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: images_block
+  bf180d68-8396-414f-940a-054d3303936f:
+    uuid: bf180d68-8396-414f-940a-054d3303936f
+    id: image_scale
+    weight: 2
+    data:
+      width: 600
+      height: null
+      upscale: false

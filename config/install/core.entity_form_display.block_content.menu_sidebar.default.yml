@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.menu_sidebar
+    - field.field.block_content.menu_sidebar.field_menu
+  module:
+    - field_menu
+id: block_content.menu_sidebar.default
+targetEntityType: block_content
+bundle: menu_sidebar
+mode: default
+content:
+  field_menu:
+    weight: 26
+    settings:
+      max_depth: 0
+      menu_item_key: ''
+      include_root: false
+      menu_title: ''
+    third_party_settings: {  }
+    type: field_menu_tree_widget
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

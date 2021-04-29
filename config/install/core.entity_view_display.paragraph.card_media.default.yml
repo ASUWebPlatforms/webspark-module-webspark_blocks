@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.card_media.field_cta
+    - field.field.paragraph.card_media.field_cta_secondary
     - field.field.paragraph.card_media.field_formatted_text
     - field.field.paragraph.card_media.field_heading
     - field.field.paragraph.card_media.field_icon
@@ -15,6 +16,8 @@ dependencies:
     - fontawesome
     - link
     - text
+_core:
+  default_config_hash: qvDcS7AL78B-u2OiZB5-UwAnPzKbTokk4WZzQYaCyM0
 id: paragraph.card_media.default
 targetEntityType: paragraph
 bundle: card_media
@@ -23,6 +26,15 @@ content:
   field_cta:
     weight: 7
     label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_cta_secondary:
+    weight: 8
+    label: above
     settings:
       view_mode: default
       link: ''

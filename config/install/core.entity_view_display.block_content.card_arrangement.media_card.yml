@@ -1,0 +1,53 @@
+langcode: en
+status: false
+dependencies:
+  config:
+    - block_content.type.card_arrangement
+    - core.entity_view_mode.block_content.media_card
+    - field.field.block_content.card_arrangement.field_anchor
+    - field.field.block_content.card_arrangement.field_cards
+    - field.field.block_content.card_arrangement.field_icon
+    - field.field.block_content.card_arrangement.field_layout
+  module:
+    - entity_reference_revisions
+    - layout_builder
+    - options
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+_core:
+  default_config_hash: 7jS7JmeWG3w8vvapHh4daJt7X0p72qpuyvSyxojlcIc
+id: block_content.card_arrangement.media_card
+targetEntityType: block_content
+bundle: card_arrangement
+mode: media_card
+content:
+  field_anchor:
+    weight: 5
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_cards:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_layout:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+hidden:
+  field_icon: true
