@@ -3,16 +3,42 @@ status: true
 dependencies:
   config:
     - block_content.type.image
+    - field.field.block_content.image.field_add_drop_shadow
+    - field.field.block_content.image.field_image_caption
+    - field.field.block_content.image.field_image_size
     - field.field.block_content.image.field_media
   module:
     - media_library
+_core:
+  default_config_hash: JkAF_LabBZt3qcAKngWl2u9KvcyToY8JbP78yox28FY
 id: block_content.image.default
 targetEntityType: block_content
 bundle: image
 mode: default
 content:
+  field_add_drop_shadow:
+    weight: 2
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_image_caption:
+    weight: 4
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_image_size:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_media:
-    weight: 26
+    weight: 3
     settings:
       media_types: {  }
     third_party_settings: {  }
@@ -20,7 +46,7 @@ content:
     region: content
   info:
     type: string_textfield
-    weight: -5
+    weight: 0
     region: content
     settings:
       size: 60

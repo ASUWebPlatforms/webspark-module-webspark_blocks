@@ -4,6 +4,7 @@ dependencies:
   config:
     - field.field.paragraph.card_story.field_body
     - field.field.paragraph.card_story.field_cta
+    - field.field.paragraph.card_story.field_cta_secondary
     - field.field.paragraph.card_story.field_heading
     - field.field.paragraph.card_story.field_link
     - field.field.paragraph.card_story.field_media
@@ -17,7 +18,7 @@ dependencies:
     - link
     - text
 _core:
-  default_config_hash: EyvWm0UHVAaCCLXoV8si4wqz4CFu5cyLOQVfAP2gu88
+  default_config_hash: COuxJwyygJ39bo-ti-wynsAH2YsYk5hFMtl-nyF4RQk
 id: paragraph.card_story.default
 targetEntityType: paragraph
 bundle: card_story
@@ -33,6 +34,15 @@ content:
   field_cta:
     weight: 6
     label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_cta_secondary:
+    weight: 8
+    label: above
     settings:
       view_mode: default
       link: ''
@@ -64,8 +74,9 @@ content:
     label: above
     settings:
       link: true
+      view_mode: default
     third_party_settings: {  }
-    type: entity_reference_label
+    type: entity_reference_entity_view
     region: content
   field_tags:
     weight: 5

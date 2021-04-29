@@ -3,7 +3,6 @@ status: true
 dependencies:
   config:
     - block_content.type.hero
-    - field.field.block_content.hero.field_anchor
     - field.field.block_content.hero.field_cta
     - field.field.block_content.hero.field_heading
     - field.field.block_content.hero.field_hero_background_color
@@ -14,22 +13,12 @@ dependencies:
     - entity_reference_revisions
     - options
 _core:
-  default_config_hash: yilnYlf2iElmDsj3-1wItsWroG4gVJ_LlK85yEg4Ngc
+  default_config_hash: 5u-Fev_iDmJc1kR-ZukD3pX-D5jRTvRFrbZzvNS9rNY
 id: block_content.hero.default
 targetEntityType: block_content
 bundle: hero
 mode: default
 content:
-  field_anchor:
-    weight: 0
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    type: boolean
-    region: content
   field_cta:
     weight: 4
     label: hidden

@@ -9,7 +9,7 @@ dependencies:
     module:
       - webspark_blocks
 _core:
-  default_config_hash: Mt1_RiJD8yBQ245-EwmYnke3wY7DaghRQp0CUu0NWcA
+  default_config_hash: gN-v7aE38zBr-7snIGL1ZuHBVEDh5RvayGEv--Nx27w
 id: paragraph.card_story.field_tags
 field_name: field_tags
 entity_type: paragraph
@@ -28,6 +28,6 @@ settings:
     sort:
       field: name
       direction: asc
-    auto_create: false
+    auto_create: true
     auto_create_bundle: ''
 field_type: entity_reference

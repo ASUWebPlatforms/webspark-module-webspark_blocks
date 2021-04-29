@@ -3,27 +3,18 @@ status: true
 dependencies:
   config:
     - block_content.type.carousel_image
-    - field.field.block_content.carousel_image.field_anchor
     - field.field.block_content.carousel_image.field_carousel_card
     - field.field.block_content.carousel_image.field_type
   module:
     - entity_reference_revisions
     - options
+_core:
+  default_config_hash: w7bFZyk9EcDUNTKOJX5dZlE-8yBk7O92ihb27-M0TJs
 id: block_content.carousel_image.default
 targetEntityType: block_content
 bundle: carousel_image
 mode: default
 content:
-  field_anchor:
-    weight: 2
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    type: boolean
-    region: content
   field_carousel_card:
     weight: 1
     label: above

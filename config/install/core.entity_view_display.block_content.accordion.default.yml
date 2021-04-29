@@ -5,10 +5,14 @@ dependencies:
     - block_content.type.accordion
     - field.field.block_content.accordion.field_anchor
     - field.field.block_content.accordion.field_color
+    - field.field.block_content.accordion.field_icon
     - field.field.block_content.accordion.field_paragraph
   module:
     - entity_reference_revisions
+    - fontawesome
     - options
+_core:
+  default_config_hash: wZoKKx90ZdtB3cAFXZR4RQaVsTseVCUtJzi0Y_MrAHc
 id: block_content.accordion.default
 targetEntityType: block_content
 bundle: accordion
@@ -29,7 +33,15 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    type: list_key
+    region: content
+  field_icon:
+    weight: 3
+    label: above
+    settings:
+      layers: false
+    third_party_settings: {  }
+    type: fontawesome_icon_formatter
     region: content
   field_paragraph:
     type: entity_reference_revisions_entity_view

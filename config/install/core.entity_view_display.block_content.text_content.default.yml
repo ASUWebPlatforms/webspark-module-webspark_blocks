@@ -5,8 +5,12 @@ dependencies:
     - block_content.type.text_content
     - field.field.block_content.text_content.field_anchor
     - field.field.block_content.text_content.field_formatted_text
+    - field.field.block_content.text_content.field_icon
   module:
+    - fontawesome
     - text
+_core:
+  default_config_hash: 4hrieuZMOUA0CJzHEatt39TT-6HEv2Mxj2bfDOfeS4Q
 id: block_content.text_content.default
 targetEntityType: block_content
 bundle: text_content
@@ -28,5 +32,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
+  field_icon:
+    weight: 2
+    label: above
+    settings:
+      layers: false
+    third_party_settings: {  }
+    type: fontawesome_icon_formatter
     region: content
 hidden: {  }
