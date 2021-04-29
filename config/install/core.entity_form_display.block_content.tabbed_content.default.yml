@@ -4,6 +4,7 @@ dependencies:
   config:
     - block_content.type.tabbed_content
     - field.field.block_content.tabbed_content.field_anchor
+    - field.field.block_content.tabbed_content.field_background_color
     - field.field.block_content.tabbed_content.field_icon
     - field.field.block_content.tabbed_content.field_tab
   module:
@@ -23,6 +24,12 @@ content:
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
+  field_background_color:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_icon:
     weight: 2
     settings: {  }
@@ -31,7 +38,7 @@ content:
     region: content
   field_tab:
     type: entity_reference_paragraphs
-    weight: 3
+    weight: 4
     settings:
       title: Paragraph
       title_plural: Paragraphs

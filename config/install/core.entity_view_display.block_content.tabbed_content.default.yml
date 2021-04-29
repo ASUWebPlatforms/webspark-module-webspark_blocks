@@ -4,11 +4,13 @@ dependencies:
   config:
     - block_content.type.tabbed_content
     - field.field.block_content.tabbed_content.field_anchor
+    - field.field.block_content.tabbed_content.field_background_color
     - field.field.block_content.tabbed_content.field_icon
     - field.field.block_content.tabbed_content.field_tab
   module:
     - entity_reference_revisions
     - fontawesome
+    - options
 _core:
   default_config_hash: iDMJC4kHTSd8_A3UYtvOmE7Xvxhqdk9b3akAz-JSEko
 id: block_content.tabbed_content.default
@@ -25,6 +27,13 @@ content:
       format_custom_true: ''
     third_party_settings: {  }
     type: boolean
+    region: content
+  field_background_color:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
     region: content
   field_icon:
     weight: 2

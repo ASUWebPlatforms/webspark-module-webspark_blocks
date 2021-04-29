@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - options
+id: block_content.field_background_color
+field_name: field_background_color
+entity_type: block_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: default
+      label: White
+    -
+      value: bg-gray-1
+      label: 'Light Gray'
+    -
+      value: bg-gray-2
+      label: Gray
+    -
+      value: bg-dark
+      label: 'Dark Background'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
