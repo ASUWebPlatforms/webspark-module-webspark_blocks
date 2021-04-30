@@ -4,7 +4,8 @@ dependencies:
   config:
     - field.field.paragraph.card_event.field_body
     - field.field.paragraph.card_event.field_cta
-    - field.field.paragraph.card_event.field_date
+    - field.field.paragraph.card_event.field_cta_secondary
+    - field.field.paragraph.card_event.field_date_event
     - field.field.paragraph.card_event.field_heading
     - field.field.paragraph.card_event.field_link
     - field.field.paragraph.card_event.field_location
@@ -15,12 +16,13 @@ dependencies:
     module:
       - webspark_blocks
   module:
-    - datetime
+    - datetime_range
     - link
+    - media_library
     - paragraphs
     - text
 _core:
-  default_config_hash: kRJWnFiS5MVl8-ZrwYcrXweEP9bGAw87ZrfvAUJo_K0
+  default_config_hash: MrWILI-xEJetmwEQfXfkH1FJzPCZpSXNh1aBzkr11Mo
 id: paragraph.card_event.default
 targetEntityType: paragraph
 bundle: card_event
@@ -37,30 +39,35 @@ content:
   field_cta:
     weight: 5
     settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: open
-      closed_mode: summary
-      autocollapse: none
-      closed_mode_threshold: 0
-      add_mode: dropdown
+      title: CTA
+      title_plural: CTA
+      edit_mode: closed
+      add_mode: button
       form_display_mode: default
-      default_paragraph_type: cta
-      features:
-        add_above: '0'
-        collapse_edit_all: collapse_edit_all
-        duplicate: duplicate
+      default_paragraph_type: _none
     third_party_settings: {  }
-    type: paragraphs
+    type: entity_reference_paragraphs
     region: content
-  field_date:
+  field_cta_secondary:
+    weight: 6
+    settings:
+      title: 'CTA Secondary'
+      title_plural: 'CTA Secondary'
+      edit_mode: closed
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
+  field_date_event:
     weight: 3
     settings: {  }
     third_party_settings: {  }
-    type: datetime_default
+    type: daterange_default
     region: content
   field_heading:
-    weight: 0
+    weight: 1
     settings:
       size: 60
       placeholder: ''
@@ -68,7 +75,7 @@ content:
     type: string_textfield
     region: content
   field_link:
-    weight: 6
+    weight: 7
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -86,17 +93,14 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_media:
-    weight: 8
+    weight: 0
     settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+      media_types: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: media_library_widget
     region: content
   field_tags:
-    weight: 7
+    weight: 8
     settings:
       match_operator: CONTAINS
       match_limit: 10
