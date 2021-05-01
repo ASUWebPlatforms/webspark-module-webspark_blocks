@@ -1,0 +1,31 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.testimonial_carousel
+    - field.field.block_content.testimonial_carousel.field_accent_color
+    - field.field.block_content.testimonial_carousel.field_background_color
+    - field.field.block_content.testimonial_carousel.field_citation_style
+    - field.field.block_content.testimonial_carousel.field_heading_highlight
+    - field.field.block_content.testimonial_carousel.field_testimonial
+  module:
+    - entity_reference_revisions
+id: block_content.testimonial_carousel.default
+targetEntityType: block_content
+bundle: testimonial_carousel
+mode: default
+content:
+  field_testimonial:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    region: content
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+hidden:
+  field_accent_color: true
+  field_background_color: true
+  field_citation_style: true
+  field_heading_highlight: true

@@ -1,0 +1,62 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.testimonial_carousel
+    - field.field.block_content.testimonial_carousel.field_accent_color
+    - field.field.block_content.testimonial_carousel.field_background_color
+    - field.field.block_content.testimonial_carousel.field_citation_style
+    - field.field.block_content.testimonial_carousel.field_heading_highlight
+    - field.field.block_content.testimonial_carousel.field_testimonial
+  module:
+    - paragraphs
+id: block_content.testimonial_carousel.default
+targetEntityType: block_content
+bundle: testimonial_carousel
+mode: default
+content:
+  field_accent_color:
+    weight: 27
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_background_color:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_citation_style:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_heading_highlight:
+    weight: 28
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_testimonial:
+    type: entity_reference_paragraphs
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }
