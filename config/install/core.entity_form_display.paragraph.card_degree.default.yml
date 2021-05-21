@@ -19,7 +19,7 @@ dependencies:
     - paragraphs
     - text
 _core:
-  default_config_hash: 7kwT54J6haC0UX-BlHRGBwCSEVUsv-4hB4gKWdagyWc
+  default_config_hash: fbMGJmYHHlMYlu8KSH3vwilYZ5oaA6g8NcsaxFWvA9I
 id: paragraph.card_degree.default
 targetEntityType: paragraph
 bundle: card_degree
@@ -41,7 +41,7 @@ content:
       title_plural: Paragraphs
       edit_mode: closed
       add_mode: button
-      form_display_mode: default
+      form_display_mode: styled
       default_paragraph_type: _none
     third_party_settings: {  }
     region: content
@@ -53,7 +53,7 @@ content:
       title_plural: Paragraphs
       edit_mode: closed
       add_mode: button
-      form_display_mode: default
+      form_display_mode: styled
       default_paragraph_type: _none
     third_party_settings: {  }
     region: content

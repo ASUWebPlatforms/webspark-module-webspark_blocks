@@ -8,9 +8,16 @@ dependencies:
     module:
       - webspark_blocks
   module:
+    - allowed_formats
     - text
+third_party_settings:
+  allowed_formats:
+    plain_text: plain_text
+    basic_html: '0'
+    restricted_html: '0'
+    full_html: '0'
 _core:
-  default_config_hash: IRPSt4NljOY5YIKb698LhfBvWGqhZW_NoAPGeZ8da3Y
+  default_config_hash: '-dKEp9os7162o1yUyHad8k2vp-MEMW9sMp96v_kMRGU'
 id: paragraph.card.field_body
 field_name: field_body
 entity_type: paragraph
