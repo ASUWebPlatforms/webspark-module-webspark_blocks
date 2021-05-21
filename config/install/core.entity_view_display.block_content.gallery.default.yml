@@ -3,19 +3,21 @@ status: true
 dependencies:
   config:
     - block_content.type.gallery
+    - field.field.block_content.gallery.field_archon_menu_settings
     - field.field.block_content.gallery.field_carousel_card
+    - field.field.block_content.gallery.field_spacing_bottom
+    - field.field.block_content.gallery.field_spacing_top
+    - field.field.block_content.gallery.field_tooltip
     - field.field.block_content.gallery.field_type
   module:
     - entity_reference_revisions
     - options
-_core:
-  default_config_hash: G5qYwdrA4JoFMJUbFq0b1H74eXlzgXP5ypMpbGZkRTQ
 id: block_content.gallery.default
 targetEntityType: block_content
 bundle: gallery
 mode: default
 content:
-  field_carousel_card:
+  field_archon_menu_settings:
     weight: 0
     label: above
     settings:
@@ -24,11 +26,31 @@ content:
     third_party_settings: {  }
     type: entity_reference_revisions_entity_view
     region: content
-  field_type:
+  field_carousel_card:
     weight: 1
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_tooltip:
+    weight: 3
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_type:
+    weight: 2
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
-hidden: {  }
+hidden:
+  field_spacing_bottom: true
+  field_spacing_top: true

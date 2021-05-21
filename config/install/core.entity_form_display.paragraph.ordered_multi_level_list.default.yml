@@ -1,0 +1,29 @@
+uuid: a2efbe03-4163-4746-aab3-48369bc41f27
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ordered_multi_level_list.field_ordered_multi_level_items
+    - paragraphs.paragraphs_type.ordered_multi_level_list
+  module:
+    - paragraphs
+id: paragraph.ordered_multi_level_list.default
+targetEntityType: paragraph
+bundle: ordered_multi_level_list
+mode: default
+content:
+  field_ordered_multi_level_items:
+    type: entity_reference_paragraphs
+    weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ordered_level_1
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true

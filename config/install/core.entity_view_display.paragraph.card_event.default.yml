@@ -5,6 +5,7 @@ dependencies:
     - field.field.paragraph.card_event.field_body
     - field.field.paragraph.card_event.field_cta
     - field.field.paragraph.card_event.field_cta_secondary
+    - field.field.paragraph.card_event.field_date
     - field.field.paragraph.card_event.field_date_event
     - field.field.paragraph.card_event.field_heading
     - field.field.paragraph.card_event.field_link
@@ -21,7 +22,7 @@ dependencies:
     - link
     - text
 _core:
-  default_config_hash: O1RdBfC1uNpe7ZNncWqQ0cUE6GM_--AkxRRd1QLkKxo
+  default_config_hash: VWrTUfLzNurQWyG0SfmIrhPn6m4RHdLfHrWAdN1oyu4
 id: paragraph.card_event.default
 targetEntityType: paragraph
 bundle: card_event
@@ -108,4 +109,5 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-hidden: {  }
+hidden:
+  field_date: true

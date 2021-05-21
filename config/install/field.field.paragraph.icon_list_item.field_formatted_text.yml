@@ -1,0 +1,28 @@
+uuid: d43b1239-8ec7-4c74-8afd-73c3ea828a01
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_formatted_text
+    - paragraphs.paragraphs_type.icon_list_item
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    plain_text: plain_text
+    basic_html: '0'
+    restricted_html: '0'
+    full_html: '0'
+id: paragraph.icon_list_item.field_formatted_text
+field_name: field_formatted_text
+entity_type: paragraph
+bundle: icon_list_item
+label: 'Formatted Text'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

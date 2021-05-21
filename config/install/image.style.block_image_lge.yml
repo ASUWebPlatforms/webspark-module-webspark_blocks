@@ -1,19 +1,9 @@
 langcode: en
 status: true
-dependencies:
-  config:
-    - crop.type.images_block
-  module:
-    - crop
+dependencies: {  }
 name: block_image_lge
 label: 'Block Image LGE'
 effects:
-  3e83ef7d-4a6f-406a-85f2-ec3489ebbcee:
-    uuid: 3e83ef7d-4a6f-406a-85f2-ec3489ebbcee
-    id: crop_crop
-    weight: 1
-    data:
-      crop_type: images_block
   e71d3617-e0aa-46cb-bcfc-3f5a06a21fc6:
     uuid: e71d3617-e0aa-46cb-bcfc-3f5a06a21fc6
     id: image_scale

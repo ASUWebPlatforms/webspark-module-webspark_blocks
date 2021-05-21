@@ -3,11 +3,14 @@ status: true
 dependencies:
   config:
     - block_content.type.banner
+    - field.field.block_content.banner.field_anchor
     - field.field.block_content.banner.field_banner_background_color
     - field.field.block_content.banner.field_banner_text
     - field.field.block_content.banner.field_ctas
     - field.field.block_content.banner.field_heading
     - field.field.block_content.banner.field_icon
+    - field.field.block_content.banner.field_spacing_bottom
+    - field.field.block_content.banner.field_spacing_top
   enforced:
     module:
       - webspark_blocks
@@ -16,22 +19,21 @@ dependencies:
     - fontawesome
     - options
     - text
-_core:
-  default_config_hash: FEvuvwfaDG08NArx3jGWTL_gzNm9Wddb2iFI342olfY
+
 id: block_content.banner.default
 targetEntityType: block_content
 bundle: banner
 mode: default
 content:
   field_banner_background_color:
-    weight: 16
+    weight: 4
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: list_key
     region: content
   field_banner_text:
-    weight: 9
+    weight: 0
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -39,7 +41,7 @@ content:
     region: content
   field_ctas:
     type: entity_reference_revisions_entity_view
-    weight: 15
+    weight: 3
     label: hidden
     settings:
       view_mode: default
@@ -47,7 +49,7 @@ content:
     third_party_settings: {  }
     region: content
   field_heading:
-    weight: 11
+    weight: 1
     label: hidden
     settings:
       link_to_entity: false
@@ -55,11 +57,14 @@ content:
     type: string
     region: content
   field_icon:
-    weight: 12
+    weight: 2
     label: hidden
     settings:
       layers: false
     third_party_settings: {  }
     type: fontawesome_icon_formatter
     region: content
-hidden: {  }
+hidden:
+  field_anchor: true
+  field_spacing_bottom: true
+  field_spacing_top: true

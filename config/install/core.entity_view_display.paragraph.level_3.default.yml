@@ -1,0 +1,33 @@
+uuid: dcb65f5a-bee4-4166-a0e3-eecf229b63be
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.level_3.field_formatted_text
+    - field.field.paragraph.level_3.field_level_4
+    - paragraphs.paragraphs_type.level_3
+  module:
+    - entity_reference_revisions
+    - text
+id: paragraph.level_3.default
+targetEntityType: paragraph
+bundle: level_3
+mode: default
+content:
+  field_formatted_text:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_level_4:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

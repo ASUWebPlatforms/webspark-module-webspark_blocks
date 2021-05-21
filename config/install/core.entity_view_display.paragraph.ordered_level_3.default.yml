@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ordered_level_3.field_formatted_text
+    - field.field.paragraph.ordered_level_3.field_ordered_level_4
+    - paragraphs.paragraphs_type.ordered_level_3
+  module:
+    - entity_reference_revisions
+    - text
+id: paragraph.ordered_level_3.default
+targetEntityType: paragraph
+bundle: ordered_level_3
+mode: default
+content:
+  field_formatted_text:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_ordered_level_4:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.lists
+    - field.storage.block_content.field_step_list_color
+  module:
+    - options
+id: block_content.lists.field_step_list_color
+field_name: field_step_list_color
+entity_type: block_content
+bundle: lists
+label: 'Step List Color'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: default
+default_value_callback: ''
+settings: {  }
+field_type: list_string
