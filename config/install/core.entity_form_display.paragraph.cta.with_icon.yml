@@ -7,7 +7,7 @@ dependencies:
     - field.field.paragraph.cta.field_icon
     - paragraphs.paragraphs_type.cta
   module:
-    - fontawesome
+    - fontawesome_iconpicker_widget
     - link
 id: paragraph.cta.with_icon
 targetEntityType: paragraph
@@ -23,7 +23,7 @@ content:
       placeholder_title: ''
     third_party_settings: {  }
   field_icon:
-    type: fontawesome_icon_widget
+    type: fontawesome_iconpicker_widget
     weight: 1
     region: content
     settings: {  }
