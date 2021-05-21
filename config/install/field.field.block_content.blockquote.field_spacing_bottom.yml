@@ -3,20 +3,20 @@ status: true
 dependencies:
   config:
     - block_content.type.blockquote
-    - field.storage.block_content.field_reverse_image
+    - field.storage.block_content.field_spacing_bottom
   module:
     - options
-id: block_content.blockquote.field_reverse_image
-field_name: field_reverse_image
+id: block_content.blockquote.field_spacing_bottom
+field_name: field_spacing_bottom
 entity_type: block_content
 bundle: blockquote
-label: 'Reverse Image'
+label: 'Spacing bottom'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value:
   -
-    value: default
+    value: spacing-bottom-32
 default_value_callback: ''
 settings: {  }
 field_type: list_string

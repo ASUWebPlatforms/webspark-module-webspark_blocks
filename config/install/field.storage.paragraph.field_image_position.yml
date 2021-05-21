@@ -2,20 +2,20 @@ langcode: en
 status: true
 dependencies:
   module:
-    - block_content
     - options
-id: block_content.field_reverse_image
-field_name: field_reverse_image
-entity_type: block_content
+    - paragraphs
+id: paragraph.field_image_position
+field_name: field_image_position
+entity_type: paragraph
 type: list_string
 settings:
   allowed_values:
     -
-      value: default
-      label: Default
+      value: right
+      label: Right
     -
-      value: reversed
-      label: 'Image Reversed'
+      value: left
+      label: Left
   allowed_values_function: ''
 module: options
 locked: false
