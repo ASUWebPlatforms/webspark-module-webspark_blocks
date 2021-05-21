@@ -4,6 +4,7 @@ dependencies:
   config:
     - block_content.type.testimonial_carousel
     - field.field.block_content.testimonial_carousel.field_accent_color
+    - field.field.block_content.testimonial_carousel.field_archon_menu_settings
     - field.field.block_content.testimonial_carousel.field_background_color
     - field.field.block_content.testimonial_carousel.field_citation_style
     - field.field.block_content.testimonial_carousel.field_heading_highlight
@@ -18,9 +19,18 @@ targetEntityType: block_content
 bundle: testimonial_carousel
 mode: default
 content:
+  field_archon_menu_settings:
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
   field_testimonial:
     type: entity_reference_revisions_entity_view
-    weight: 0
+    weight: 1
     region: content
     label: above
     settings:

@@ -9,18 +9,36 @@ dependencies:
     - field.field.block_content.hero.field_hero_size
     - field.field.block_content.hero.field_hero_unformatted_text
     - field.field.block_content.hero.field_media
+    - field.field.block_content.hero.field_spacing_bottom
+    - field.field.block_content.hero.field_spacing_top
   module:
+    - field_group
     - media_library
     - paragraphs
-_core:
-  default_config_hash: KU2wRvCnAT9xaZg_2Z1q0WVaR_hWrFuiZnTqA13ihoQ
+third_party_settings:
+  field_group:
+    group_appearance_settings:
+      children:
+        - field_spacing_top
+        - field_spacing_bottom
+      parent_name: ''
+      weight: 7
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: 'Appearance Settings'
 id: block_content.hero.default
 targetEntityType: block_content
 bundle: hero
 mode: default
 content:
   field_cta:
-    weight: 7
+    weight: 6
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -39,7 +57,7 @@ content:
     type: paragraphs
     region: content
   field_heading:
-    weight: 5
+    weight: 4
     settings:
       size: 60
       placeholder: ''
@@ -47,19 +65,19 @@ content:
     type: string_textfield
     region: content
   field_hero_background_color:
-    weight: 4
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_hero_size:
-    weight: 2
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_hero_unformatted_text:
-    weight: 3
+    weight: 2
     settings:
       rows: 5
       placeholder: ''
@@ -68,10 +86,22 @@ content:
     region: content
   field_media:
     type: media_library_widget
-    weight: 6
+    weight: 5
     settings:
       media_types: {  }
     third_party_settings: {  }
+    region: content
+  field_spacing_bottom:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_spacing_top:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   info:
     type: string_textfield

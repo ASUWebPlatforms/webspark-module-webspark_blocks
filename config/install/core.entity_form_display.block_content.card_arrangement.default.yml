@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - block_content.type.card_arrangement
+    - field.field.block_content.card_arrangement.field_archon_menu_settings
     - field.field.block_content.card_arrangement.field_card_group
     - field.field.block_content.card_arrangement.field_cta
     - field.field.block_content.card_arrangement.field_formatted_text
@@ -12,13 +13,13 @@ dependencies:
     - field.field.block_content.card_arrangement.field_tooltip
   module:
     - field_group
-    - fontawesome_iconpicker_widget
     - paragraphs
     - text
 third_party_settings:
   field_group:
     group_appearance_settings:
       children:
+        - field_archon_menu_settings
         - field_spacing_top
         - field_spacing_bottom
       parent_name: ''
@@ -32,13 +33,23 @@ third_party_settings:
         formatter: closed
         required_fields: true
       label: 'Appearance Settings'
-_core:
-  default_config_hash: 0yo3dVrly2XpE1R4Moit0-kW1glRGpu6IO47V0VijPY
 id: block_content.card_arrangement.default
 targetEntityType: block_content
 bundle: card_arrangement
 mode: default
 content:
+  field_archon_menu_settings:
+    weight: 26
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
   field_card_group:
     weight: 4
     settings:
@@ -80,13 +91,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_spacing_bottom:
-    weight: 8
+    weight: 28
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_spacing_top:
-    weight: 7
+    weight: 27
     settings: {  }
     third_party_settings: {  }
     type: options_select

@@ -4,6 +4,7 @@ dependencies:
   config:
     - block_content.type.lists
     - core.entity_view_mode.block_content.ordered_list
+    - field.field.block_content.lists.field_archon_menu_settings
     - field.field.block_content.lists.field_list_color
     - field.field.block_content.lists.field_list_item
     - field.field.block_content.lists.field_spacing_bottom
@@ -56,5 +57,6 @@ content:
       link: ''
     third_party_settings: {  }
 hidden:
+  field_archon_menu_settings: true
   field_spacing_bottom: true
   field_spacing_top: true

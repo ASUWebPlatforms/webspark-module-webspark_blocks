@@ -2,15 +2,15 @@ langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.text_content
-    - field.storage.block_content.field_icon
+    - field.storage.paragraph.field_icon
+    - paragraphs.paragraphs_type.archon_menu_settings
   module:
     - fontawesome
-id: block_content.text_content.field_icon
+id: paragraph.archon_menu_settings.field_icon
 field_name: field_icon
-entity_type: block_content
-bundle: text_content
-label: 'Anchor Menu Icon'
+entity_type: paragraph
+bundle: archon_menu_settings
+label: Icon
 description: ''
 required: false
 translatable: true

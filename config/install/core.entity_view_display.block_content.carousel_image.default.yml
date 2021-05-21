@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - block_content.type.carousel_image
-    - field.field.block_content.carousel_image.field_anchor
+    - field.field.block_content.carousel_image.field_archon_menu_settings
     - field.field.block_content.carousel_image.field_carousel_card
     - field.field.block_content.carousel_image.field_spacing_bottom
     - field.field.block_content.carousel_image.field_spacing_top
@@ -11,14 +11,12 @@ dependencies:
     - field.field.block_content.carousel_image.field_type
   module:
     - entity_reference_revisions
-_core:
-  default_config_hash: Gt9dZIJ5fSb0STImYBa6H4xNLQSARvg0yuctyu4n_PI
 id: block_content.carousel_image.default
 targetEntityType: block_content
 bundle: carousel_image
 mode: default
 content:
-  field_carousel_card:
+  field_archon_menu_settings:
     weight: 0
     label: above
     settings:
@@ -27,8 +25,17 @@ content:
     third_party_settings: {  }
     type: entity_reference_revisions_entity_view
     region: content
-  field_tooltip:
+  field_carousel_card:
     weight: 1
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_tooltip:
+    weight: 2
     label: hidden
     settings:
       view_mode: default
@@ -37,7 +44,6 @@ content:
     type: entity_reference_revisions_entity_view
     region: content
 hidden:
-  field_anchor: true
   field_spacing_bottom: true
   field_spacing_top: true
   field_type: true

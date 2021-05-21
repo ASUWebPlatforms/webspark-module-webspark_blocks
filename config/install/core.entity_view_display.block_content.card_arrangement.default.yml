@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - block_content.type.card_arrangement
+    - field.field.block_content.card_arrangement.field_archon_menu_settings
     - field.field.block_content.card_arrangement.field_card_group
     - field.field.block_content.card_arrangement.field_cta
     - field.field.block_content.card_arrangement.field_formatted_text
@@ -12,13 +13,20 @@ dependencies:
     - field.field.block_content.card_arrangement.field_tooltip
   module:
     - entity_reference_revisions
-_core:
-  default_config_hash: 2Wb_iqexfByG2yrzkYogo5pGbzeDQz5PCtd0JnMKhsg
 id: block_content.card_arrangement.default
 targetEntityType: block_content
 bundle: card_arrangement
 mode: default
 content:
+  field_archon_menu_settings:
+    weight: 4
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
   field_card_group:
     weight: 1
     label: hidden

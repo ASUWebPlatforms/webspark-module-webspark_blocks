@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - block_content.type.card_carousel
+    - field.field.block_content.card_carousel.field_archon_menu_settings
     - field.field.block_content.card_carousel.field_card_group
     - field.field.block_content.card_carousel.field_card_orientation
     - field.field.block_content.card_carousel.field_layout
@@ -17,6 +18,15 @@ targetEntityType: block_content
 bundle: card_carousel
 mode: default
 content:
+  field_archon_menu_settings:
+    weight: 4
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
   field_card_group:
     type: entity_reference_revisions_entity_view
     weight: 0

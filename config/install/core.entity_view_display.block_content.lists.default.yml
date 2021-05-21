@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - block_content.type.lists
+    - field.field.block_content.lists.field_archon_menu_settings
     - field.field.block_content.lists.field_list_color
     - field.field.block_content.lists.field_list_item
     - field.field.block_content.lists.field_spacing_bottom
@@ -17,6 +18,15 @@ targetEntityType: block_content
 bundle: lists
 mode: default
 content:
+  field_archon_menu_settings:
+    weight: 4
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
   field_list_color:
     weight: 1
     label: hidden

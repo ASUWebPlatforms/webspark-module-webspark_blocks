@@ -4,6 +4,7 @@ dependencies:
   config:
     - block_content.type.card_arrangement
     - core.entity_view_mode.block_content.story_card
+    - field.field.block_content.card_arrangement.field_archon_menu_settings
     - field.field.block_content.card_arrangement.field_card_group
     - field.field.block_content.card_arrangement.field_cta
     - field.field.block_content.card_arrangement.field_formatted_text
@@ -17,14 +18,13 @@ third_party_settings:
   layout_builder:
     allow_custom: false
     enabled: false
-_core:
-  default_config_hash: JZqh9pj_gAhaV3o_cOR8P8JUsGZvH9Xy2KTglOQA3fg
 id: block_content.card_arrangement.story_card
 targetEntityType: block_content
 bundle: card_arrangement
 mode: story_card
 content: {  }
 hidden:
+  field_archon_menu_settings: true
   field_card_group: true
   field_cta: true
   field_formatted_text: true

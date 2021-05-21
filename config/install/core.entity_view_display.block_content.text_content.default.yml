@@ -3,46 +3,35 @@ status: true
 dependencies:
   config:
     - block_content.type.text_content
-    - field.field.block_content.text_content.field_anchor
+    - field.field.block_content.text_content.field_archon_menu_settings
     - field.field.block_content.text_content.field_formatted_text
-    - field.field.block_content.text_content.field_icon
     - field.field.block_content.text_content.field_tooltip
   module:
     - entity_reference_revisions
-    - fontawesome
     - text
 id: block_content.text_content.default
 targetEntityType: block_content
 bundle: text_content
 mode: default
 content:
-  field_anchor:
-    weight: 1
-    label: hidden
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    type: boolean
-    region: content
-  field_formatted_text:
+  field_archon_menu_settings:
+    type: entity_reference_revisions_entity_view
     weight: 0
+    region: content
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  field_formatted_text:
+    weight: 1
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
-  field_icon:
-    weight: 2
-    label: above
-    settings:
-      layers: false
-    third_party_settings: {  }
-    type: fontawesome_icon_formatter
-    region: content
   field_tooltip:
-    weight: 3
+    weight: 2
     label: hidden
     settings:
       view_mode: default

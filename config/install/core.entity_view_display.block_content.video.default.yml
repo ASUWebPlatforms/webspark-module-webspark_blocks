@@ -4,6 +4,7 @@ dependencies:
   config:
     - block_content.type.video
     - field.field.block_content.video.field_add_drop_shadow
+    - field.field.block_content.video.field_archon_menu_settings
     - field.field.block_content.video.field_image_size
     - field.field.block_content.video.field_media
     - field.field.block_content.video.field_spacing_bottom
@@ -16,6 +17,15 @@ targetEntityType: block_content
 bundle: video
 mode: default
 content:
+  field_archon_menu_settings:
+    weight: 2
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
   field_media:
     weight: 0
     label: hidden

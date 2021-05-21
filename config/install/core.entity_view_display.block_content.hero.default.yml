@@ -3,7 +3,6 @@ status: true
 dependencies:
   config:
     - block_content.type.hero
-    - field.field.block_content.hero.field_anchor
     - field.field.block_content.hero.field_cta
     - field.field.block_content.hero.field_heading
     - field.field.block_content.hero.field_hero_background_color
@@ -68,6 +67,5 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
-  field_anchor: true
   field_spacing_bottom: true
   field_spacing_top: true
