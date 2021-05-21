@@ -1,8 +1,6 @@
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: IHs9OkcpbFpPGXK1hpD1t7aLmeoia3j85WXXUDCd0h8
 name: block_image_med
 label: 'Block Image MED'
 effects:
