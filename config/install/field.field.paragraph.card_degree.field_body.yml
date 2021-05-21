@@ -17,7 +17,7 @@ third_party_settings:
     restricted_html: '0'
     full_html: '0'
 _core:
-  default_config_hash: rDFyrH3WUAPpkjXw1wvM8y6t1Zdkgv-NWntdcDi1nKc
+  default_config_hash: '-Ze_QQvKe6EDysTgYFHC-qPMZ5ddSNeD7oNV_Bb7r7U'
 id: paragraph.card_degree.field_body
 field_name: field_body
 entity_type: paragraph

@@ -17,7 +17,7 @@ third_party_settings:
     restricted_html: '0'
     full_html: '0'
 _core:
-  default_config_hash: E-FIrnBnuRZ1akzIERVtexZiTzCXxbPjtmB1L1RumaM
+  default_config_hash: RAetv1Y0mn8ppd0feS8_mdfh9VZxYtxa6Ew1VRIO2Vw
 id: paragraph.card_event.field_body
 field_name: field_body
 entity_type: paragraph

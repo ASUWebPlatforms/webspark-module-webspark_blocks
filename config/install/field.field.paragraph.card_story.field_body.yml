@@ -17,7 +17,7 @@ third_party_settings:
     restricted_html: '0'
     full_html: '0'
 _core:
-  default_config_hash: PYs-iK0ttF_elCwSa6Q_zgG-6IVvY3sXoKx5ZmVzGbU
+  default_config_hash: 6HI_ftfF3m4Gnr4L8HHY-UIV0hfT4MNRKI1F3hkZzFk
 id: paragraph.card_story.field_body
 field_name: field_body
 entity_type: paragraph
