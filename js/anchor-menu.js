@@ -10,7 +10,7 @@
         }
 
         links.each(function(i, item) {
-          let icon = $(item).siblings('.archon-link-icon').html();
+          let icon = $(item).siblings('.anchor-link-icon').html();
           let title = $(item).data('title');
           let href = $(item).attr('id');
 
