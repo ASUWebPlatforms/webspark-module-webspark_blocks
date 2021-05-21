@@ -1,0 +1,47 @@
+uuid: f71d2a78-95d7-4f36-90bb-f492c3b8c757
+langcode: en
+status: false
+dependencies:
+  config:
+    - block_content.type.lists
+    - core.entity_view_mode.block_content.display_list_icons
+    - field.field.block_content.lists.field_list_color
+    - field.field.block_content.lists.field_list_item
+    - field.field.block_content.lists.field_step_list_color
+  module:
+    - entity_reference_revisions
+    - layout_builder
+    - options
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: block_content.lists.display_list_icons
+targetEntityType: block_content
+bundle: lists
+mode: display_list_icons
+content:
+  field_list_color:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_list_item:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_step_list_color:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+hidden: {  }

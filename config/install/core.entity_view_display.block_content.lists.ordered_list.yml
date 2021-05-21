@@ -1,0 +1,47 @@
+uuid: 446630ae-6b82-4ed1-80e2-ed8ed5a8c7be
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.lists
+    - core.entity_view_mode.block_content.ordered_list
+    - field.field.block_content.lists.field_list_color
+    - field.field.block_content.lists.field_list_item
+    - field.field.block_content.lists.field_step_list_color
+  module:
+    - entity_reference_revisions
+    - layout_builder
+    - options
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: block_content.lists.ordered_list
+targetEntityType: block_content
+bundle: lists
+mode: ordered_list
+content:
+  field_list_color:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_list_item:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_step_list_color:
+    type: list_key
+    weight: 2
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

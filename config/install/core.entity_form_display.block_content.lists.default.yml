@@ -1,0 +1,49 @@
+uuid: 1a640a04-3605-4960-81f2-9921612a32f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.lists
+    - field.field.block_content.lists.field_list_color
+    - field.field.block_content.lists.field_list_item
+    - field.field.block_content.lists.field_step_list_color
+  module:
+    - paragraphs
+id: block_content.lists.default
+targetEntityType: block_content
+bundle: lists
+mode: default
+content:
+  field_list_color:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_list_item:
+    type: entity_reference_paragraphs
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: select
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    region: content
+  field_step_list_color:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

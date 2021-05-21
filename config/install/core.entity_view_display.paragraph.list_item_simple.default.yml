@@ -1,0 +1,22 @@
+uuid: f32b6dc7-a5f2-4185-a216-a8509cd80f75
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.list_item_simple.field_formatted_text
+    - paragraphs.paragraphs_type.list_item_simple
+  module:
+    - text
+id: paragraph.list_item_simple.default
+targetEntityType: paragraph
+bundle: list_item_simple
+mode: default
+content:
+  field_formatted_text:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

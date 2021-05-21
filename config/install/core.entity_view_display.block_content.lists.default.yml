@@ -1,0 +1,41 @@
+uuid: bab350b5-89be-408d-a272-3ecd6c211119
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.lists
+    - field.field.block_content.lists.field_list_color
+    - field.field.block_content.lists.field_list_item
+    - field.field.block_content.lists.field_step_list_color
+  module:
+    - entity_reference_revisions
+    - options
+id: block_content.lists.default
+targetEntityType: block_content
+bundle: lists
+mode: default
+content:
+  field_list_color:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_list_item:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_step_list_color:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+hidden: {  }

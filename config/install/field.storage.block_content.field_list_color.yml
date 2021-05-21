@@ -1,0 +1,39 @@
+uuid: fbd5dddf-8354-4695-8c11-2ec336174590
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - options
+id: block_content.field_list_color
+field_name: field_list_color
+entity_type: block_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: default
+      label: Default
+    -
+      value: maroon
+      label: Maroon
+    -
+      value: smokemode
+      label: 'Smoke Mode'
+    -
+      value: light-smokemode
+      label: 'Light Smoke Mode'
+    -
+      value: darkmode
+      label: 'Dark Mode'
+    -
+      value: darkmode_gold
+      label: 'Dark Mode Gold'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
