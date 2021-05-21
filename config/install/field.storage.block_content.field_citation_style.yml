@@ -4,6 +4,8 @@ dependencies:
   module:
     - block_content
     - options
+_core:
+  default_config_hash: wiLecl6XxbonFtqYxcU5fl5iskZjq2vYLtLye8_vIJk
 id: block_content.field_citation_style
 field_name: field_citation_style
 entity_type: block_content

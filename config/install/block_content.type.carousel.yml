@@ -1,9 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-_core:
-  default_config_hash: iQLFIXf4raUI8iddaqCRmOe-YxacYAGOQX4oXoQzRAE
-id: carousel
-label: Carousel
-revision: 0
-description: ''

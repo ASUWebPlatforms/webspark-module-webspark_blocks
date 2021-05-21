@@ -1,0 +1,25 @@
+uuid: 9dfa595a-abd6-45c8-9217-d572cbf7010d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ordered_level_6.field_formatted_text
+    - paragraphs.paragraphs_type.ordered_level_6
+  module:
+    - text
+id: paragraph.ordered_level_6.default
+targetEntityType: paragraph
+bundle: ordered_level_6
+mode: default
+content:
+  field_formatted_text:
+    weight: 0
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+hidden:
+  created: true
+  status: true

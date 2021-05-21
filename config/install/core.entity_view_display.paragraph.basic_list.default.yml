@@ -1,0 +1,24 @@
+uuid: a89f829a-9886-4104-9eb3-cd26267602a5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.basic_list.field_basic_list_items
+    - paragraphs.paragraphs_type.basic_list
+  module:
+    - entity_reference_revisions
+id: paragraph.basic_list.default
+targetEntityType: paragraph
+bundle: basic_list
+mode: default
+content:
+  field_basic_list_items:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

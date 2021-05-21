@@ -3,53 +3,54 @@ status: true
 dependencies:
   config:
     - block_content.type.accordion
-    - field.field.block_content.accordion.field_anchor
+    - field.field.block_content.accordion.field_archon_menu_settings
     - field.field.block_content.accordion.field_color
-    - field.field.block_content.accordion.field_icon
     - field.field.block_content.accordion.field_paragraph
+    - field.field.block_content.accordion.field_spacing_bottom
+    - field.field.block_content.accordion.field_spacing_top
+    - field.field.block_content.accordion.field_tooltip
   module:
     - entity_reference_revisions
-    - fontawesome
     - options
-_core:
-  default_config_hash: wZoKKx90ZdtB3cAFXZR4RQaVsTseVCUtJzi0Y_MrAHc
 id: block_content.accordion.default
 targetEntityType: block_content
 bundle: accordion
 mode: default
 content:
-  field_anchor:
-    weight: 2
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    type: boolean
-    region: content
-  field_color:
-    weight: 1
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_key
-    region: content
-  field_icon:
-    weight: 3
-    label: above
-    settings:
-      layers: false
-    third_party_settings: {  }
-    type: fontawesome_icon_formatter
-    region: content
-  field_paragraph:
-    type: entity_reference_revisions_entity_view
+  field_archon_menu_settings:
     weight: 0
     label: above
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
     region: content
-hidden: {  }
+  field_color:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_paragraph:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_tooltip:
+    weight: 3
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+hidden:
+  field_spacing_bottom: true
+  field_spacing_top: true

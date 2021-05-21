@@ -24,7 +24,7 @@ third_party_settings:
     allow_custom: false
     enabled: false
 _core:
-  default_config_hash: k3RXrFBMU3dEfsY4uYmdqRVxLPNw3CUKcpdqRsTBjJI
+  default_config_hash: LsERuJKjMD2Dz0D50MgCbqvl89Zc7peJul2EwNn7K7k
 id: paragraph.card.portrait
 targetEntityType: paragraph
 bundle: card

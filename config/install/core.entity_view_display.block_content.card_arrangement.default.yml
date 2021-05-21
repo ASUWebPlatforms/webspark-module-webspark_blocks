@@ -3,53 +3,67 @@ status: true
 dependencies:
   config:
     - block_content.type.card_arrangement
-    - field.field.block_content.card_arrangement.field_anchor
-    - field.field.block_content.card_arrangement.field_cards
-    - field.field.block_content.card_arrangement.field_icon
-    - field.field.block_content.card_arrangement.field_layout
+    - field.field.block_content.card_arrangement.field_archon_menu_settings
+    - field.field.block_content.card_arrangement.field_card_group
+    - field.field.block_content.card_arrangement.field_cta
+    - field.field.block_content.card_arrangement.field_formatted_text
+    - field.field.block_content.card_arrangement.field_heading
+    - field.field.block_content.card_arrangement.field_spacing_bottom
+    - field.field.block_content.card_arrangement.field_spacing_top
+    - field.field.block_content.card_arrangement.field_tooltip
   module:
     - entity_reference_revisions
-    - fontawesome
-    - options
-_core:
-  default_config_hash: 7jS7JmeWG3w8vvapHh4daJt7X0p72qpuyvSyxojlcIc
 id: block_content.card_arrangement.default
 targetEntityType: block_content
 bundle: card_arrangement
 mode: default
 content:
-  field_anchor:
-    weight: 0
-    label: hidden
+  field_archon_menu_settings:
+    weight: 4
+    label: above
     settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
+      view_mode: default
+      link: ''
     third_party_settings: {  }
-    type: boolean
-    region: content
-  field_cards:
     type: entity_reference_revisions_entity_view
+    region: content
+  field_card_group:
     weight: 1
     label: hidden
     settings:
-      view_mode: portrait
+      view_mode: default
       link: ''
     third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
     region: content
-  field_icon:
+  field_cta:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    region: content
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  field_heading:
+    type: string
     weight: 3
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_tooltip:
+    weight: 0
     label: hidden
     settings:
-      layers: false
+      view_mode: default
+      link: ''
     third_party_settings: {  }
-    type: fontawesome_icon_formatter
+    type: entity_reference_revisions_entity_view
     region: content
-  field_layout:
-    weight: 2
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
-hidden: {  }
+hidden:
+  field_formatted_text: true
+  field_heading: true
+  field_spacing_bottom: true
+  field_spacing_top: true

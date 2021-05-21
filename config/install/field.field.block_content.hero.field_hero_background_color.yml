@@ -12,7 +12,7 @@ entity_type: block_content
 bundle: hero
 label: 'Heading Title Background Color'
 description: ''
-required: false
+required: true
 translatable: false
 default_value:
   -

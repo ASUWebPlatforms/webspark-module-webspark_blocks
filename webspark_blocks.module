@@ -44,5 +44,8 @@ function webspark_blocks_preprocess_input__submit(&$variables) {
 function webspark_blocks_theme($existing, $type, $theme, $path){
   return [
     'webspark_blocks__back-to-top' => [],
+    'webspark_blocks_anchor_menu' => [
+      'variables' => [],
+    ],
   ];
 }

@@ -1,0 +1,29 @@
+uuid: 351211b3-a924-4a36-90b1-b089f6b00653
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.multi_level_list.field_multi_level_items
+    - paragraphs.paragraphs_type.multi_level_list
+  module:
+    - paragraphs
+id: paragraph.multi_level_list.default
+targetEntityType: paragraph
+bundle: multi_level_list
+mode: default
+content:
+  field_multi_level_items:
+    type: entity_reference_paragraphs
+    weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: multi_level_list_item
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true

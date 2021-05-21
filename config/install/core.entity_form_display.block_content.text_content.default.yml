@@ -3,39 +3,65 @@ status: true
 dependencies:
   config:
     - block_content.type.text_content
-    - field.field.block_content.text_content.field_anchor
+    - field.field.block_content.text_content.field_archon_menu_settings
     - field.field.block_content.text_content.field_formatted_text
-    - field.field.block_content.text_content.field_icon
+    - field.field.block_content.text_content.field_tooltip
   module:
-    - fontawesome_iconpicker_widget
+    - field_group
+    - paragraphs
     - text
-_core:
-  default_config_hash: u1HdSXzhRv-hc5yZQLoNV3yNib_m3U8o9uUeVcfPyfM
+third_party_settings:
+  field_group:
+    group_appearance_settings:
+      children:
+        - field_archon_menu_settings
+      parent_name: ''
+      weight: 4
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: 'Appearance Settings'
 id: block_content.text_content.default
 targetEntityType: block_content
 bundle: text_content
 mode: default
 content:
-  field_anchor:
-    weight: 1
+  field_archon_menu_settings:
+    type: entity_reference_paragraphs
+    weight: 3
     settings:
-      display_label: true
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
     third_party_settings: {  }
-    type: boolean_checkbox
     region: content
   field_formatted_text:
-    weight: 3
+    weight: 1
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
     region: content
-  field_icon:
+  field_tooltip:
     weight: 2
-    settings: {  }
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
     third_party_settings: {  }
-    type: fontawesome_iconpicker_widget
+    type: entity_reference_paragraphs
     region: content
   info:
     type: string_textfield

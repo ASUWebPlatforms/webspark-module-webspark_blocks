@@ -1,0 +1,10 @@
+uuid: 8fd73830-035d-414b-ad70-24a4a477e6f8
+langcode: en
+status: true
+dependencies: {  }
+id: list_item_simple
+label: 'List Item'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

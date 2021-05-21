@@ -1,0 +1,25 @@
+uuid: 8be02f36-b531-4b35-9b5a-f4909e60881c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.lists.field_formatted_text
+    - paragraphs.paragraphs_type.lists
+  module:
+    - text
+id: paragraph.lists.default
+targetEntityType: paragraph
+bundle: lists
+mode: default
+content:
+  field_formatted_text:
+    weight: 0
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+hidden:
+  created: true
+  status: true

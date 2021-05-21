@@ -1,0 +1,10 @@
+uuid: a4daca80-8dfa-4381-9130-4ef6c1b0ec14
+langcode: en
+status: true
+dependencies: {  }
+id: lists
+label: Lists
+icon_uuid: null
+icon_default: null
+description: 'Used for single level ordered and un-ordered lists.'
+behavior_plugins: {  }

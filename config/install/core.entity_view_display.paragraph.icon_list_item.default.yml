@@ -1,0 +1,32 @@
+uuid: f3584245-1da7-498a-950b-08994e4628a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.icon_list_item.field_formatted_text
+    - field.field.paragraph.icon_list_item.field_icon
+    - paragraphs.paragraphs_type.icon_list_item
+  module:
+    - fontawesome
+    - text
+id: paragraph.icon_list_item.default
+targetEntityType: paragraph
+bundle: icon_list_item
+mode: default
+content:
+  field_formatted_text:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_icon:
+    weight: 0
+    label: hidden
+    settings:
+      layers: false
+    third_party_settings: {  }
+    type: fontawesome_icon_formatter
+    region: content
+hidden: {  }
