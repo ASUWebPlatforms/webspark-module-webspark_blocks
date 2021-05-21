@@ -2,9 +2,9 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.media.with_caption
+    - core.entity_view_mode.media.medium
     - field.field.media.image_block_images.field_media_image
-    - image.style.image_block
+    - image.style.block_image_med
     - media.type.image_block_images
   module:
     - image
@@ -13,16 +13,16 @@ third_party_settings:
   layout_builder:
     allow_custom: false
     enabled: false
-id: media.image_block_images.with_caption
+id: media.image_block_images.medium
 targetEntityType: media
 bundle: image_block_images
-mode: with_caption
+mode: medium
 content:
   field_media_image:
     label: visually_hidden
     weight: 0
     settings:
-      image_style: image_block
+      image_style: block_image_med
       image_link: ''
     third_party_settings: {  }
     type: image
