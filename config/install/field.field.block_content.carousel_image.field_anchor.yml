@@ -4,6 +4,8 @@ dependencies:
   config:
     - block_content.type.carousel_image
     - field.storage.block_content.field_anchor
+_core:
+  default_config_hash: ED24GjmL4EyK_iEjqePk2Vquty9WQXRgw0TrRf7uf-Q
 id: block_content.carousel_image.field_anchor
 field_name: field_anchor
 entity_type: block_content

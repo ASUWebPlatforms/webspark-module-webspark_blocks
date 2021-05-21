@@ -3,20 +3,20 @@ status: true
 dependencies:
   config:
     - block_content.type.gallery
-    - field.storage.block_content.field_type
+    - field.storage.block_content.field_spacing_top
   module:
     - options
-_core:
-  default_config_hash: Cmkn6Ee2VqRD6yYZM5YdiFXTz53LN6KDlK7oekO4VJM
-id: block_content.gallery.field_type
-field_name: field_type
+id: block_content.gallery.field_spacing_top
+field_name: field_spacing_top
 entity_type: block_content
 bundle: gallery
-label: Type
+label: 'Spacing top'
 description: ''
 required: false
-translatable: false
-default_value: {  }
+translatable: true
+default_value:
+  -
+    value: spacing-top-96
 default_value_callback: ''
 settings: {  }
 field_type: list_string

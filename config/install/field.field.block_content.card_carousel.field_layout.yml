@@ -2,18 +2,18 @@ langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.carousel
+    - block_content.type.card_carousel
     - field.storage.block_content.field_layout
   module:
     - options
-id: block_content.carousel.field_layout
+id: block_content.card_carousel.field_layout
 field_name: field_layout
 entity_type: block_content
-bundle: carousel
+bundle: card_carousel
 label: Layout
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

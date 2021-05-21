@@ -13,77 +13,18 @@ dependencies:
   enforced:
     module:
       - webspark_blocks
-  module:
-    - entity_reference_revisions
-    - link
-    - text
 _core:
-  default_config_hash: k3RXrFBMU3dEfsY4uYmdqRVxLPNw3CUKcpdqRsTBjJI
+  default_config_hash: 79qI3Ac4z7nZKoni_InUHBSpKkV0WbJJ6uzaiEIRvjQ
 id: paragraph.card.default
 targetEntityType: paragraph
 bundle: card
 mode: default
-content:
-  field_body:
-    weight: 2
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
-  field_cta:
-    weight: 5
-    label: hidden
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    type: entity_reference_revisions_entity_view
-    region: content
-  field_cta_secondary:
-    weight: 7
-    label: hidden
-    settings:
-      view_mode: small
-      link: ''
-    third_party_settings: {  }
-    type: entity_reference_revisions_entity_view
-    region: content
-  field_heading:
-    weight: 1
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_link:
-    weight: 4
-    label: hidden
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    type: link
-    region: content
-  field_media:
-    weight: 0
-    label: hidden
-    settings:
-      link: true
-      view_mode: default
-    third_party_settings: {  }
-    type: entity_reference_entity_view
-    region: content
-  field_tags:
-    weight: 6
-    label: hidden
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-hidden: {  }
+content: {  }
+hidden:
+  field_body: true
+  field_cta: true
+  field_cta_secondary: true
+  field_heading: true
+  field_link: true
+  field_media: true
+  field_tags: true
