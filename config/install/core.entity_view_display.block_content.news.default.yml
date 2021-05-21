@@ -1,0 +1,63 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.news
+    - field.field.block_content.news.field_anchor
+    - field.field.block_content.news.field_display
+    - field.field.block_content.news.field_icon
+    - field.field.block_content.news.field_news_feed_filter
+    - field.field.block_content.news.field_news_items_to_display
+    - field.field.block_content.news.field_spacing_bottom
+    - field.field.block_content.news.field_spacing_top
+  module:
+    - fontawesome
+    - options
+id: block_content.news.default
+targetEntityType: block_content
+bundle: news
+mode: default
+content:
+  field_anchor:
+    weight: 2
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_display:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_icon:
+    weight: 3
+    label: hidden
+    settings:
+      layers: false
+    third_party_settings: {  }
+    type: fontawesome_icon_formatter
+    region: content
+  field_news_feed_filter:
+    type: string
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_news_items_to_display:
+    type: list_key
+    weight: 1
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_spacing_bottom: true
+  field_spacing_top: true

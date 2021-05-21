@@ -6,30 +6,16 @@ dependencies:
     - field.field.block_content.video.field_add_drop_shadow
     - field.field.block_content.video.field_image_size
     - field.field.block_content.video.field_media
+    - field.field.block_content.video.field_spacing_bottom
+    - field.field.block_content.video.field_spacing_top
+    - field.field.block_content.video.field_tooltip
   module:
-    - options
+    - entity_reference_revisions
 id: block_content.video.default
 targetEntityType: block_content
 bundle: video
 mode: default
 content:
-  field_add_drop_shadow:
-    weight: 1
-    label: hidden
-    settings:
-      format: boolean
-      format_custom_true: ''
-      format_custom_false: ''
-    third_party_settings: {  }
-    type: boolean
-    region: content
-  field_image_size:
-    weight: 2
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: list_key
-    region: content
   field_media:
     weight: 0
     label: hidden
@@ -39,4 +25,17 @@ content:
     third_party_settings: {  }
     type: entity_reference_entity_view
     region: content
-hidden: {  }
+  field_tooltip:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+hidden:
+  field_add_drop_shadow: true
+  field_image_size: true
+  field_spacing_bottom: true
+  field_spacing_top: true

@@ -7,12 +7,14 @@ dependencies:
     - field.field.block_content.accordion.field_color
     - field.field.block_content.accordion.field_icon
     - field.field.block_content.accordion.field_paragraph
+    - field.field.block_content.accordion.field_spacing_bottom
+    - field.field.block_content.accordion.field_spacing_top
+    - field.field.block_content.accordion.field_tooltip
   module:
     - entity_reference_revisions
     - fontawesome
     - options
-_core:
-  default_config_hash: wZoKKx90ZdtB3cAFXZR4RQaVsTseVCUtJzi0Y_MrAHc
+
 id: block_content.accordion.default
 targetEntityType: block_content
 bundle: accordion
@@ -52,4 +54,15 @@ content:
       link: ''
     third_party_settings: {  }
     region: content
-hidden: {  }
+  field_tooltip:
+    weight: 4
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+hidden:
+  field_spacing_bottom: true
+  field_spacing_top: true

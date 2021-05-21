@@ -6,11 +6,11 @@ dependencies:
     - field.field.block_content.text_content.field_anchor
     - field.field.block_content.text_content.field_formatted_text
     - field.field.block_content.text_content.field_icon
+    - field.field.block_content.text_content.field_tooltip
   module:
+    - entity_reference_revisions
     - fontawesome
     - text
-_core:
-  default_config_hash: 4hrieuZMOUA0CJzHEatt39TT-6HEv2Mxj2bfDOfeS4Q
 id: block_content.text_content.default
 targetEntityType: block_content
 bundle: text_content
@@ -40,5 +40,14 @@ content:
       layers: false
     third_party_settings: {  }
     type: fontawesome_icon_formatter
+    region: content
+  field_tooltip:
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
     region: content
 hidden: {  }
