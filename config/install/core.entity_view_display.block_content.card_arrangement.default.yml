@@ -12,6 +12,8 @@ dependencies:
     - field.field.block_content.card_arrangement.field_tooltip
   module:
     - entity_reference_revisions
+_core:
+  default_config_hash: 2Wb_iqexfByG2yrzkYogo5pGbzeDQz5PCtd0JnMKhsg
 id: block_content.card_arrangement.default
 targetEntityType: block_content
 bundle: card_arrangement

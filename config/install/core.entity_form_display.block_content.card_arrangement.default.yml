@@ -3,50 +3,105 @@ status: true
 dependencies:
   config:
     - block_content.type.card_arrangement
-    - field.field.block_content.card_arrangement.field_anchor
-    - field.field.block_content.card_arrangement.field_cards
-    - field.field.block_content.card_arrangement.field_icon
-    - field.field.block_content.card_arrangement.field_layout
+    - field.field.block_content.card_arrangement.field_card_group
+    - field.field.block_content.card_arrangement.field_cta
+    - field.field.block_content.card_arrangement.field_formatted_text
+    - field.field.block_content.card_arrangement.field_heading
+    - field.field.block_content.card_arrangement.field_spacing_bottom
+    - field.field.block_content.card_arrangement.field_spacing_top
+    - field.field.block_content.card_arrangement.field_tooltip
   module:
+    - field_group
     - fontawesome_iconpicker_widget
     - paragraphs
+    - text
+third_party_settings:
+  field_group:
+    group_appearance_settings:
+      children:
+        - field_spacing_top
+        - field_spacing_bottom
+      parent_name: ''
+      weight: 6
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: 'Appearance Settings'
 _core:
-  default_config_hash: h6VQd7R3El2PSFCEkBivmdmPT1GYHdP3_QJclpmo1gI
+  default_config_hash: 0yo3dVrly2XpE1R4Moit0-kW1glRGpu6IO47V0VijPY
 id: block_content.card_arrangement.default
 targetEntityType: block_content
 bundle: card_arrangement
 mode: default
 content:
-  field_anchor:
-    weight: 1
+  field_card_group:
+    weight: 4
     settings:
-      display_label: true
-    third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
-  field_cards:
-    type: entity_reference_paragraphs
-    weight: 3
-    settings:
-      title: Card
-      title_plural: Cards
-      edit_mode: closed
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
       add_mode: button
       form_display_mode: default
       default_paragraph_type: _none
     third_party_settings: {  }
+    type: entity_reference_paragraphs
     region: content
-  field_icon:
+  field_cta:
+    type: entity_reference_paragraphs
     weight: 2
-    settings: {  }
-    third_party_settings: {  }
-    type: fontawesome_iconpicker_widget
     region: content
-  field_layout:
-    weight: 4
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: styled
+      default_paragraph_type: cta
+    third_party_settings: {  }
+  field_formatted_text:
+    type: text_textarea
+    weight: 3
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_heading:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_spacing_bottom:
+    weight: 8
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
+  field_spacing_top:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_tooltip:
+    weight: 5
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
     region: content
   info:
     type: string_textfield

@@ -2,19 +2,21 @@ langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.basic
-    - field.storage.block_content.field_tooltip
-    - paragraphs.paragraphs_type.tooltip
+    - block_content.type.card_arrangement
+    - field.storage.block_content.field_card_group
+    - paragraphs.paragraphs_type.card_group_default
+    - paragraphs.paragraphs_type.card_group_degree
+    - paragraphs.paragraphs_type.card_group_story
   module:
     - entity_reference_revisions
-id: block_content.basic.field_tooltip
-field_name: field_tooltip
+id: block_content.card_arrangement.field_card_group
+field_name: field_card_group
 entity_type: block_content
-bundle: basic
-label: Tooltip
-description: 'A tooltip can be added here. It will display in the top left of the block.'
+bundle: card_arrangement
+label: 'Card Group'
+description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
@@ -22,111 +24,125 @@ settings:
   handler_settings:
     negate: 0
     target_bundles:
-      tooltip: tooltip
+      card_group_default: card_group_default
+      card_group_degree: card_group_degree
+      card_group_story: card_group_story
     target_bundles_drag_drop:
       accordion_panel:
-        weight: 36
-        enabled: false
-      basic_list:
-        weight: 37
-        enabled: false
-      card:
-        weight: 38
-        enabled: false
-      card_degree:
-        weight: 39
-        enabled: false
-      card_event:
         weight: 40
         enabled: false
-      card_media:
+      basic_list:
         weight: 41
         enabled: false
-      card_story:
+      blockquote:
         weight: 42
         enabled: false
-      cta:
+      card:
         weight: 43
         enabled: false
-      display_list:
+      card_degree:
         weight: 44
         enabled: false
-      display_list_item:
+      card_event:
         weight: 45
         enabled: false
-      gallery_image:
+      card_group_default:
+        enabled: true
         weight: 46
-        enabled: false
-      icon_list:
+      card_group_degree:
+        enabled: true
         weight: 47
-        enabled: false
-      icon_list_item:
+      card_group_story:
+        enabled: true
         weight: 48
-        enabled: false
-      level_1:
+      card_media:
         weight: 49
         enabled: false
-      level_2:
+      card_story:
         weight: 50
         enabled: false
-      level_3:
+      cta:
         weight: 51
         enabled: false
-      level_4:
+      display_list:
         weight: 52
         enabled: false
-      level_5:
+      display_list_item:
         weight: 53
         enabled: false
-      level_6:
+      gallery_image:
         weight: 54
         enabled: false
-      list_item_simple:
+      icon_list:
         weight: 55
         enabled: false
-      lists:
+      icon_list_item:
         weight: 56
         enabled: false
-      multi_level_item:
+      level_1:
         weight: 57
         enabled: false
-      multi_level_list:
+      level_2:
         weight: 58
         enabled: false
-      ordered_level_1:
+      level_3:
         weight: 59
         enabled: false
-      ordered_level_2:
+      level_4:
         weight: 60
         enabled: false
-      ordered_level_3:
+      level_5:
         weight: 61
         enabled: false
-      ordered_level_4:
+      level_6:
         weight: 62
         enabled: false
-      ordered_level_5:
-        weight: 63
-        enabled: false
-      ordered_level_6:
+      list_item_simple:
         weight: 64
         enabled: false
-      ordered_multi_level_list:
+      lists:
+        weight: 63
+        enabled: false
+      multi_level_item:
         weight: 65
         enabled: false
-      step_list:
+      multi_level_list:
         weight: 66
         enabled: false
-      step_list_item:
+      ordered_level_1:
         weight: 67
         enabled: false
-      tab_content:
+      ordered_level_2:
         weight: 68
         enabled: false
-      testimonial:
+      ordered_level_3:
         weight: 69
         enabled: false
-      tooltip:
-        enabled: true
+      ordered_level_4:
         weight: 70
+        enabled: false
+      ordered_level_5:
+        weight: 71
+        enabled: false
+      ordered_level_6:
+        weight: 72
+        enabled: false
+      ordered_multi_level_list:
+        weight: 73
+        enabled: false
+      step_list:
+        weight: 74
+        enabled: false
+      step_list_item:
+        weight: 75
+        enabled: false
+      tab_content:
+        weight: 76
+        enabled: false
+      testimonial:
+        weight: 77
+        enabled: false
+      tooltip:
+        weight: 78
+        enabled: false
 field_type: entity_reference_revisions
