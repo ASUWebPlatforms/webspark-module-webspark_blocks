@@ -1,8 +1,6 @@
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: FnuLezDbmiD87VTFx3nJPWqbCHqRHJXQs7WfUtIbsIw
 id: image
 label: Image
 description: 'Use local images for reusable media.'

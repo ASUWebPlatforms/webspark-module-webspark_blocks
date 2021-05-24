@@ -1,8 +1,6 @@
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: nnJA5MIAL5x7yKDWKn5gHIDtXLOOshXmVDuO8ZyztT0
 name: hero
 label: 'Hero (1920x1200)'
 effects:

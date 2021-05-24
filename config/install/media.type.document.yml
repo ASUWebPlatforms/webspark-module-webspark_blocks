@@ -1,8 +1,6 @@
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: SP7BQ9U87SqAk8gsJey3AfyGu4PRCyp6iJvBb8eW4Vw
 id: document
 label: Document
 description: 'An uploaded file or document, such as a PDF.'
