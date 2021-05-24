@@ -2,34 +2,42 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.media.image_block_images.field_media_image
+    - field.field.media.story_hero.field_media_image
     - image.style.thumbnail
-    - media.type.image_block_images
+    - media.type.story_hero
   module:
-    - image
+    - image_widget_crop
     - path
-id: media.image_block_images.default
+id: media.story_hero.default
 targetEntityType: media
-bundle: image_block_images
+bundle: story_hero
 mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 4
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
   field_media_image:
-    weight: 1
+    weight: 0
     settings:
+      show_crop_area: true
+      show_default_crop: true
+      warn_multiple_usages: true
       preview_image_style: thumbnail
+      crop_preview_image_style: crop_thumbnail
       progress_indicator: throbber
+      crop_list:
+        - story_hero
+      crop_types_required:
+        - story_hero
     third_party_settings: {  }
-    type: image_image
+    type: image_widget_crop
     region: content
   name:
     type: string_textfield
-    weight: 0
+    weight: -5
     region: content
     settings:
       size: 60
@@ -37,7 +45,7 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 5
+    weight: 30
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -45,12 +53,12 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 6
+    weight: 100
     region: content
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 3
+    weight: 5
     settings:
       match_operator: CONTAINS
       size: 60
