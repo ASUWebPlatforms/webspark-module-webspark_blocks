@@ -3,14 +3,14 @@
   Drupal.behaviors.anchorMenu = {
     attach: function (context, settings) {
       if ($(context).find('#uds-anchor-menu').length) {
-        let links = $('.webspark-anchor-link-data');
 
+        let links = $('.webspark-anchor-link-data');
         if (!links.length) {
           return;
         }
 
         links.each(function(i, item) {
-          let icon = $(item).siblings('.archon-link-icon').html();
+          let icon = $(item).siblings('.anchor-link-icon').html();
           let title = $(item).data('title');
           let href = $(item).attr('id');
 
@@ -20,7 +20,17 @@
 
         $('#headerContainer header').attr('id', 'global-header');
 
-        setTimeout(initializeAnchorMenu, 100);
+
+        // We use setTimeout to compensate header built by react 🤦
+        setTimeout(function() {
+          let globalHeader = document.getElementById('global-header');
+          let navbar = document.getElementById('uds-anchor-menu');
+
+          // Compensate for a fixed admin toolbar.
+          let offset = $('#toolbar-administration').length ? 78 : 0;
+
+          initializeAnchorMenu(globalHeader, navbar, offset);
+        }, 100);
 
         $('.uds-anchor-menu').show();
       }
@@ -28,12 +38,9 @@
   };
 
 
-  function initializeAnchorMenu() {
-    const globalHeader = document.getElementById('global-header');
-    const navbar = document.getElementById('uds-anchor-menu');
+  function initializeAnchorMenu(globalHeader, navbar, offset) {
     const anchors = navbar.getElementsByClassName('nav-link');
     const navbarInitialPosition = navbar.offsetTop;
-    console.log(navbarInitialPosition);
     const anchorTargets = new Map();
     let previousScrollPosition = window.scrollY;
 
@@ -54,15 +61,15 @@
         window.scrollY > previousScrollPosition &&
         !navbar.classList.contains('uds-anchor-menu-sticky')
       ) {
-        if (navbarY > 0 && navbarY < headerHeight) {
+        if (navbarY > offset && navbarY < headerHeight + offset) {
           globalHeader.style.top = -(headerHeight - navbarY) + 'px';
-        } else if (navbarY <= 0) {
+        } else if (navbarY <= offset) {
           globalHeader.style.top = -globalHeader.offsetHeight + 'px';
           navbar.classList.add('uds-anchor-menu-sticky');
           navbar.classList.add('container');
+          navbar.style.top = offset + 'px';
         }
       }
-
       // If scrolling UP
       if (
         window.scrollY < previousScrollPosition &&
@@ -70,9 +77,9 @@
       ) {
         navbar.classList.remove('uds-anchor-menu-sticky');
         navbar.classList.remove('container');
-        if (globalHeader.getBoundingClientRect().top < 0) {
-          const offset = globalHeader.getBoundingClientRect().top + navbarY;
-          globalHeader.style.top = (offset < 0 ? offset : 0) + 'px';
+        if (globalHeader.getBoundingClientRect().top < offset) {
+          const localOffset = globalHeader.getBoundingClientRect().top + navbarY + offset;
+          globalHeader.style.top = (localOffset + offset < 0 ? localOffset + offset : offset) + 'px';
         }
       }
 
@@ -99,7 +106,7 @@
 
         // Compensate for height of navbar so content appears below it
         let scrollBy =
-          anchorTarget.getBoundingClientRect().top - navbar.offsetHeight;
+          anchorTarget.getBoundingClientRect().top - navbar.offsetHeight - offset;
 
         // If window hasn't been scrolled, compensate for header shrinking.
         const approximateHeaderSize = 65;
