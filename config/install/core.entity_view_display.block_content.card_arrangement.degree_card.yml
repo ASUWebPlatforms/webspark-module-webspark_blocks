@@ -4,7 +4,7 @@ dependencies:
   config:
     - block_content.type.card_arrangement
     - core.entity_view_mode.block_content.degree_card
-    - field.field.block_content.card_arrangement.field_archon_menu_settings
+    - field.field.block_content.card_arrangement.field_anchor_menu_settings
     - field.field.block_content.card_arrangement.field_card_group
     - field.field.block_content.card_arrangement.field_cta
     - field.field.block_content.card_arrangement.field_formatted_text
@@ -24,7 +24,7 @@ bundle: card_arrangement
 mode: degree_card
 content: {  }
 hidden:
-  field_archon_menu_settings: true
+  field_anchor_menu_settings: true
   field_card_group: true
   field_cta: true
   field_formatted_text: true

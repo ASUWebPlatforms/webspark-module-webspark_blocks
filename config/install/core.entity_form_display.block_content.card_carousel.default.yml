@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - block_content.type.card_carousel
-    - field.field.block_content.card_carousel.field_archon_menu_settings
+    - field.field.block_content.card_carousel.field_anchor_menu_settings
     - field.field.block_content.card_carousel.field_card_group
     - field.field.block_content.card_carousel.field_card_orientation
     - field.field.block_content.card_carousel.field_layout
@@ -17,7 +17,7 @@ third_party_settings:
   field_group:
     group_appearance_settings:
       children:
-        - field_archon_menu_settings
+        - field_anchor_menu_settings
         - field_spacing_top
         - field_spacing_bottom
       parent_name: ''
@@ -36,7 +36,7 @@ targetEntityType: block_content
 bundle: card_carousel
 mode: default
 content:
-  field_archon_menu_settings:
+  field_anchor_menu_settings:
     weight: 26
     settings:
       title: Paragraph

@@ -2,14 +2,14 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.archon_menu_settings.field_icon
-    - field.field.paragraph.archon_menu_settings.field_title
-    - paragraphs.paragraphs_type.archon_menu_settings
+    - field.field.paragraph.anchor_menu_settings.field_icon
+    - field.field.paragraph.anchor_menu_settings.field_title
+    - paragraphs.paragraphs_type.anchor_menu_settings
   module:
     - fontawesome_iconpicker_widget
-id: paragraph.archon_menu_settings.default
+id: paragraph.anchor_menu_settings.default
 targetEntityType: paragraph
-bundle: archon_menu_settings
+bundle: anchor_menu_settings
 mode: default
 content:
   field_icon:

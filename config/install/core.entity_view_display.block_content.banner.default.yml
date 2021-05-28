@@ -3,7 +3,6 @@ status: true
 dependencies:
   config:
     - block_content.type.banner
-    - field.field.block_content.banner.field_anchor
     - field.field.block_content.banner.field_banner_background_color
     - field.field.block_content.banner.field_banner_text
     - field.field.block_content.banner.field_ctas
@@ -64,6 +63,5 @@ content:
     type: fontawesome_icon_formatter
     region: content
 hidden:
-  field_anchor: true
   field_spacing_bottom: true
   field_spacing_top: true

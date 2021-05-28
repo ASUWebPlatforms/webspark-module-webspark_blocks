@@ -4,7 +4,7 @@ dependencies:
   config:
     - block_content.type.card_arrangement
     - core.entity_view_mode.block_content.landscape
-    - field.field.block_content.card_arrangement.field_archon_menu_settings
+    - field.field.block_content.card_arrangement.field_anchor_menu_settings
     - field.field.block_content.card_arrangement.field_card_group
     - field.field.block_content.card_arrangement.field_cta
     - field.field.block_content.card_arrangement.field_formatted_text
@@ -68,7 +68,7 @@ content:
       link: ''
     third_party_settings: {  }
 hidden:
-  field_archon_menu_settings: true
+  field_anchor_menu_settings: true
   field_cta: true
   field_formatted_text: true
   field_heading: true

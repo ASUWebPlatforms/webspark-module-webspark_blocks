@@ -3,11 +3,11 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_title
-    - paragraphs.paragraphs_type.archon_menu_settings
-id: paragraph.archon_menu_settings.field_title
+    - paragraphs.paragraphs_type.anchor_menu_settings
+id: paragraph.anchor_menu_settings.field_title
 field_name: field_title
 entity_type: paragraph
-bundle: archon_menu_settings
+bundle: anchor_menu_settings
 label: 'Anchor menu title'
 description: ''
 required: false

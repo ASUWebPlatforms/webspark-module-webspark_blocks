@@ -3,10 +3,8 @@ status: true
 dependencies:
   config:
     - block_content.type.text_content
-    - field.field.block_content.text_content.field_archon_menu_settings
+    - field.field.block_content.text_content.field_anchor_menu_settings
     - field.field.block_content.text_content.field_formatted_text
-    - field.field.block_content.text_content.field_spacing_bottom
-    - field.field.block_content.text_content.field_spacing_top
     - field.field.block_content.text_content.field_tooltip
   module:
     - entity_reference_revisions
@@ -16,7 +14,7 @@ targetEntityType: block_content
 bundle: text_content
 mode: default
 content:
-  field_archon_menu_settings:
+  field_anchor_menu_settings:
     type: entity_reference_revisions_entity_view
     weight: 0
     region: content
@@ -41,6 +39,4 @@ content:
     third_party_settings: {  }
     type: entity_reference_revisions_entity_view
     region: content
-hidden:
-  field_spacing_bottom: true
-  field_spacing_top: true
+hidden: {  }

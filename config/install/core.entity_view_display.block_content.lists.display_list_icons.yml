@@ -4,7 +4,7 @@ dependencies:
   config:
     - block_content.type.lists
     - core.entity_view_mode.block_content.display_list_icons
-    - field.field.block_content.lists.field_archon_menu_settings
+    - field.field.block_content.lists.field_anchor_menu_settings
     - field.field.block_content.lists.field_list_color
     - field.field.block_content.lists.field_list_item
     - field.field.block_content.lists.field_spacing_bottom
@@ -48,7 +48,7 @@ content:
     type: list_key
     region: content
 hidden:
-  field_archon_menu_settings: true
+  field_anchor_menu_settings: true
   field_spacing_bottom: true
   field_spacing_top: true
   field_tooltip: true
