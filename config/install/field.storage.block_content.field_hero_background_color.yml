@@ -14,11 +14,11 @@ settings:
       value: gold
       label: 'Gold background'
     -
-      value: maroon
-      label: 'Maroon background'
-    -
       value: white
       label: 'White background'
+    -
+      value: black
+      label: 'Black background'
   allowed_values_function: ''
 module: options
 locked: false
