@@ -14,9 +14,7 @@ label: 'Spacing bottom'
 description: ''
 required: false
 translatable: true
-default_value:
-  -
-    value: spacing-bottom-96
+default_value: {  }
 default_value_callback: ''
 settings: {  }
 field_type: list_string

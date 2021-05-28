@@ -7,10 +7,30 @@ dependencies:
     - field.field.block_content.image.field_image_caption
     - field.field.block_content.image.field_image_size
     - field.field.block_content.image.field_media
+    - field.field.block_content.image.field_spacing_bottom
+    - field.field.block_content.image.field_spacing_top
+    - field.field.block_content.image.field_tooltip
   module:
+    - field_group
     - media_library
-_core:
-  default_config_hash: JkAF_LabBZt3qcAKngWl2u9KvcyToY8JbP78yox28FY
+    - paragraphs
+third_party_settings:
+  field_group:
+    group_appearance_settings:
+      children:
+        - field_spacing_top
+        - field_spacing_bottom
+      parent_name: ''
+      weight: 6
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: 'Appearance Settings'
 id: block_content.image.default
 targetEntityType: block_content
 bundle: image
@@ -43,6 +63,30 @@ content:
       media_types: {  }
     third_party_settings: {  }
     type: media_library_widget
+    region: content
+  field_spacing_bottom:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_spacing_top:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_tooltip:
+    weight: 5
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
     region: content
   info:
     type: string_textfield

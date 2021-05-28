@@ -9,8 +9,6 @@ dependencies:
     - field.field.block_content.blockquote.field_tooltip
   module:
     - entity_reference_revisions
-_core:
-  default_config_hash: zn-ryietunW2mgb3yieNmlM82ZbjXwHS4q-X0UKVwWk
 id: block_content.blockquote.default
 targetEntityType: block_content
 bundle: blockquote
