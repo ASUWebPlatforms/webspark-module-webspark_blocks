@@ -17,6 +17,8 @@ third_party_settings:
     group_appearance_settings:
       children:
         - field_anchor_menu_settings
+        - field_spacing_top
+        - field_spacing_bottom
       parent_name: ''
       weight: 4
       format_type: tab
