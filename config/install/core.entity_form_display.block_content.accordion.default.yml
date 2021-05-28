@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - block_content.type.accordion
-    - field.field.block_content.accordion.field_archon_menu_settings
+    - field.field.block_content.accordion.field_anchor_menu_settings
     - field.field.block_content.accordion.field_color
     - field.field.block_content.accordion.field_paragraph
     - field.field.block_content.accordion.field_spacing_bottom
@@ -16,7 +16,7 @@ third_party_settings:
   field_group:
     group_appearance_settings:
       children:
-        - field_archon_menu_settings
+        - field_anchor_menu_settings
         - field_spacing_top
         - field_spacing_bottom
       parent_name: ''
@@ -35,7 +35,7 @@ targetEntityType: block_content
 bundle: accordion
 mode: default
 content:
-  field_archon_menu_settings:
+  field_anchor_menu_settings:
     weight: 8
     settings:
       title: Paragraph

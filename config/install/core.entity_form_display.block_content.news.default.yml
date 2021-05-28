@@ -2,12 +2,13 @@ langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.blockquote
-    - field.field.block_content.blockquote.field_anchor_menu_settings
-    - field.field.block_content.blockquote.field_blockquote
-    - field.field.block_content.blockquote.field_spacing_bottom
-    - field.field.block_content.blockquote.field_spacing_top
-    - field.field.block_content.blockquote.field_tooltip
+    - block_content.type.news
+    - field.field.block_content.news.field_anchor_menu_settings
+    - field.field.block_content.news.field_display
+    - field.field.block_content.news.field_news_feed_filter
+    - field.field.block_content.news.field_news_items_to_display
+    - field.field.block_content.news.field_spacing_bottom
+    - field.field.block_content.news.field_spacing_top
   module:
     - field_group
     - paragraphs
@@ -19,7 +20,7 @@ third_party_settings:
         - field_spacing_top
         - field_spacing_bottom
       parent_name: ''
-      weight: 9
+      weight: 6
       format_type: tab
       region: content
       format_settings:
@@ -29,9 +30,9 @@ third_party_settings:
         formatter: closed
         required_fields: true
       label: 'Appearance Settings'
-id: block_content.blockquote.default
+id: block_content.news.default
 targetEntityType: block_content
-bundle: blockquote
+bundle: news
 mode: default
 content:
   field_anchor_menu_settings:
@@ -46,18 +47,26 @@ content:
     third_party_settings: {  }
     type: entity_reference_paragraphs
     region: content
-  field_blockquote:
-    type: entity_reference_paragraphs
-    weight: 1
-    settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: open
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: blockquote
+  field_display:
+    weight: 5
+    settings: {  }
     third_party_settings: {  }
+    type: options_select
     region: content
+  field_news_feed_filter:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_news_items_to_display:
+    type: options_select
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_spacing_bottom:
     weight: 28
     settings: {  }
@@ -69,18 +78,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
-    region: content
-  field_tooltip:
-    weight: 8
-    settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: open
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: _none
-    third_party_settings: {  }
-    type: entity_reference_paragraphs
     region: content
   info:
     type: string_textfield

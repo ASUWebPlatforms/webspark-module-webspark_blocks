@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - block_content.type.gallery
-    - field.field.block_content.gallery.field_archon_menu_settings
+    - field.field.block_content.gallery.field_anchor_menu_settings
     - field.field.block_content.gallery.field_carousel_card
     - field.field.block_content.gallery.field_spacing_bottom
     - field.field.block_content.gallery.field_spacing_top
@@ -17,7 +17,7 @@ targetEntityType: block_content
 bundle: gallery
 mode: default
 content:
-  field_archon_menu_settings:
+  field_anchor_menu_settings:
     weight: 0
     label: above
     settings:

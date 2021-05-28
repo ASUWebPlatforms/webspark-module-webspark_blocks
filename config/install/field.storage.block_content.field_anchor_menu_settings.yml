@@ -5,8 +5,8 @@ dependencies:
     - block_content
     - entity_reference_revisions
     - paragraphs
-id: block_content.field_archon_menu_settings
-field_name: field_archon_menu_settings
+id: block_content.field_anchor_menu_settings
+field_name: field_anchor_menu_settings
 entity_type: block_content
 type: entity_reference_revisions
 settings:

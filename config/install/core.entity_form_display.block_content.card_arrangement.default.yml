@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - block_content.type.card_arrangement
-    - field.field.block_content.card_arrangement.field_archon_menu_settings
+    - field.field.block_content.card_arrangement.field_anchor_menu_settings
     - field.field.block_content.card_arrangement.field_card_group
     - field.field.block_content.card_arrangement.field_cta
     - field.field.block_content.card_arrangement.field_formatted_text
@@ -19,7 +19,7 @@ third_party_settings:
   field_group:
     group_appearance_settings:
       children:
-        - field_archon_menu_settings
+        - field_anchor_menu_settings
         - field_spacing_top
         - field_spacing_bottom
       parent_name: ''
@@ -38,7 +38,7 @@ targetEntityType: block_content
 bundle: card_arrangement
 mode: default
 content:
-  field_archon_menu_settings:
+  field_anchor_menu_settings:
     weight: 26
     settings:
       title: Paragraph

@@ -3,15 +3,15 @@ status: true
 dependencies:
   config:
     - block_content.type.accordion
-    - field.storage.block_content.field_archon_menu_settings
-    - paragraphs.paragraphs_type.archon_menu_settings
+    - field.storage.block_content.field_anchor_menu_settings
+    - paragraphs.paragraphs_type.anchor_menu_settings
   module:
     - entity_reference_revisions
-id: block_content.accordion.field_archon_menu_settings
-field_name: field_archon_menu_settings
+id: block_content.accordion.field_anchor_menu_settings
+field_name: field_anchor_menu_settings
 entity_type: block_content
 bundle: accordion
-label: 'Archon Menu Settings'
+label: 'anchor Menu Settings'
 description: ''
 required: false
 translatable: true
@@ -22,12 +22,12 @@ settings:
   handler_settings:
     negate: 0
     target_bundles:
-      archon_menu_settings: archon_menu_settings
+      anchor_menu_settings: anchor_menu_settings
     target_bundles_drag_drop:
       accordion_panel:
         weight: 41
         enabled: false
-      archon_menu_settings:
+      anchor_menu_settings:
         enabled: true
         weight: 42
       basic_list:
