@@ -20,7 +20,7 @@ third_party_settings:
         - field_spacing_top
         - field_spacing_bottom
       parent_name: ''
-      weight: 4
+      weight: 5
       format_type: tab
       region: content
       format_settings:
@@ -30,6 +30,27 @@ third_party_settings:
         formatter: closed
         required_fields: true
       label: 'Appearance Settings'
+    group_help_text:
+      children:
+        - field_carousel_card
+      parent_name: ''
+      weight: 3
+      format_type: html_element
+      region: content
+      format_settings:
+        element: H3
+        show_label: true
+        label_element: 'Note: All carousel images have to be the same aspect ratio.'
+        label_element_classes: ''
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: ''
+      label: 'Note: All carousel images have to be the same aspect ratio.'
+_core:
+  default_config_hash: iLaG1ugrB7pbeeryGrLzS7ZML8drmV67Wp3BDOG7P2E
 id: block_content.gallery.default
 targetEntityType: block_content
 bundle: gallery
@@ -78,7 +99,7 @@ content:
     type: options_select
     region: content
   field_tooltip:
-    weight: 3
+    weight: 4
     settings:
       title: Paragraph
       title_plural: Paragraphs

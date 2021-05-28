@@ -2,6 +2,6 @@ langcode: en
 status: true
 dependencies: {  }
 id: menu_sidebar
-label: 'Menu (Sidebar)'
+label: 'Sidebar Menu'
 revision: 0
 description: ''

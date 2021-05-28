@@ -2,6 +2,6 @@ langcode: en
 status: true
 dependencies: {  }
 id: gallery
-label: Gallery
+label: 'Image Gallery'
 revision: 0
 description: ''
