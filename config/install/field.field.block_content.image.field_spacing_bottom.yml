@@ -1,4 +1,3 @@
-uuid: 66c7ccb0-e39f-40ef-8b52-e7a8ec5d5a05
 langcode: en
 status: true
 dependencies:
@@ -15,9 +14,7 @@ label: 'Spacing bottom'
 description: ''
 required: false
 translatable: true
-default_value:
-  -
-    value: spacing-bottom-24
+default_value: {  }
 default_value_callback: ''
 settings: {  }
 field_type: list_string

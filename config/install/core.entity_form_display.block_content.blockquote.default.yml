@@ -29,8 +29,6 @@ third_party_settings:
         formatter: closed
         required_fields: true
       label: 'Appearance Settings'
-_core:
-  default_config_hash: DMFONpOEg4eVNjrpA0JM9TrywfKjGl8j3FaZ93-bsAY
 id: block_content.blockquote.default
 targetEntityType: block_content
 bundle: blockquote

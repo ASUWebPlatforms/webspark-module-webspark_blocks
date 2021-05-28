@@ -31,6 +31,27 @@ settings:
     -
       value: spacing-bottom-96
       label: 96px
+    -
+      value: spacing-bottom-minus-8
+      label: '-8px'
+    -
+      value: spacing-bottom-minus-16
+      label: '-16px'
+    -
+      value: spacing-bottom-minus-24
+      label: '-24px'
+    -
+      value: spacing-bottom-minus-32
+      label: '-32px'
+    -
+      value: spacing-bottom-minus-48
+      label: '-48px'
+    -
+      value: spacing-bottom-minus-72
+      label: '-72px'
+    -
+      value: spacing-bottom-minus-96
+      label: '-96px'
   allowed_values_function: ''
 module: options
 locked: false

@@ -2,15 +2,15 @@ langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.blockquote
-    - field.storage.block_content.field_spacing_top
+    - block_content.type.menu_sidebar
+    - field.storage.block_content.field_spacing_bottom
   module:
     - options
-id: block_content.blockquote.field_spacing_top
-field_name: field_spacing_top
+id: block_content.menu_sidebar.field_spacing_bottom
+field_name: field_spacing_bottom
 entity_type: block_content
-bundle: blockquote
-label: 'Spacing top'
+bundle: menu_sidebar
+label: 'Spacing bottom'
 description: ''
 required: false
 translatable: true

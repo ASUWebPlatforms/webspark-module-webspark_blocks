@@ -19,7 +19,6 @@ dependencies:
     - fontawesome
     - options
     - text
-
 id: block_content.banner.default
 targetEntityType: block_content
 bundle: banner
