@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.asu_lists
+    - field.storage.block_content.field_list
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    lists: lists
+    basic_html: '0'
+    restricted_html: '0'
+    full_html: '0'
+    plain_text: '0'
+id: block_content.asu_lists.field_list
+field_name: field_list
+entity_type: block_content
+bundle: asu_lists
+label: List
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
