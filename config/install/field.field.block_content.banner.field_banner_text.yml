@@ -9,8 +9,6 @@ dependencies:
       - webspark_blocks
   module:
     - text
-_core:
-  default_config_hash: 3q0W98NOKhS8ZYaNpfl2yYrRlJhB2SX-XtiYfcwYMtk
 id: block_content.banner.field_banner_text
 field_name: field_banner_text
 entity_type: block_content

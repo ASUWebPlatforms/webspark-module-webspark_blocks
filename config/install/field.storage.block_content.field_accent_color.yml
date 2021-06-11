@@ -11,6 +11,9 @@ type: list_string
 settings:
   allowed_values:
     -
+      value: ''''''
+      label: Black
+    -
       value: accent-maroon
       label: Maroon
     -

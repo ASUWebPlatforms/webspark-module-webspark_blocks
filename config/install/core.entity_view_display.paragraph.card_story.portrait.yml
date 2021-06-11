@@ -23,8 +23,6 @@ third_party_settings:
   layout_builder:
     allow_custom: false
     enabled: false
-_core:
-  default_config_hash: UHukAyqvyLJf83CjnIXdjNdo3pnJIuuG8rN2GvmeM58
 id: paragraph.card_story.portrait
 targetEntityType: paragraph
 bundle: card_story

@@ -24,8 +24,6 @@ third_party_settings:
   layout_builder:
     allow_custom: false
     enabled: false
-_core:
-  default_config_hash: ASqwJFh4jDGIQ_glhCmruR8bxFscjrQyHKpoS0vdZjE
 id: paragraph.card_degree.landscape
 targetEntityType: paragraph
 bundle: card_degree

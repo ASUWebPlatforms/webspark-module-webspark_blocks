@@ -6,8 +6,6 @@ dependencies:
     - field.field.paragraph.gallery_image.field_media
     - field.field.paragraph.gallery_image.field_title
     - paragraphs.paragraphs_type.gallery_image
-_core:
-  default_config_hash: U6PV4I1pPlUF49i2FK3eEOUL_jduERlEjo2QNQw_fSM
 id: paragraph.gallery_image.default
 targetEntityType: paragraph
 bundle: gallery_image

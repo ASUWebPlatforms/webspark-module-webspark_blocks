@@ -4,8 +4,6 @@ dependencies:
   enforced:
     module:
       - webspark_blocks
-_core:
-  default_config_hash: mJebUtHFkxiZ0qE7ith3cCW7VbnI11oU6UJQ66xYzxY
 id: card_degree
 label: 'Card Degree'
 icon_uuid: null

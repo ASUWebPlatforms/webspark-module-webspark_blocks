@@ -11,10 +11,10 @@ type: list_string
 settings:
   allowed_values:
     -
-      value: default
+      value: ''''''
       label: Default
     -
-      value: alt
+      value: alt-citation
       label: Alternative
   allowed_values_function: ''
 module: options

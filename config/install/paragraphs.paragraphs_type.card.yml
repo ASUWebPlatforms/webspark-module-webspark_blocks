@@ -4,8 +4,6 @@ dependencies:
   enforced:
     module:
       - webspark_blocks
-_core:
-  default_config_hash: daiHr6aCTBciKSdRZ2Fdg7JVsme8p1F3tT4x5JLgcqA
 id: card
 label: Card
 icon_uuid: null

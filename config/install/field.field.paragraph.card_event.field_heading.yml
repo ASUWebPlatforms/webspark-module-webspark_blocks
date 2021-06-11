@@ -7,8 +7,6 @@ dependencies:
   enforced:
     module:
       - webspark_blocks
-_core:
-  default_config_hash: AiY1EXU25hAdjvCR10Zst8wEbrICWaMD6oCJpxUU-UE
 id: paragraph.card_event.field_heading
 field_name: field_heading
 entity_type: paragraph

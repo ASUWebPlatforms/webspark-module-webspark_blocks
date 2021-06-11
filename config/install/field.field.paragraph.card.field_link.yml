@@ -9,8 +9,6 @@ dependencies:
       - webspark_blocks
   module:
     - link
-_core:
-  default_config_hash: k8XusHIPkvkmOBjyx1g5V9O6ii8QGN7I1bwTz8cDj5E
 id: paragraph.card.field_link
 field_name: field_link
 entity_type: paragraph

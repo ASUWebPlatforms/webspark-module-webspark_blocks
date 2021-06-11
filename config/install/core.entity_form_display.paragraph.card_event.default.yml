@@ -22,8 +22,6 @@ dependencies:
     - media_library
     - paragraphs
     - text
-_core:
-  default_config_hash: B50tB3Hg9C9a4k45BbABBZyzG3NHwy3PnQ1eXRSJQdM
 id: paragraph.card_event.default
 targetEntityType: paragraph
 bundle: card_event

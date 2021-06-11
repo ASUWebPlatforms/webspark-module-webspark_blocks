@@ -49,8 +49,6 @@ third_party_settings:
         id: ''
         classes: ''
       label: 'Note: All carousel images have to be the same aspect ratio.'
-_core:
-  default_config_hash: iLaG1ugrB7pbeeryGrLzS7ZML8drmV67Wp3BDOG7P2E
 id: block_content.gallery.default
 targetEntityType: block_content
 bundle: gallery

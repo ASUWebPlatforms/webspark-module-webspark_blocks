@@ -18,8 +18,6 @@ dependencies:
     - media_library
     - paragraphs
     - text
-_core:
-  default_config_hash: fbMGJmYHHlMYlu8KSH3vwilYZ5oaA6g8NcsaxFWvA9I
 id: paragraph.card_degree.default
 targetEntityType: paragraph
 bundle: card_degree

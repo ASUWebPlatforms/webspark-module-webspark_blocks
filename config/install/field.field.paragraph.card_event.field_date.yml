@@ -9,8 +9,6 @@ dependencies:
       - webspark_blocks
   module:
     - datetime
-_core:
-  default_config_hash: nMmeGEayyJAqvvOkR9PQs7AM0-S6me_nZPu77jnfaco
 id: paragraph.card_event.field_date
 field_name: field_date
 entity_type: paragraph

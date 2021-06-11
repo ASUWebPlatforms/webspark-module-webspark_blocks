@@ -22,8 +22,6 @@ dependencies:
     - entity_reference_revisions
     - link
     - text
-_core:
-  default_config_hash: VWrTUfLzNurQWyG0SfmIrhPn6m4RHdLfHrWAdN1oyu4
 id: paragraph.card_event.default
 targetEntityType: paragraph
 bundle: card_event

@@ -8,7 +8,6 @@ dependencies:
     - field.field.block_content.carousel_image.field_spacing_bottom
     - field.field.block_content.carousel_image.field_spacing_top
     - field.field.block_content.carousel_image.field_tooltip
-    - field.field.block_content.carousel_image.field_type
   module:
     - field_group
     - paragraphs
@@ -88,12 +87,6 @@ content:
       default_paragraph_type: _none
     third_party_settings: {  }
     type: entity_reference_paragraphs
-    region: content
-  field_type:
-    weight: 1
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
     region: content
   info:
     type: string_textfield

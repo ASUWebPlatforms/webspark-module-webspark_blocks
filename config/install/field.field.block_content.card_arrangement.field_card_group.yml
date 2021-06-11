@@ -7,6 +7,7 @@ dependencies:
     - paragraphs.paragraphs_type.card_group_default
     - paragraphs.paragraphs_type.card_group_degree
     - paragraphs.paragraphs_type.card_group_story
+    - paragraphs.paragraphs_type.card_group_with_icon
   module:
     - entity_reference_revisions
 id: block_content.card_arrangement.field_card_group
@@ -27,9 +28,13 @@ settings:
       card_group_default: card_group_default
       card_group_degree: card_group_degree
       card_group_story: card_group_story
+      card_group_with_icon: card_group_with_icon
     target_bundles_drag_drop:
       accordion_panel:
         weight: 40
+        enabled: false
+      anchor_menu_settings:
+        weight: 44
         enabled: false
       basic_list:
         weight: 41
@@ -55,11 +60,17 @@ settings:
       card_group_story:
         enabled: true
         weight: 48
+      card_group_with_icon:
+        enabled: true
+        weight: 53
       card_media:
         weight: 49
         enabled: false
       card_story:
         weight: 50
+        enabled: false
+      card_with_icon:
+        weight: 56
         enabled: false
       cta:
         weight: 51

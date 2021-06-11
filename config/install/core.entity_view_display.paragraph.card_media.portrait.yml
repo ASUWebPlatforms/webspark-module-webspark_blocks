@@ -22,8 +22,6 @@ third_party_settings:
   layout_builder:
     allow_custom: false
     enabled: false
-_core:
-  default_config_hash: mnrXbInQH7iowWStwe9zgif2wkGvieOsNciDM6UHLLA
 id: paragraph.card_media.portrait
 targetEntityType: paragraph
 bundle: card_media

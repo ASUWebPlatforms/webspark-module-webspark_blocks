@@ -23,8 +23,8 @@ third_party_settings:
         - field_spacing_top
         - field_spacing_bottom
       parent_name: ''
-      weight: 6
-      format_type: tab
+      weight: 4
+      format_type: details
       region: content
       format_settings:
         id: ''
@@ -32,7 +32,41 @@ third_party_settings:
         description: ''
         formatter: closed
         required_fields: true
+        direction: vertical
+        open: false
       label: 'Appearance Settings'
+    group_main_content:
+      children:
+        - field_heading
+        - field_cta
+        - field_formatted_text
+        - field_tooltip
+      parent_name: ''
+      weight: 2
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+        open: false
+      label: 'Main Content'
+    group_cards:
+      children:
+        - field_card_group
+      parent_name: ''
+      weight: 3
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: Cards
 id: block_content.card_arrangement.default
 targetEntityType: block_content
 bundle: card_arrangement
@@ -51,7 +85,7 @@ content:
     type: entity_reference_paragraphs
     region: content
   field_card_group:
-    weight: 4
+    weight: 1
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -103,7 +137,7 @@ content:
     type: options_select
     region: content
   field_tooltip:
-    weight: 5
+    weight: 4
     settings:
       title: Paragraph
       title_plural: Paragraphs

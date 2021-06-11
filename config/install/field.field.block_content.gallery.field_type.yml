@@ -6,8 +6,6 @@ dependencies:
     - field.storage.block_content.field_type
   module:
     - options
-_core:
-  default_config_hash: Cmkn6Ee2VqRD6yYZM5YdiFXTz53LN6KDlK7oekO4VJM
 id: block_content.gallery.field_type
 field_name: field_type
 entity_type: block_content
