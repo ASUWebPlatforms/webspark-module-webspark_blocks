@@ -1,9 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: ordered_multi_level_list
-label: 'Ordered Multi Level List'
-icon_uuid: null
-icon_default: null
-description: ''
-behavior_plugins: {  }
