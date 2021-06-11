@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - block_content.type.banner
+    - field.field.block_content.banner.field_anchor
     - field.field.block_content.banner.field_banner_background_color
     - field.field.block_content.banner.field_banner_text
     - field.field.block_content.banner.field_ctas
@@ -18,7 +19,6 @@ dependencies:
     - fontawesome_iconpicker_widget
     - paragraphs
     - text
-    - webspark_utility
 third_party_settings:
   field_group:
     group_appearance_settings:
@@ -43,10 +43,9 @@ mode: default
 content:
   field_banner_background_color:
     weight: 3
-    settings:
-      width: 100%
+    settings: {  }
     third_party_settings: {  }
-    type: select2_colour
+    type: options_buttons
     region: content
   field_banner_text:
     weight: 2
@@ -102,4 +101,5 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_anchor: true

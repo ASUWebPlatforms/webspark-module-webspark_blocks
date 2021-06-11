@@ -12,19 +12,19 @@ settings:
   allowed_values:
     -
       value: banner-green
-      label: banner-green
+      label: Green
     -
       value: banner-orange
-      label: banner-orange
+      label: Orange
     -
       value: banner-blue
-      label: banner-blue
+      label: Blue
     -
       value: banner-gray
-      label: banner-gray
+      label: Gray
     -
       value: banner-black
-      label: banner-black
+      label: Black
   allowed_values_function: ''
 module: options
 locked: false
