@@ -1,0 +1,35 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.lists
+  module:
+    - ckeditor
+format: lists
+editor: ckeditor
+settings:
+  toolbar:
+    rows:
+      -
+        -
+          name: Lists
+          items:
+            - BulletedList
+            - NumberedList
+            - DrupalFontAwesome
+  plugins:
+    drupallink:
+      linkit_enabled: false
+      linkit_profile: ''
+    language:
+      language_list: un
+    stylescombo:
+      styles: ''
+image_upload:
+  status: false
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: null
+    height: null

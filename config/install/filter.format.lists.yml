@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+name: Lists
+format: lists
+weight: 0
+filters:
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: true
+    weight: -10
+    settings:
+      allowed_html: '<em> <strong> <cite class=""> <blockquote cite class=""> <code> <ul class="darkmode gold uds-list light-smokemode smokemode maroon default-list fa-ul"> <ol ol class="darkmode gold uds-list uds-steplist light-smokemode smokemode maroon default-list uds-steplist-maroon uds-steplist-gold"> <li> <dl> <dt> <dd> <h3 id> <h4 id> <h5 id> <p> <br> <img src alt height width data-entity-type data-entity-uuid data-align data-caption> <h1 class="article"> <mark> <a href hreflang data-entity-substitution data-entity-type data-entity-uuid title class=""> <drupal-media data-entity-type data-entity-uuid data-view-mode data-align data-caption alt title> <span class="fa* highlight-gold highlight-black highlight-white"> <hr class=""> <h2 id class=""> <div class=""> <svg title role viewBox class=""> <path d>'
+      filter_html_help: true
+      filter_html_nofollow: false
+  media_embed:
+    id: media_embed
+    provider: media
+    status: false
+    weight: 100
+    settings:
+      default_view_mode: default
+      allowed_media_types: {  }
+      allowed_view_modes: {  }
