@@ -1,0 +1,55 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.card_with_icon.field_body
+    - field.field.paragraph.card_with_icon.field_cta
+    - field.field.paragraph.card_with_icon.field_heading
+    - field.field.paragraph.card_with_icon.field_icon
+    - paragraphs.paragraphs_type.card_with_icon
+  module:
+    - fontawesome_iconpicker_widget
+    - paragraphs
+    - text
+id: paragraph.card_with_icon.default
+targetEntityType: paragraph
+bundle: card_with_icon
+mode: default
+content:
+  field_body:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_cta:
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
+  field_heading:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_icon:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: fontawesome_iconpicker_widget
+    region: content
+hidden:
+  created: true
+  status: true

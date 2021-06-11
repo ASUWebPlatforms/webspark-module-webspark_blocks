@@ -18,8 +18,6 @@ dependencies:
     - media_library
     - paragraphs
     - text
-_core:
-  default_config_hash: fAfNruN9w05n9mRN-0emThWHMhehzgJEppJESyZCD-c
 id: paragraph.card_story.default
 targetEntityType: paragraph
 bundle: card_story

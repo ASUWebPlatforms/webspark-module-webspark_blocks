@@ -11,8 +11,6 @@ dependencies:
     - fontawesome
     - options
     - text
-_core:
-  default_config_hash: uc7jte6OfoaH3HFLXyPqlLUIz4w1gRZswtO-3xiqdO0
 id: paragraph.accordion_panel.default
 targetEntityType: paragraph
 bundle: accordion_panel

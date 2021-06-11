@@ -28,8 +28,6 @@ third_party_settings:
   layout_builder:
     allow_custom: false
     enabled: false
-_core:
-  default_config_hash: V5Ngj-BHif8dndE7yPNw0yPi5ZX9jx_fhQUl_SNguTs
 id: paragraph.card_event.portrait
 targetEntityType: paragraph
 bundle: card_event

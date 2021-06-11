@@ -13,8 +13,6 @@ third_party_settings:
     basic_html: '0'
     restricted_html: '0'
     full_html: '0'
-_core:
-  default_config_hash: 4yNHSFAEBxsbqSlyUj-ftWP5hMsOf1eZr8nx_viHIuk
 id: paragraph.gallery_image.field_formatted_text
 field_name: field_formatted_text
 entity_type: paragraph

@@ -6,8 +6,6 @@ dependencies:
     - field.storage.block_content.field_icon
   module:
     - fontawesome
-_core:
-  default_config_hash: ZgZDTW5gJPm8kkaa2BGaXzkJ-4WgSziIcxF5OLeuFG8
 id: block_content.banner.field_icon
 field_name: field_icon
 entity_type: block_content

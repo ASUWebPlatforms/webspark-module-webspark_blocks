@@ -4,7 +4,6 @@ dependencies:
   config:
     - field.field.paragraph.testimonial.field_accent_color
     - field.field.paragraph.testimonial.field_citation_author
-    - field.field.paragraph.testimonial.field_citation_style
     - field.field.paragraph.testimonial.field_citation_title
     - field.field.paragraph.testimonial.field_formatted_text
     - field.field.paragraph.testimonial.field_heading
@@ -19,7 +18,6 @@ content: {  }
 hidden:
   field_accent_color: true
   field_citation_author: true
-  field_citation_style: true
   field_citation_title: true
   field_formatted_text: true
   field_heading: true

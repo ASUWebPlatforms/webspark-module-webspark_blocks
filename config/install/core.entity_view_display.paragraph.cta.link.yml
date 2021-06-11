@@ -14,8 +14,6 @@ third_party_settings:
   layout_builder:
     allow_custom: false
     enabled: false
-_core:
-  default_config_hash: 65Ttd1s3eRtC9XcFFifUSIXwjI1fTCJ9g2EXnY_Rh_Y
 id: paragraph.cta.link
 targetEntityType: paragraph
 bundle: cta

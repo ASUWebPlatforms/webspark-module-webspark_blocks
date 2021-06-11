@@ -13,8 +13,6 @@ dependencies:
   enforced:
     module:
       - webspark_blocks
-_core:
-  default_config_hash: 79qI3Ac4z7nZKoni_InUHBSpKkV0WbJJ6uzaiEIRvjQ
 id: paragraph.card.default
 targetEntityType: paragraph
 bundle: card

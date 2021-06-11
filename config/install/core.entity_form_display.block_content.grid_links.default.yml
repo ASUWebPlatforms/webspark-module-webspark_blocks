@@ -3,8 +3,9 @@ status: true
 dependencies:
   config:
     - block_content.type.grid_links
-    - field.field.block_content.grid_links.field_grid_links_style
+    - field.field.block_content.grid_links.field_grid_links_display
     - field.field.block_content.grid_links.field_links
+    - field.field.block_content.grid_links.field_links_color
     - field.field.block_content.grid_links.field_spacing_bottom
     - field.field.block_content.grid_links.field_spacing_top
     - field.field.block_content.grid_links.field_tooltip

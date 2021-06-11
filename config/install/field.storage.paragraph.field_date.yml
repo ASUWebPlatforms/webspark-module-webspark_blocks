@@ -7,8 +7,6 @@ dependencies:
   module:
     - datetime
     - paragraphs
-_core:
-  default_config_hash: a3YpguJ972itg5cegKT7GeQiWLzKq2uBlRMbZFt0JPY
 id: paragraph.field_date
 field_name: field_date
 entity_type: paragraph

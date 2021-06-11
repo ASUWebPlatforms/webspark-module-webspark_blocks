@@ -7,8 +7,6 @@ dependencies:
   enforced:
     module:
       - webspark_blocks
-_core:
-  default_config_hash: K2YBdVpH19dfkVflN9qhh2grVis9LGpGYJm1vKIPKvI
 id: block_content.banner.field_heading
 field_name: field_heading
 entity_type: block_content

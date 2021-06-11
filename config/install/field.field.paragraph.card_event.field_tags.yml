@@ -8,8 +8,6 @@ dependencies:
   enforced:
     module:
       - webspark_blocks
-_core:
-  default_config_hash: nboLdgbSJyM2aNR-TeE8eW2R9MRyPDq3EfOt2YaEU68
 id: paragraph.card_event.field_tags
 field_name: field_tags
 entity_type: paragraph

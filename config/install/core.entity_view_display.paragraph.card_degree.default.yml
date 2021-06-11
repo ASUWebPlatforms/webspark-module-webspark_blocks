@@ -14,8 +14,6 @@ dependencies:
   enforced:
     module:
       - webspark_blocks
-_core:
-  default_config_hash: UuN-TLylSoLUCiV3c_SjzZICz3ZThHIDa98qBoLJLkQ
 id: paragraph.card_degree.default
 targetEntityType: paragraph
 bundle: card_degree

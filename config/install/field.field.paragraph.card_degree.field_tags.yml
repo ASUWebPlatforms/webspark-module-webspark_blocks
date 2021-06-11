@@ -8,8 +8,6 @@ dependencies:
   enforced:
     module:
       - webspark_blocks
-_core:
-  default_config_hash: XRAG6MUu7CTeOg3ZtPPx1ZM5h7jJlp2pR8ro7vsHu0I
 id: paragraph.card_degree.field_tags
 field_name: field_tags
 entity_type: paragraph

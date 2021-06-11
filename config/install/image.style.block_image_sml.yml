@@ -1,8 +1,6 @@
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: P807g1fYOw1GtBdTA5MnAxaLdQwOTZiPD6DUGWWtUQs
 name: block_image_sml
 label: 'Block Image SML'
 effects:

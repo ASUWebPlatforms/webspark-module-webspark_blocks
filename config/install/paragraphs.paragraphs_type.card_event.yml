@@ -4,8 +4,6 @@ dependencies:
   enforced:
     module:
       - webspark_blocks
-_core:
-  default_config_hash: vStZ8cLw0ARv6WMiGtUNNgWG0mU0YDeT2QSOFD71vHI
 id: card_event
 label: 'Card Event'
 icon_uuid: null

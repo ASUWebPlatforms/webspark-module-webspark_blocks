@@ -6,8 +6,6 @@ dependencies:
       - webspark_blocks
   module:
     - paragraphs
-_core:
-  default_config_hash: NNC-g5OOQxe9Khyi86oHUOe4jXezd_FQk0B4ULJMWJg
 id: paragraph.field_heading
 field_name: field_heading
 entity_type: paragraph
