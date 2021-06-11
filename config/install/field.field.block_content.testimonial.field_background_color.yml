@@ -2,14 +2,14 @@ langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.testimonial_carousel
+    - block_content.type.testimonial
     - field.storage.block_content.field_background_color
   module:
     - options
-id: block_content.testimonial_carousel.field_background_color
+id: block_content.testimonial.field_background_color
 field_name: field_background_color
 entity_type: block_content
-bundle: testimonial_carousel
+bundle: testimonial
 label: 'Background Color'
 description: ''
 required: false
