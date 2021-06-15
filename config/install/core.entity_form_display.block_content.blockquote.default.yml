@@ -5,15 +5,12 @@ dependencies:
     - block_content.type.blockquote
     - field.field.block_content.blockquote.field_anchor_menu_settings
     - field.field.block_content.blockquote.field_blockquote
-    - field.field.block_content.blockquote.field_formatted_text
-    - field.field.block_content.blockquote.field_media
     - field.field.block_content.blockquote.field_spacing_bottom
     - field.field.block_content.blockquote.field_spacing_top
     - field.field.block_content.blockquote.field_tooltip
   module:
     - field_group
     - paragraphs
-    - text
 third_party_settings:
   field_group:
     group_appearance_settings:
