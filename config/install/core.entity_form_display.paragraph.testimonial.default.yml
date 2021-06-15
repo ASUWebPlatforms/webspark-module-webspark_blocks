@@ -2,12 +2,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.testimonial.field_accent_color
     - field.field.paragraph.testimonial.field_citation_author
     - field.field.paragraph.testimonial.field_citation_title
     - field.field.paragraph.testimonial.field_formatted_text
     - field.field.paragraph.testimonial.field_heading
-    - field.field.paragraph.testimonial.field_heading_highlight
     - field.field.paragraph.testimonial.field_media
     - paragraphs.paragraphs_type.testimonial
   module:
@@ -19,7 +17,7 @@ bundle: testimonial
 mode: default
 content:
   field_citation_author:
-    weight: 0
+    weight: 3
     settings:
       size: 60
       placeholder: ''
@@ -28,14 +26,14 @@ content:
     region: content
   field_citation_title:
     type: string_textfield
-    weight: 1
+    weight: 4
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
   field_formatted_text:
-    weight: 2
+    weight: 1
     settings:
       rows: 5
       placeholder: ''
@@ -43,7 +41,7 @@ content:
     type: text_textarea
     region: content
   field_heading:
-    weight: 3
+    weight: 0
     settings:
       size: 60
       placeholder: ''
@@ -51,7 +49,7 @@ content:
     type: string_textfield
     region: content
   field_media:
-    weight: 4
+    weight: 2
     settings:
       media_types: {  }
     third_party_settings: {  }
@@ -59,6 +57,4 @@ content:
     region: content
 hidden:
   created: true
-  field_accent_color: true
-  field_heading_highlight: true
   status: true
