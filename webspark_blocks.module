@@ -49,3 +49,33 @@ function webspark_blocks_theme($existing, $type, $theme, $path){
     ],
   ];
 }
+
+/**
+ * Implements hook_form_alter().
+ */
+function webspark_blocks_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $form_ids = ['layout_builder_update_block', 'layout_builder_add_block'];
+
+  // Alter only the layout builder blocks.
+  if (!in_array($form_id, $form_ids)) {
+    return;
+  }
+
+  $form['settings']['block_form']['#process'][] = '_webspark_blocks_hero_block_form_alter';
+}
+
+/**
+ * Process callback for hero custom block form.
+ */
+function _webspark_blocks_hero_block_form_alter(array $element, FormStateInterface $form_state) {
+  // Hide the text field in the small heros.
+  if (isset($element['field_hero_unformatted_text']) && isset($element['field_hero_size'])) {
+    $element['field_hero_unformatted_text']['#states'] = [
+      'invisible' => [
+        'select[name="settings[block_form][field_hero_size]"]' => ['value' => 'sm']
+     ]
+    ];
+  }
+
+  return $element;
+}
