@@ -10,8 +10,6 @@ dependencies:
   module:
     - fontawesome_iconpicker_widget
     - text
-_core:
-  default_config_hash: x-b960REyYV2HPQJUDr4PJEcWqX43OdaxojHKLMw_78
 id: paragraph.accordion_panel.default
 targetEntityType: paragraph
 bundle: accordion_panel
