@@ -12,6 +12,7 @@ dependencies:
     - field.field.block_content.hero.field_spacing_bottom
     - field.field.block_content.hero.field_spacing_top
     - field.field.block_content.hero.field_sub_heading
+    - field.field.block_content.hero.field_sub_heading_background
   module:
     - field_group
     - media_library
@@ -23,7 +24,7 @@ third_party_settings:
         - field_spacing_top
         - field_spacing_bottom
       parent_name: ''
-      weight: 8
+      weight: 9
       format_type: tab
       region: content
       format_settings:
@@ -33,13 +34,15 @@ third_party_settings:
         formatter: closed
         required_fields: true
       label: 'Appearance Settings'
+_core:
+  default_config_hash: G01W5OcdvzdIIUdFIg3qeB4-rk85BR6iVeduT1F3m_E
 id: block_content.hero.default
 targetEntityType: block_content
 bundle: hero
 mode: default
 content:
   field_cta:
-    weight: 7
+    weight: 8
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -58,7 +61,7 @@ content:
     type: paragraphs
     region: content
   field_heading:
-    weight: 4
+    weight: 2
     settings:
       size: 60
       placeholder: ''
@@ -78,7 +81,7 @@ content:
     type: options_select
     region: content
   field_hero_unformatted_text:
-    weight: 5
+    weight: 4
     settings:
       rows: 5
       placeholder: ''
@@ -87,7 +90,7 @@ content:
     region: content
   field_media:
     type: media_library_widget
-    weight: 6
+    weight: 7
     settings:
       media_types: {  }
     third_party_settings: {  }
@@ -105,12 +108,18 @@ content:
     type: options_select
     region: content
   field_sub_heading:
-    weight: 2
+    weight: 5
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_sub_heading_background:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   info:
     type: string_textfield
