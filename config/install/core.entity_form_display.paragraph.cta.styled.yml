@@ -8,8 +8,6 @@ dependencies:
     - paragraphs.paragraphs_type.cta
   module:
     - webspark_utility
-_core:
-  default_config_hash: CqmjI4Sq9ePF97fIhejgpkzHRKg3O1i54E-RwDRNhZM
 id: paragraph.cta.styled
 targetEntityType: paragraph
 bundle: cta

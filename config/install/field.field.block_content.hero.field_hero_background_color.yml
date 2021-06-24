@@ -10,7 +10,7 @@ id: block_content.hero.field_hero_background_color
 field_name: field_hero_background_color
 entity_type: block_content
 bundle: hero
-label: 'Heading Title Background Color'
+label: 'Hero Heading Background Color'
 description: ''
 required: true
 translatable: false
