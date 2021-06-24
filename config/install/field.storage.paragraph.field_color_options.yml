@@ -1,9 +1,12 @@
+uuid: da396d6e-8091-46ce-86b6-208b662d8190
 langcode: en
 status: true
 dependencies:
   module:
     - options
     - paragraphs
+_core:
+  default_config_hash: wi-iDNm70UUmGHtXdlz5odQpFofI94Sc1In8y5jJUm8
 id: paragraph.field_color_options
 field_name: field_color_options
 entity_type: paragraph
@@ -18,10 +21,10 @@ settings:
       label: Maroon
     -
       value: card-gray
-      label: Gray
+      label: 'Gray 4'
     -
       value: card-dark
-      label: Dark
+      label: 'Gray 7'
   allowed_values_function: ''
 module: options
 locked: false
