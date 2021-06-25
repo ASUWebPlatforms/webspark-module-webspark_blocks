@@ -40,7 +40,7 @@
 
   function initializeAnchorMenu(globalHeader, navbar, offset) {
     const anchors = navbar.getElementsByClassName('nav-link');
-    const navbarInitialPosition = navbar.offsetTop;
+    const navbarInitialPosition = navbar.getBoundingClientRect().top + window.scrollY;
     const anchorTargets = new Map();
     let previousScrollPosition = window.scrollY;
 
@@ -66,17 +66,15 @@
         } else if (navbarY <= offset) {
           globalHeader.style.top = -globalHeader.offsetHeight + 'px';
           navbar.classList.add('uds-anchor-menu-sticky');
-          navbar.classList.add('container');
           navbar.style.top = offset + 'px';
         }
       }
       // If scrolling UP
       if (
         window.scrollY < previousScrollPosition &&
-        window.scrollY < navbarInitialPosition
+        window.scrollY < (navbarInitialPosition)
       ) {
         navbar.classList.remove('uds-anchor-menu-sticky');
-        navbar.classList.remove('container');
         if (globalHeader.getBoundingClientRect().top < offset) {
           const localOffset = globalHeader.getBoundingClientRect().top + navbarY + offset;
           globalHeader.style.top = (localOffset + offset < 0 ? localOffset + offset : offset) + 'px';
