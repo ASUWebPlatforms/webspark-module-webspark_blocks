@@ -34,8 +34,6 @@ third_party_settings:
         formatter: closed
         required_fields: true
       label: 'Appearance Settings'
-_core:
-  default_config_hash: G01W5OcdvzdIIUdFIg3qeB4-rk85BR6iVeduT1F3m_E
 id: block_content.hero.default
 targetEntityType: block_content
 bundle: hero
