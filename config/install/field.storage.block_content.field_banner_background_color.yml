@@ -21,10 +21,10 @@ settings:
       label: Blue
     -
       value: banner-gray
-      label: Gray
+      label: 'Gray 2'
     -
       value: banner-black
-      label: Black
+      label: 'Gray 7'
   allowed_values_function: ''
 module: options
 locked: false
