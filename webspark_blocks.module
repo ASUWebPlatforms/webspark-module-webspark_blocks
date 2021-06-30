@@ -1,5 +1,6 @@
 <?php
 
+use Drupal\block_content\BlockContentInterface;
 use  \Drupal\Core\Form\FormStateInterface;
 
 function webspark_blocks_theme_suggestions_block_alter(array &$suggestions, array $variables) {
@@ -7,10 +8,11 @@ function webspark_blocks_theme_suggestions_block_alter(array &$suggestions, arra
   // Block suggestions for custom block bundles.
   if (isset($variables['elements']['content']['#block_content'])
     && $variables['elements']['content']['#block_content'] instanceof BlockContentInterface) {
-    $blockType = $variables['elements']['content']['#block_content']->bundle();
+    $bundle = $variables['elements']['content']['#block_content']->bundle();
     $view_mode = strtr($variables['elements']['#configuration']['view_mode'], '.', '_');
-    $suggestions[] = 'block__' . $blockType;
-    $suggestions[] = 'block__' . $blockType . '__' . $view_mode;
+    $suggestions[] = 'block__' . $bundle;
+    $suggestions[] = 'block__' . $bundle . '__' . $view_mode;
+    $suggestions[] = 'block__inline_block__' . $bundle;
   }
 }
 
