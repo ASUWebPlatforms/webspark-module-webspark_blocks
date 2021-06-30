@@ -3,7 +3,6 @@ status: true
 dependencies:
   config:
     - block_content.type.hero
-    - field.field.block_content.hero.field_cta
     - field.field.block_content.hero.field_heading
     - field.field.block_content.hero.field_hero_background_color
     - field.field.block_content.hero.field_hero_size
@@ -13,6 +12,7 @@ dependencies:
     - field.field.block_content.hero.field_spacing_top
     - field.field.block_content.hero.field_sub_heading
     - field.field.block_content.hero.field_sub_heading_background
+    - field.field.block_content.hero.field_two_cta
   module:
     - entity_reference_revisions
     - options
@@ -21,17 +21,8 @@ targetEntityType: block_content
 bundle: hero
 mode: default
 content:
-  field_cta:
-    weight: 3
-    label: hidden
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    type: entity_reference_revisions_entity_view
-    region: content
   field_heading:
-    weight: 4
+    weight: 5
     label: hidden
     settings:
       link_to_entity: false
@@ -39,7 +30,7 @@ content:
     type: string
     region: content
   field_hero_background_color:
-    weight: 5
+    weight: 6
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -69,7 +60,7 @@ content:
     third_party_settings: {  }
     region: content
   field_sub_heading:
-    weight: 6
+    weight: 7
     label: hidden
     settings:
       link_to_entity: false
@@ -77,11 +68,20 @@ content:
     type: string
     region: content
   field_sub_heading_background:
-    weight: 7
+    weight: 8
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: list_key
+    region: content
+  field_two_cta:
+    type: entity_reference_revisions_entity_view
+    weight: 4
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
     region: content
 hidden:
   field_spacing_bottom: true
