@@ -1,0 +1,50 @@
+uuid: 2e3d1687-23e0-4834-b8d4-52ebd7822948
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.modal.field_button_label
+    - field.field.paragraph.modal.field_formatted_text
+    - field.field.paragraph.modal.field_heading
+    - field.field.paragraph.modal.field_media
+    - paragraphs.paragraphs_type.modal
+  module:
+    - text
+id: paragraph.modal.default
+targetEntityType: paragraph
+bundle: modal
+mode: default
+content:
+  field_button_label:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_formatted_text:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_heading:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_media:
+    weight: 3
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden: {  }

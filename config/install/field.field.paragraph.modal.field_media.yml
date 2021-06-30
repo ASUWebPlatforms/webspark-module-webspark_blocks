@@ -1,0 +1,31 @@
+uuid: 362962a5-a414-4251-b026-431ab3b1e2ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_media
+    - media.type.image
+    - media.type.image_block_images
+    - paragraphs.paragraphs_type.modal
+id: paragraph.modal.field_media
+field_name: field_media
+entity_type: paragraph
+bundle: modal
+label: Media
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+      image_block_images: image_block_images
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: image
+field_type: entity_reference

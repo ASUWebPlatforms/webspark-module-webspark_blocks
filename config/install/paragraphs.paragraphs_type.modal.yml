@@ -1,0 +1,10 @@
+uuid: e02c2141-8827-4ebe-88df-561e41f1b2f5
+langcode: en
+status: true
+dependencies: {  }
+id: modal
+label: Modal
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }
