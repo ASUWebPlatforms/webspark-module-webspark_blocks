@@ -15,13 +15,13 @@ settings:
       label: White
     -
       value: base-gray
-      label: 'Base Grey'
+      label: 'Gray 1'
     -
       value: gray
-      label: Gray
+      label: 'Gray 2'
     -
       value: dark
-      label: Dark
+      label: 'Gray 7'
   allowed_values_function: ''
 module: options
 locked: false
