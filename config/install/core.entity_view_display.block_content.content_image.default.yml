@@ -20,7 +20,7 @@ bundle: content_image
 mode: default
 content:
   field_anchor_menu_settings:
-    weight: 7
+    weight: 3
     label: hidden
     settings:
       view_mode: default
@@ -29,21 +29,21 @@ content:
     type: entity_reference_revisions_entity_view
     region: content
   field_content_position:
-    weight: 8
+    weight: 4
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: list_key
     region: content
   field_formatted_text:
-    weight: 2
+    weight: 1
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_heading:
-    weight: 1
+    weight: 0
     label: hidden
     settings:
       link_to_entity: false
@@ -51,7 +51,7 @@ content:
     type: string
     region: content
   field_media:
-    weight: 3
+    weight: 2
     label: hidden
     settings:
       link: true
@@ -59,18 +59,6 @@ content:
     third_party_settings: {  }
     type: entity_reference_entity_view
     region: content
-  field_spacing_bottom:
-    weight: 6
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
-  field_spacing_top:
-    weight: 5
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
-hidden: {  }
+hidden:
+  field_spacing_bottom: true
+  field_spacing_top: true
