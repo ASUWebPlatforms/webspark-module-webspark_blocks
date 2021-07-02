@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.card_degree.field_body
+    - field.field.paragraph.card_degree.field_card_link
+    - field.field.paragraph.card_degree.field_clickable
     - field.field.paragraph.card_degree.field_cta
     - field.field.paragraph.card_degree.field_cta_secondary
     - field.field.paragraph.card_degree.field_heading
@@ -21,6 +23,8 @@ mode: default
 content: {  }
 hidden:
   field_body: true
+  field_card_link: true
+  field_clickable: true
   field_cta: true
   field_cta_secondary: true
   field_heading: true

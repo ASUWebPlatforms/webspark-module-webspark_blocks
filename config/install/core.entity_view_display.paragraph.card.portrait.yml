@@ -5,6 +5,8 @@ dependencies:
   config:
     - core.entity_view_mode.paragraph.portrait
     - field.field.paragraph.card.field_body
+    - field.field.paragraph.card.field_card_link
+    - field.field.paragraph.card.field_clickable
     - field.field.paragraph.card.field_cta
     - field.field.paragraph.card.field_cta_secondary
     - field.field.paragraph.card.field_heading
@@ -36,6 +38,24 @@ content:
     third_party_settings: {  }
     type: text_default
     region: content
+  field_card_link:
+    type: string
+    weight: 7
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_clickable:
+    type: boolean
+    weight: 8
+    region: content
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
   field_cta:
     weight: 4
     label: hidden
