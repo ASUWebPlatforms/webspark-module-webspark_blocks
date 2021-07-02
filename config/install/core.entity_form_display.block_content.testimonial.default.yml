@@ -9,6 +9,7 @@ dependencies:
     - field.field.block_content.testimonial.field_spacing_bottom
     - field.field.block_content.testimonial.field_spacing_top
     - field.field.block_content.testimonial.field_testimonial_component
+    - field.field.block_content.testimonial.field_text_color
     - field.field.block_content.testimonial.field_tooltip
   module:
     - field_group
@@ -55,7 +56,7 @@ content:
     type: entity_reference_paragraphs
     region: content
   field_heading_highlight:
-    weight: 2
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -83,6 +84,12 @@ content:
       form_display_mode: default
       default_paragraph_type: testimonial
     third_party_settings: {  }
+    region: content
+  field_text_color:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_tooltip:
     weight: 5

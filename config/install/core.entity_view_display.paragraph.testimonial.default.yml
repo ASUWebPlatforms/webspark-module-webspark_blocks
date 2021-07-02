@@ -7,7 +7,6 @@ dependencies:
     - field.field.paragraph.testimonial.field_formatted_text
     - field.field.paragraph.testimonial.field_heading
     - field.field.paragraph.testimonial.field_media
-    - field.field.paragraph.testimonial.field_text_color
     - paragraphs.paragraphs_type.testimonial
   module:
     - options
@@ -15,14 +14,7 @@ id: paragraph.testimonial.default
 targetEntityType: paragraph
 bundle: testimonial
 mode: default
-content:
-  field_text_color:
-    weight: 0
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
+content: {  }
 hidden:
   field_citation_author: true
   field_citation_title: true

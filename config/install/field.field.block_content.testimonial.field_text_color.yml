@@ -2,13 +2,13 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_text_color
-    - paragraphs.paragraphs_type.testimonial
+    - block_content.type.testimonial
+    - field.storage.block_content.field_text_color
   module:
     - options
-id: paragraph.testimonial.field_text_color
+id: block_content.testimonial.field_text_color
 field_name: field_text_color
-entity_type: paragraph
+entity_type: block_content
 bundle: testimonial
 label: 'Text Color'
 description: ''
