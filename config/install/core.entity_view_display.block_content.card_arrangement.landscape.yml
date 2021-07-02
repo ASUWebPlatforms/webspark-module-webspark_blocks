@@ -11,6 +11,7 @@ dependencies:
     - field.field.block_content.card_arrangement.field_heading
     - field.field.block_content.card_arrangement.field_spacing_bottom
     - field.field.block_content.card_arrangement.field_spacing_top
+    - field.field.block_content.card_arrangement.field_text_color
     - field.field.block_content.card_arrangement.field_tooltip
   module:
     - entity_reference_revisions
@@ -74,3 +75,4 @@ hidden:
   field_heading: true
   field_spacing_bottom: true
   field_spacing_top: true
+  field_text_color: true

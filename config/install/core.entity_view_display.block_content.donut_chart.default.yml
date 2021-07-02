@@ -5,6 +5,7 @@ dependencies:
     - block_content.type.donut_chart
     - field.field.block_content.donut_chart.field_heading
     - field.field.block_content.donut_chart.field_number
+    - field.field.block_content.donut_chart.field_text_color
 id: block_content.donut_chart.default
 targetEntityType: block_content
 bundle: donut_chart
@@ -27,4 +28,5 @@ content:
     third_party_settings: {  }
     type: number_integer
     region: content
-hidden: {  }
+hidden:
+  field_text_color: true

@@ -10,6 +10,7 @@ dependencies:
     - field.field.block_content.card_arrangement.field_heading
     - field.field.block_content.card_arrangement.field_spacing_bottom
     - field.field.block_content.card_arrangement.field_spacing_top
+    - field.field.block_content.card_arrangement.field_text_color
     - field.field.block_content.card_arrangement.field_tooltip
   module:
     - field_group
@@ -38,6 +39,7 @@ third_party_settings:
     group_main_content:
       children:
         - field_heading
+        - field_text_color
         - field_cta
         - field_formatted_text
         - field_tooltip
@@ -98,7 +100,7 @@ content:
     region: content
   field_cta:
     type: entity_reference_paragraphs
-    weight: 2
+    weight: 3
     region: content
     settings:
       title: Paragraph
@@ -110,7 +112,7 @@ content:
     third_party_settings: {  }
   field_formatted_text:
     type: text_textarea
-    weight: 3
+    weight: 4
     region: content
     settings:
       rows: 5
@@ -136,8 +138,14 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
+  field_text_color:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_tooltip:
-    weight: 4
+    weight: 5
     settings:
       title: Paragraph
       title_plural: Paragraphs

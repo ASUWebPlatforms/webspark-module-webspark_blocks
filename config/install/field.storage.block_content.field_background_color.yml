@@ -12,6 +12,9 @@ settings:
   allowed_values:
     -
       value: default
+      label: Default
+    -
+      value: bg-white
       label: White
     -
       value: bg-gray-1

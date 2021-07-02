@@ -5,6 +5,7 @@ dependencies:
     - block_content.type.donut_chart
     - field.field.block_content.donut_chart.field_heading
     - field.field.block_content.donut_chart.field_number
+    - field.field.block_content.donut_chart.field_text_color
 id: block_content.donut_chart.default
 targetEntityType: block_content
 bundle: donut_chart
@@ -24,6 +25,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: number
+    region: content
+  field_text_color:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
 hidden:
   info: true

@@ -20,7 +20,7 @@ third_party_settings:
         - field_spacing_top
         - field_spacing_bottom
       parent_name: ''
-      weight: 6
+      weight: 5
       format_type: tab
       region: content
       format_settings:
@@ -48,7 +48,7 @@ content:
     type: entity_reference_paragraphs
     region: content
   field_background_color:
-    weight: 3
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -67,7 +67,7 @@ content:
     region: content
   field_tab:
     type: entity_reference_paragraphs
-    weight: 4
+    weight: 3
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -78,7 +78,7 @@ content:
     third_party_settings: {  }
     region: content
   field_tooltip:
-    weight: 5
+    weight: 4
     settings:
       title: Paragraph
       title_plural: Paragraphs

@@ -7,6 +7,7 @@ dependencies:
     - field.field.paragraph.testimonial.field_formatted_text
     - field.field.paragraph.testimonial.field_heading
     - field.field.paragraph.testimonial.field_media
+    - field.field.paragraph.testimonial.field_text_color
     - paragraphs.paragraphs_type.testimonial
   module:
     - media_library
@@ -54,6 +55,12 @@ content:
       media_types: {  }
     third_party_settings: {  }
     type: media_library_widget
+    region: content
+  field_text_color:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
 hidden:
   created: true

@@ -7,6 +7,7 @@ dependencies:
     - field.field.block_content.text_content.field_formatted_text
     - field.field.block_content.text_content.field_spacing_bottom
     - field.field.block_content.text_content.field_spacing_top
+    - field.field.block_content.text_content.field_text_color
     - field.field.block_content.text_content.field_tooltip
   module:
     - entity_reference_revisions
@@ -44,3 +45,4 @@ content:
 hidden:
   field_spacing_bottom: true
   field_spacing_top: true
+  field_text_color: true
