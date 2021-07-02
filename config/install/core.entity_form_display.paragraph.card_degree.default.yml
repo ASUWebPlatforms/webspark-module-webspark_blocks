@@ -3,6 +3,8 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.card_degree.field_body
+    - field.field.paragraph.card_degree.field_card_link
+    - field.field.paragraph.card_degree.field_clickable
     - field.field.paragraph.card_degree.field_cta
     - field.field.paragraph.card_degree.field_cta_secondary
     - field.field.paragraph.card_degree.field_heading
@@ -30,6 +32,21 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+    region: content
+  field_card_link:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_clickable:
+    weight: 7
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
     region: content
   field_cta:
     type: entity_reference_paragraphs
