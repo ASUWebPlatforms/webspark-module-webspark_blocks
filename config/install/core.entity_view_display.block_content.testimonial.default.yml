@@ -9,6 +9,7 @@ dependencies:
     - field.field.block_content.testimonial.field_spacing_bottom
     - field.field.block_content.testimonial.field_spacing_top
     - field.field.block_content.testimonial.field_testimonial_component
+    - field.field.block_content.testimonial.field_text_color
     - field.field.block_content.testimonial.field_tooltip
   module:
     - entity_reference_revisions
@@ -50,6 +51,13 @@ content:
       link: ''
     third_party_settings: {  }
     region: content
+  field_text_color:
+    type: list_default
+    weight: 5
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
   field_tooltip:
     weight: 0
     label: above
