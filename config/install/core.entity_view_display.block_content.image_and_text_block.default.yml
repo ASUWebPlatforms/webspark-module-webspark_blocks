@@ -3,10 +3,14 @@ status: true
 dependencies:
   config:
     - block_content.type.image_and_text_block
+    - field.field.block_content.image_and_text_block.field_anchor_menu_settings
+    - field.field.block_content.image_and_text_block.field_bg_color_content_sections
     - field.field.block_content.image_and_text_block.field_content_position
     - field.field.block_content.image_and_text_block.field_formatted_text
     - field.field.block_content.image_and_text_block.field_heading
     - field.field.block_content.image_and_text_block.field_media
+    - field.field.block_content.image_and_text_block.field_spacing_bottom
+    - field.field.block_content.image_and_text_block.field_spacing_top
     - field.field.block_content.image_and_text_block.field_sub_heading
     - field.field.block_content.image_and_text_block.field_two_cta
   module:
@@ -18,6 +22,13 @@ targetEntityType: block_content
 bundle: image_and_text_block
 mode: default
 content:
+  field_bg_color_content_sections:
+    weight: 7
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
   field_content_position:
     weight: 5
     label: hidden
@@ -59,11 +70,14 @@ content:
     region: content
   field_two_cta:
     weight: 6
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
     type: entity_reference_revisions_entity_view
     region: content
-hidden: {  }
+hidden:
+  field_anchor_menu_settings: true
+  field_spacing_bottom: true
+  field_spacing_top: true
