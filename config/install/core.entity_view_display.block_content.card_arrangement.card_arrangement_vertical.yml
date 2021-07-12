@@ -5,6 +5,7 @@ dependencies:
     - block_content.type.card_arrangement
     - core.entity_view_mode.block_content.card_arrangement_vertical
     - field.field.block_content.card_arrangement.field_anchor_menu_settings
+    - field.field.block_content.card_arrangement.field_card_arrangement_display
     - field.field.block_content.card_arrangement.field_card_group
     - field.field.block_content.card_arrangement.field_cta
     - field.field.block_content.card_arrangement.field_formatted_text
@@ -26,6 +27,7 @@ mode: card_arrangement_vertical
 content: {  }
 hidden:
   field_anchor_menu_settings: true
+  field_card_arrangement_display: true
   field_card_group: true
   field_cta: true
   field_formatted_text: true
