@@ -4,6 +4,7 @@ dependencies:
   config:
     - block_content.type.image_and_text_block
     - field.field.block_content.image_and_text_block.field_anchor_menu_settings
+    - field.field.block_content.image_and_text_block.field_bg_color_content_sections
     - field.field.block_content.image_and_text_block.field_content_position
     - field.field.block_content.image_and_text_block.field_formatted_text
     - field.field.block_content.image_and_text_block.field_heading
@@ -25,7 +26,7 @@ third_party_settings:
         - field_spacing_top
         - field_spacing_bottom
       parent_name: ''
-      weight: 10
+      weight: 8
       format_type: tab
       region: content
       format_settings:
@@ -52,8 +53,14 @@ content:
     third_party_settings: {  }
     type: entity_reference_paragraphs
     region: content
+  field_bg_color_content_sections:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_content_position:
-    weight: 5
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -75,7 +82,7 @@ content:
     type: string_textfield
     region: content
   field_media:
-    weight: 6
+    weight: 5
     settings:
       media_types: {  }
     third_party_settings: {  }
@@ -102,7 +109,7 @@ content:
     type: string_textfield
     region: content
   field_two_cta:
-    weight: 26
+    weight: 9
     settings:
       title: Paragraph
       title_plural: Paragraphs
