@@ -4,6 +4,7 @@ dependencies:
   config:
     - block_content.type.card_arrangement
     - field.field.block_content.card_arrangement.field_anchor_menu_settings
+    - field.field.block_content.card_arrangement.field_card_arrangement_display
     - field.field.block_content.card_arrangement.field_card_group
     - field.field.block_content.card_arrangement.field_cta
     - field.field.block_content.card_arrangement.field_formatted_text
@@ -14,6 +15,7 @@ dependencies:
     - field.field.block_content.card_arrangement.field_tooltip
   module:
     - entity_reference_revisions
+    - options
 id: block_content.card_arrangement.default
 targetEntityType: block_content
 bundle: card_arrangement
@@ -21,12 +23,19 @@ mode: default
 content:
   field_anchor_menu_settings:
     weight: 4
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
     type: entity_reference_revisions_entity_view
+    region: content
+  field_card_arrangement_display:
+    weight: 5
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
     region: content
   field_card_group:
     weight: 1
@@ -41,7 +50,7 @@ content:
     type: entity_reference_revisions_entity_view
     weight: 2
     region: content
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: ''
@@ -50,7 +59,7 @@ content:
     type: string
     weight: 3
     region: content
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }

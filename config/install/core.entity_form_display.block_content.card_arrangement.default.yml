@@ -4,6 +4,7 @@ dependencies:
   config:
     - block_content.type.card_arrangement
     - field.field.block_content.card_arrangement.field_anchor_menu_settings
+    - field.field.block_content.card_arrangement.field_card_arrangement_display
     - field.field.block_content.card_arrangement.field_card_group
     - field.field.block_content.card_arrangement.field_cta
     - field.field.block_content.card_arrangement.field_formatted_text
@@ -85,6 +86,12 @@ content:
       default_paragraph_type: ''
     third_party_settings: {  }
     type: entity_reference_paragraphs
+    region: content
+  field_card_arrangement_display:
+    weight: 29
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_card_group:
     weight: 1
