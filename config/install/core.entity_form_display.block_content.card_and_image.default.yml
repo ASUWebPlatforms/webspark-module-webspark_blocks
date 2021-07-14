@@ -61,7 +61,7 @@ content:
       title_plural: Paragraphs
       edit_mode: open
       add_mode: dropdown
-      form_display_mode: default
+      form_display_mode: card_and_image
       default_paragraph_type: card_with_icon
     third_party_settings: {  }
     type: entity_reference_paragraphs

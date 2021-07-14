@@ -1,7 +1,9 @@
+uuid: 0d0ba95d-9a87-409a-929b-abaef085150b
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_form_mode.paragraph.card_and_image
     - field.field.paragraph.card_with_icon.field_body
     - field.field.paragraph.card_with_icon.field_card_link
     - field.field.paragraph.card_with_icon.field_clickable
@@ -15,10 +17,12 @@ dependencies:
     - maxlength
     - paragraphs
     - text
-id: paragraph.card_with_icon.default
+_core:
+  default_config_hash: TTpooCeSTrDb-cxtmFnyyOZjdf2cc8syekPmGtzWpM4
+id: paragraph.card_with_icon.card_and_image
 targetEntityType: paragraph
 bundle: card_with_icon
-mode: default
+mode: card_and_image
 content:
   field_body:
     weight: 1
@@ -27,7 +31,7 @@ content:
       placeholder: ''
     third_party_settings:
       maxlength:
-        maxlength_js: null
+        maxlength_js: 190
         maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
         maxlength_js_enforce: false
         maxlength_js_truncate_html: false
