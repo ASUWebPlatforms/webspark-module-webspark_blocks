@@ -11,11 +11,14 @@ type: list_string
 settings:
   allowed_values:
     -
+      value: default
+      label: 'Black text, no background color'
+    -
       value: highlight-white
-      label: 'Highlight White'
+      label: 'White background'
     -
       value: highlight-black
-      label: 'Highlight Gray 7'
+      label: 'Gray 7 background'
   allowed_values_function: ''
 module: options
 locked: false
