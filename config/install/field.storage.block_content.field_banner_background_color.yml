@@ -24,7 +24,7 @@ settings:
       label: 'Gray 2'
     -
       value: banner-black
-      label: 'Gray 7'
+      label: 'Black'
   allowed_values_function: ''
 module: options
 locked: false

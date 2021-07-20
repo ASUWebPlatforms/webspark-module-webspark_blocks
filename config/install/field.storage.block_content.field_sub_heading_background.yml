@@ -15,7 +15,7 @@ settings:
       label: 'Highlight White'
     -
       value: highlight-black
-      label: 'Highlight Gray 7'
+      label: 'Highlight Black'
   allowed_values_function: ''
 module: options
 locked: false
