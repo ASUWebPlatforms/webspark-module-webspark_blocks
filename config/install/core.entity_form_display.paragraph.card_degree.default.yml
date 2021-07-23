@@ -54,7 +54,7 @@ content:
     settings:
       title: CTA
       title_plural: Paragraphs
-      edit_mode: closed
+      edit_mode: open
       add_mode: button
       form_display_mode: styled
       default_paragraph_type: _none
@@ -66,7 +66,7 @@ content:
     settings:
       title: 'CTA Secondary'
       title_plural: Paragraphs
-      edit_mode: closed
+      edit_mode: open
       add_mode: button
       form_display_mode: styled
       default_paragraph_type: _none
