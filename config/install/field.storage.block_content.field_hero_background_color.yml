@@ -21,7 +21,7 @@ settings:
       label: 'White background'
     -
       value: black
-      label: 'Gray 7 background'
+      label: 'Black background'
   allowed_values_function: ''
 module: options
 locked: false
