@@ -49,6 +49,18 @@ function webspark_blocks_theme($existing, $type, $theme, $path){
     'webspark_blocks_anchor_menu' => [
       'variables' => [],
     ],
+    'webspark_blocks__asu_search' => [
+      'variables' => [
+        'form' => [],
+        'subtitle' => NULL,
+      ],
+    ],
+    'webspark_blocks__links' => [
+      'variables' => [
+        'links' => [],
+        'title' => NULL,
+      ],
+    ],
   ];
 }
 
@@ -80,4 +92,64 @@ function _webspark_blocks_hero_block_form_alter(array $element, FormStateInterfa
   }
 
   return $element;
+}
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function webspark_blocks_preprocess_page(&$variables)  {
+  $route_name = \Drupal::routeMatch()->getRouteName();
+  switch ($route_name) {
+    case 'system.404':
+      // Page Not Found.
+      _webspark_blocks_preprocess_page_404($variables);
+      break;
+  }
+}
+
+/**
+ * Private function to preprocess the 404 page.
+ */
+function _webspark_blocks_preprocess_page_404(&$variables) {
+
+  // Remove the default behaviour.
+  unset($variables['page']['content']['system_main']);
+  // Create a wrapper, so we can add classes here.
+  $wrapper = [
+    '#type' => 'container',
+    '#attributes' => [
+      'class' => ['container', 'container-page-404'],
+    ],
+  ];
+  // Title for the 404 page.
+  $wrapper['title'] = [
+    '#type' => 'html_tag',
+    '#tag' => 'h1',
+    '#value' => t('Hmm, we can\'t find that page'),
+  ];
+
+  // Get the search block.
+  $block_manager = \Drupal::service('plugin.manager.block');
+  $config = [];
+  $block_plugin = $block_manager->createInstance('webspark_asu_search_block', $config);
+  $wrapper['search'] = [
+    '#theme' => 'block', // Use block template.
+    '#plugin_id' => $block_plugin->getPluginId(),
+    '#base_plugin_id' => $block_plugin->getBaseId(),
+    '#derivative_plugin_id' => $block_plugin->getDerivativeId(),
+    '#configuration' => $block_plugin->getConfiguration(),
+    'content' => $block_plugin->build(),
+  ];
+
+
+  // Get the links.
+  $config = \Drupal::config('webspark_blocks.settings');
+  $links = $config->get('webspark_utility_links');
+  $wrapper['links'] = [
+    '#theme' => 'webspark_blocks__links',
+    '#title' => t('Here are some links you may find helpful'),
+    '#links' => $links,
+  ];
+
+  $variables['page']['content']['page_404_content'] = $wrapper;
 }
