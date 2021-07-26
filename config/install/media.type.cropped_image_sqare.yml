@@ -6,9 +6,9 @@ dependencies:
 third_party_settings:
   crop:
     image_field: _none
-id: image_block_images
-label: 'Cropped image (4:3)'
-description: 'Used for Image Block in layout builder.'
+id: cropped_image_sqare
+label: 'Cropped image square (1:1)'
+description: 'Used for image block and ckeditor media.'
 source: image
 queue_thumbnail_downloads: false
 new_revision: false
