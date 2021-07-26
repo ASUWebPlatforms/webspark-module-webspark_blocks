@@ -13,3 +13,6 @@ dependencies:
   - drupal:fontawesome
   - drupal:fontawesome_iconpicker_widget
   - drupal:responsive_image
+  - drupal:maxlength
+  - drupal:ckeditor_responsive_plugin
+  - drupal:anchor_link
