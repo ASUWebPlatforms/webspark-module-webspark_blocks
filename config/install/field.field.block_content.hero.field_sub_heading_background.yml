@@ -10,9 +10,9 @@ id: block_content.hero.field_sub_heading_background
 field_name: field_sub_heading_background
 entity_type: block_content
 bundle: hero
-label: 'Sub Heading Background'
+label: 'Sub Heading Background Color'
 description: ''
-required: false
+required: true
 translatable: false
 default_value:
   -
