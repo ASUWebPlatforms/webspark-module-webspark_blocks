@@ -36,10 +36,10 @@ content:
   field_card_link:
     weight: 8
     settings:
-      size: 60
-      placeholder: ''
+      placeholder_url: ''
+      placeholder_title: ''
     third_party_settings: {  }
-    type: string_textfield
+    type: link_default
     region: content
   field_clickable:
     weight: 7

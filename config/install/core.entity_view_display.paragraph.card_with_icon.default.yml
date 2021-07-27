@@ -9,11 +9,25 @@ dependencies:
     - field.field.paragraph.card_with_icon.field_heading
     - field.field.paragraph.card_with_icon.field_icon
     - paragraphs.paragraphs_type.card_with_icon
+  module:
+    - link
 id: paragraph.card_with_icon.default
 targetEntityType: paragraph
 bundle: card_with_icon
 mode: default
 content:
+  field_card_link:
+    weight: 1
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
   field_clickable:
     weight: 0
     label: above
@@ -26,7 +40,6 @@ content:
     region: content
 hidden:
   field_body: true
-  field_card_link: true
   field_cta: true
   field_heading: true
   field_icon: true
