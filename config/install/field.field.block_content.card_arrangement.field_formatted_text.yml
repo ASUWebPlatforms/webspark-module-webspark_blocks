@@ -17,8 +17,8 @@ id: block_content.card_arrangement.field_formatted_text
 field_name: field_formatted_text
 entity_type: block_content
 bundle: card_arrangement
-label: 'Formatted Text'
-description: '* Only for Card Vertical Arrangement'
+label: 'Formatted Text (Only for Card Vertical Arrangement)'
+description: ''
 required: false
 translatable: true
 default_value: {  }
