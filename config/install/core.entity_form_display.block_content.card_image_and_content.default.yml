@@ -7,6 +7,7 @@ dependencies:
     - field.field.block_content.card_image_and_content.field_card
     - field.field.block_content.card_image_and_content.field_formatted_text
     - field.field.block_content.card_image_and_content.field_heading
+    - field.field.block_content.card_image_and_content.field_heading_color
     - field.field.block_content.card_image_and_content.field_media
     - field.field.block_content.card_image_and_content.field_spacing_bottom
     - field.field.block_content.card_image_and_content.field_spacing_top
@@ -24,7 +25,7 @@ third_party_settings:
         - field_spacing_top
         - field_spacing_bottom
       parent_name: ''
-      weight: 6
+      weight: 7
       format_type: tab
       region: content
       format_settings:
@@ -59,7 +60,7 @@ content:
     region: content
   field_card:
     type: entity_reference_paragraphs
-    weight: 5
+    weight: 6
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -85,6 +86,12 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_heading_color:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_media:
     weight: 3
     settings:
@@ -105,7 +112,7 @@ content:
     type: options_select
     region: content
   field_text_color:
-    weight: 2
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     type: options_select
