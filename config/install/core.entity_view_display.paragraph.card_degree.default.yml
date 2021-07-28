@@ -16,14 +16,27 @@ dependencies:
   enforced:
     module:
       - webspark_blocks
+  module:
+    - link
 id: paragraph.card_degree.default
 targetEntityType: paragraph
 bundle: card_degree
 mode: default
-content: {  }
+content:
+  field_card_link:
+    weight: 0
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
 hidden:
   field_body: true
-  field_card_link: true
   field_clickable: true
   field_cta: true
   field_cta_secondary: true

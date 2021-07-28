@@ -4,6 +4,8 @@ dependencies:
   config:
     - field.storage.paragraph.field_card_link
     - paragraphs.paragraphs_type.card
+  module:
+    - link
 id: paragraph.card.field_card_link
 field_name: field_card_link
 entity_type: paragraph
@@ -11,8 +13,10 @@ bundle: card
 label: 'Card Link'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
-settings: {  }
-field_type: string
+settings:
+  link_type: 17
+  title: 0
+field_type: link

@@ -12,6 +12,7 @@ dependencies:
   module:
     - allowed_formats
     - fontawesome_iconpicker_widget
+    - link
     - maxlength
     - paragraphs
     - text
@@ -39,10 +40,10 @@ content:
   field_card_link:
     weight: 5
     settings:
-      size: 60
-      placeholder: ''
+      placeholder_url: ''
+      placeholder_title: ''
     third_party_settings: {  }
-    type: string_textfield
+    type: link_default
     region: content
   field_clickable:
     weight: 4
