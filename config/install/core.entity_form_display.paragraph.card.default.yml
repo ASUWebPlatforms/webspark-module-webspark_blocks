@@ -105,16 +105,7 @@ content:
     third_party_settings: {  }
     type: media_library_widget
     region: content
-  field_tags:
-    weight: 6
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
 hidden:
   created: true
+  field_tags: true
   status: true
