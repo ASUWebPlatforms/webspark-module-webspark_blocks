@@ -51,13 +51,6 @@ content:
       link: ''
     third_party_settings: {  }
     region: content
-  field_text_color:
-    type: list_default
-    weight: 5
-    region: content
-    label: above
-    settings: {  }
-    third_party_settings: {  }
   field_tooltip:
     weight: 0
     label: above
@@ -70,3 +63,4 @@ content:
 hidden:
   field_spacing_bottom: true
   field_spacing_top: true
+  field_text_color: true
