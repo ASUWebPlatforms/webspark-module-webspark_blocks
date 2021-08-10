@@ -1,0 +1,96 @@
+<?php
+
+use Drupal\Core\Config\FileStorage;
+
+
+/**
+ * Update the paragraphs to classical ones.
+ */
+function webspark_blocks_update_9001(&$sandbox) {
+  // Contains config names on the first level, key and value of the config for 
+  // level 2 and 3. 
+  $config_updates = [
+      'core.entity_form_display.block_content.gallery.default' => [
+          'content' => [
+              'field_carousel_card' => ['type', 'settings']
+          ]
+      ],
+      'core.entity_form_display.block_content.card_and_image.default' => [
+          'content' => [
+              'field_anchor_menu_settings' => ['type', 'settings']
+          ]
+      ],
+      'core.entity_form_display.block_content.card_image_and_content.default' => [
+          'content' => [
+              'field_anchor_menu_settings' => ['type', 'settings']
+          ]
+      ],
+      'core.entity_form_display.block_content.carousel_image.default' => [
+          'content' => [
+              'field_carousel_card' => ['type', 'settings']
+          ]
+      ],
+      'core.entity_form_display.block_content.content_image.default' => [
+          'content' => [
+              'field_anchor_menu_settings' => ['type', 'settings']
+          ]
+      ],
+      'core.entity_form_display.block_content.gallery.default' => [
+          'content' => [
+              'field_carousel_card' => ['type', 'settings']
+          ]
+      ],
+      'core.entity_form_display.block_content.hero.default' => [
+          'content' => [
+              'field_two_cta' => ['type', 'settings']
+          ]
+      ],
+      'core.entity_form_display.block_content.video_hero.default' => [
+        'content' => [
+          'field_two_cta' => ['type', 'settings']
+        ]
+      ],
+      'core.entity_form_display.paragraph.card_media.default' => [
+          'content' => [
+              'field_cta' => ['type', 'settings'],
+              'field_cta_secondary' => ['type', 'settings']
+          ],
+      ],
+
+  ];
+
+  _webspark_blocks_update_config($config_updates);
+  return 'Updated the paragraph config.';
+}
+
+/**
+ * Helper function to update a config with the values
+ */
+function _webspark_blocks_update_config($config_updates) {
+  $config_path    = drupal_get_path('module', 'webspark_blocks') . '/config/install';
+  $source         = new FileStorage($config_path);
+  $config_storage = \Drupal::service('config.storage');
+  $config_factory = \Drupal::configFactory();
+  $uuid_service = \Drupal::service('uuid');
+
+  foreach ($config_updates as $name => $config_update) {
+    $config_data = $source->read($name);
+    foreach ($config_update as $key => $value) {
+      if (is_array($value)) {
+        foreach ($value as $sub_key => $sub_value) {
+          if (is_array($sub_value)) {
+            foreach ($sub_value as $field_settings_key => $field_setting) {
+              $config_factory->getEditable($name)->set("$key.$sub_key.$field_setting", $config_data[$key][$sub_key][$field_setting])->save();
+            }
+          }
+          else {
+            $config_factory->getEditable($name)->set("$key.$sub_key", $config_data[$key][$sub_key])->save();
+          }
+        }
+      }
+      else {
+        $config_factory->getEditable($name)->set("$key.$value", $config_data[$key][$value])->save();
+      }
+    }
+  }
+}
