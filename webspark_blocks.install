@@ -120,6 +120,11 @@ function webspark_blocks_update_9002(&$sandbox) {
               'allowed_formats'
           ]
       ],
+      'field.field.paragraph.gallery_image.field_formatted_text' => [
+          'third_party_settings' => [
+              'allowed_formats'
+          ]
+      ],
   ];
 
   _webspark_blocks_update_config($config_updates);
