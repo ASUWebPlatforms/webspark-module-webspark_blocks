@@ -9,9 +9,10 @@ dependencies:
     - text
 third_party_settings:
   allowed_formats:
-    basic_html: basic_html
-    full_html: full_html
+    minimal_format: minimal_format
+    basic_html: '0'
     restricted_html: '0'
+    full_html: '0'
     plain_text: '0'
 id: block_content.card_image_and_content.field_formatted_text
 field_name: field_formatted_text

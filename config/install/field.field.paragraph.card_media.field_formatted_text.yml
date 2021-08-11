@@ -5,7 +5,15 @@ dependencies:
     - field.storage.paragraph.field_formatted_text
     - paragraphs.paragraphs_type.card_media
   module:
+    - allowed_formats
     - text
+third_party_settings:
+  allowed_formats:
+    minimal_format: minimal_format
+    basic_html: '0'
+    restricted_html: '0'
+    full_html: '0'
+    plain_text: '0'
 id: paragraph.card_media.field_formatted_text
 field_name: field_formatted_text
 entity_type: paragraph
