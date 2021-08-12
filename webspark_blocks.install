@@ -7,8 +7,8 @@ use Drupal\Core\Config\FileStorage;
  * Update the paragraphs to classical ones.
  */
 function webspark_blocks_update_9001(&$sandbox) {
-  // Contains config names on the first level, key and value of the config for 
-  // level 2 and 3. 
+  // Contains config names on the first level, key and value of the config for
+  // level 2 and 3.
   $config_updates = [
       'core.entity_form_display.block_content.gallery.default' => [
           'content' => [
@@ -64,6 +64,74 @@ function webspark_blocks_update_9001(&$sandbox) {
 }
 
 /**
+ * Update the card format text.
+ */
+function webspark_blocks_update_9002(&$sandbox) {
+  // Contains config names on the first level, key and value of the config for
+  // level 2 and 3.
+  $config_updates = [
+      'editor.editor.minimal_format' => [],
+      'filter.format.minimal_format' => [],
+      'field.field.block_content.card_arrangement.field_formatted_text' => [
+          'third_party_settings' => [
+              'allowed_formats'
+          ]
+      ],
+      'field.field.block_content.card_image_and_content.field_formatted_text' => [
+          'third_party_settings' => [
+              'allowed_formats'
+          ]
+      ],
+      'field.field.block_content.content_image.field_formatted_text' => [
+          'third_party_settings' => [
+              'allowed_formats'
+          ]
+      ],
+      'field.field.paragraph.card.field_body' => [
+          'third_party_settings' => [
+              'allowed_formats'
+          ]
+      ],
+      'field.field.paragraph.card_degree.field_body' => [
+          'third_party_settings' => [
+              'allowed_formats'
+          ]
+      ],
+      'field.field.paragraph.card_event.field_body' => [
+          'third_party_settings' => [
+              'allowed_formats'
+          ]
+      ],
+      'field.field.paragraph.card_media.field_formatted_text' => [
+          'dependencies' => [
+              'module'
+          ],
+           'third_party_settings' => [
+              'allowed_formats'
+          ]
+      ],
+      'field.field.paragraph.card_story.field_body' => [
+        'third_party_settings' => [
+              'allowed_formats'
+          ]
+      ],
+      'field.field.paragraph.card_with_icon.field_body' => [
+          'third_party_settings' => [
+              'allowed_formats'
+          ]
+      ],
+      'field.field.paragraph.gallery_image.field_formatted_text' => [
+          'third_party_settings' => [
+              'allowed_formats'
+          ]
+      ],
+  ];
+
+  _webspark_blocks_update_config($config_updates);
+  return 'Updated the paragraph config.';
+}
+
+/**
  * Helper function to update a config with the values
  */
 function _webspark_blocks_update_config($config_updates) {
@@ -75,6 +143,11 @@ function _webspark_blocks_update_config($config_updates) {
 
   foreach ($config_updates as $name => $config_update) {
     $config_data = $source->read($name);
+    // If the file is new copy the whole file.
+    if (!is_array($config_update) || empty($config_update)) {
+      $config_storage->write($name, $config_data);
+      continue;
+    }
     foreach ($config_update as $key => $value) {
       if (is_array($value)) {
         foreach ($value as $sub_key => $sub_value) {
@@ -84,12 +157,12 @@ function _webspark_blocks_update_config($config_updates) {
             }
           }
           else {
-            $config_factory->getEditable($name)->set("$key.$sub_key", $config_data[$key][$sub_key])->save();
+            $config_factory->getEditable($name)->set("$key.$sub_value", $config_data[$key][$sub_value])->save();
           }
         }
       }
       else {
-        $config_factory->getEditable($name)->set("$key.$value", $config_data[$key][$value])->save();
+        $config_factory->getEditable($name)->set("$value", $config_data[$key][$value])->save();
       }
     }
   }
