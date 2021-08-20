@@ -82,11 +82,6 @@ function webspark_blocks_update_9002(&$sandbox) {
               'allowed_formats'
           ]
       ],
-      'field.field.block_content.content_image.field_formatted_text' => [
-          'third_party_settings' => [
-              'allowed_formats'
-          ]
-      ],
       'field.field.paragraph.card.field_body' => [
           'third_party_settings' => [
               'allowed_formats'
