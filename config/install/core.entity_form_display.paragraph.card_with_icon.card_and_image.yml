@@ -57,7 +57,7 @@ content:
     settings:
       title: CTA
       title_plural: CTA
-      edit_mode: closed
+      edit_mode: open
       add_mode: button
       form_display_mode: styled
       default_paragraph_type: _none
