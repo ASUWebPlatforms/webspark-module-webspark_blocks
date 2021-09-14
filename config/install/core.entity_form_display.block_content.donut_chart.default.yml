@@ -12,7 +12,7 @@ bundle: donut_chart
 mode: default
 content:
   field_heading:
-    weight: 1
+    weight: 3
     settings:
       size: 60
       placeholder: ''
@@ -20,17 +20,24 @@ content:
     type: string_textfield
     region: content
   field_number:
-    weight: 0
+    weight: 1
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
     region: content
   field_text_color:
-    weight: 26
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
-hidden:
-  info: true
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }
