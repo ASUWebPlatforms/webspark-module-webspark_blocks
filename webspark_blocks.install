@@ -162,3 +162,25 @@ function _webspark_blocks_update_config($config_updates) {
     }
   }
 }
+
+/**
+ * Implements hook_update_N().
+ * Revert all configurations from this module.
+ */
+function webspark_blocks_update_9003(&$sandbox) {
+  // Get this module name.
+  $module = \Drupal::service('module_handler')
+      ->getModule(basename(__FILE__, '.install'))
+      ->getName();
+  
+  // Unlock the configuration storage.
+  \Drupal::state()->set('configuration_locked', FALSE);
+  // Revert all configs from this module.
+  webspark_uitlity_revert_all($module);
+  // Lock the configuration storage.
+  \Drupal::state()->set('configuration_locked', TRUE);
+  
+  // Enable the modules that we need
+  $modules = ['config_update', 'config_readonly', 'entity_clone'];
+  \Drupal::service('module_installer')->install($modules, TRUE);
+}
