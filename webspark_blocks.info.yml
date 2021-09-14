@@ -16,6 +16,8 @@ dependencies:
   - drupal:maxlength
   - drupal:ckeditor_responsive_plugin
   - drupal:anchor_link
+  - config_readonly:config_readonly
+  - config_update:config_update
   - drupal:field_group
   - drupal:image_widget_crop
   - drupal:allowed_formats
