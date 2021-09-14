@@ -11,9 +11,6 @@ type: list_string
 settings:
   allowed_values:
     -
-      value: default
-      label: Default
-    -
       value: bg-white
       label: White
     -
@@ -24,7 +21,7 @@ settings:
       label: 'Gray 2'
     -
       value: bg-dark
-      label: 'Black'
+      label: 'Gray 7'
   allowed_values_function: ''
 module: options
 locked: false

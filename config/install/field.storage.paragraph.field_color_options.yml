@@ -24,7 +24,7 @@ settings:
       label: 'Gray 4'
     -
       value: card-dark
-      label: 'Black'
+      label: 'Gary 7'
   allowed_values_function: ''
 module: options
 locked: false

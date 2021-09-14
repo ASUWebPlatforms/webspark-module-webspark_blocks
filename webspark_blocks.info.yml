@@ -18,3 +18,7 @@ dependencies:
   - drupal:anchor_link
   - config_readonly:config_readonly
   - config_update:config_update
+  - drupal:field_group
+  - drupal:image_widget_crop
+  - drupal:allowed_formats
+  - drupal:crop
