@@ -15,7 +15,7 @@ function webspark_blocks_update_9001(&$sandbox) {
   // Unlock the configuration storage.
   \Drupal::state()->set('configuration_locked', FALSE);
   // Revert all configs from this module.
-  webspark_uitlity_revert_all($module);
+  \Drupal::service('webspark.config_manager')->revertAll($module);
   // Lock the configuration storage.
   \Drupal::state()->set('configuration_locked', TRUE);
 }
