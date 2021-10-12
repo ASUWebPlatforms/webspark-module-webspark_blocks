@@ -5,6 +5,7 @@ dependencies:
     - block_content.type.video
     - field.field.block_content.video.field_add_drop_shadow
     - field.field.block_content.video.field_anchor_menu_settings
+    - field.field.block_content.video.field_image_caption
     - field.field.block_content.video.field_image_size
     - field.field.block_content.video.field_media
     - field.field.block_content.video.field_spacing_bottom
@@ -22,7 +23,7 @@ third_party_settings:
         - field_spacing_top
         - field_spacing_bottom
       parent_name: ''
-      weight: 3
+      weight: 4
       format_type: tab
       region: content
       format_settings:
@@ -49,6 +50,14 @@ content:
     third_party_settings: {  }
     type: entity_reference_paragraphs
     region: content
+  field_image_caption:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
   field_media:
     weight: 1
     settings:
@@ -69,7 +78,7 @@ content:
     type: options_select
     region: content
   field_tooltip:
-    weight: 2
+    weight: 3
     settings:
       title: Paragraph
       title_plural: Paragraphs
