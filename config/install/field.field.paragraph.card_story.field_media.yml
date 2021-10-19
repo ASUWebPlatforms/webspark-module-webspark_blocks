@@ -4,6 +4,7 @@ dependencies:
   config:
     - field.storage.paragraph.field_media
     - media.type.image
+    - media.type.image_block_images
     - paragraphs.paragraphs_type.card_story
 id: paragraph.card_story.field_media
 field_name: field_media
@@ -19,10 +20,11 @@ settings:
   handler: 'default:media'
   handler_settings:
     target_bundles:
+      image_block_images: image_block_images
       image: image
     sort:
       field: _none
       direction: ASC
     auto_create: false
-    auto_create_bundle: ''
+    auto_create_bundle: image_block_images
 field_type: entity_reference
