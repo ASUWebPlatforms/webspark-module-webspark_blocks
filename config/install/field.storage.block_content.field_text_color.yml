@@ -12,7 +12,7 @@ settings:
   allowed_values:
     -
       value: default
-      label: Black
+      label: 'Gray 7'
     -
       value: text-white
       label: White

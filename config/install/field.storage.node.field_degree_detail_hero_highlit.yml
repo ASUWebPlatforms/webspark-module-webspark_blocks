@@ -1,27 +1,27 @@
 langcode: en
 status: true
 dependencies:
+  enforced:
+    module:
+      - asu_degree_rfi
   module:
+    - node
     - options
-    - paragraphs
-id: paragraph.field_color_options
-field_name: field_color_options
-entity_type: paragraph
+id: node.field_degree_detail_hero_highlit
+field_name: field_degree_detail_hero_highlit
+entity_type: node
 type: list_string
 settings:
   allowed_values:
     -
-      value: default
-      label: Gold
+      value: gold
+      label: gold
     -
-      value: card-maroon
-      label: Maroon
+      value: black
+      label: 'gray 7'
     -
-      value: card-gray
-      label: 'Gray 2'
-    -
-      value: card-dark
-      label: 'Gray 7'
+      value: white
+      label: white
   allowed_values_function: ''
 module: options
 locked: false
