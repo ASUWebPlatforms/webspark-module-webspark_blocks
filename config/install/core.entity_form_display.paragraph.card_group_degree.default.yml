@@ -18,7 +18,7 @@ content:
       title_plural: Paragraphs
       edit_mode: open
       add_mode: button
-      form_display_mode: default
+      form_display_mode: carousel_card
       default_paragraph_type: card_degree
     third_party_settings: {  }
     type: entity_reference_paragraphs
