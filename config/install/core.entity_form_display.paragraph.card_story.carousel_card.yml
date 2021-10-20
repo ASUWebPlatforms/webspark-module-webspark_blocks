@@ -1,4 +1,3 @@
-uuid: 09c6af36-e826-4972-be27-1342e5b094b9
 langcode: en
 status: true
 dependencies:
@@ -24,8 +23,6 @@ dependencies:
     - media_library
     - paragraphs
     - text
-_core:
-  default_config_hash: R7oaFm0hZdGSB2wlwjXJY79qSbPfXKixDUlIcu_05nU
 id: paragraph.card_story.carousel_card
 targetEntityType: paragraph
 bundle: card_story
