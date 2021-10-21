@@ -40,6 +40,14 @@ function webspark_blocks_update_9002(&$sandbox) {
   _revert_all_module_config();
 }
 
+/**
+ * Removes the basic block entities and basic block entity type.
+ */
+function webspark_blocks_update_9003(&$sandbox) {
+  //Revert all configurations from this module.
+  _revert_all_module_config();
+}
+
 function _revert_all_module_config() {
   // Get this module name.
   $module = \Drupal::service('module_handler')

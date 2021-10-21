@@ -13,8 +13,6 @@ third_party_settings:
   layout_builder:
     allow_custom: false
     enabled: false
-_core:
-  default_config_hash: 9ssbFtaZ8LvVXiq0W4LOXDNAXzqdF8nqutEzxA2mg3I
 id: media.image_block_images.large
 targetEntityType: media
 bundle: image_block_images

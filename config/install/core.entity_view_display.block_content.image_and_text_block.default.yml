@@ -22,6 +22,15 @@ targetEntityType: block_content
 bundle: image_and_text_block
 mode: default
 content:
+  field_anchor_menu_settings:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    region: content
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
   field_bg_color_content_sections:
     weight: 7
     label: hidden
@@ -37,14 +46,14 @@ content:
     type: list_key
     region: content
   field_formatted_text:
-    weight: 3
+    weight: 4
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_heading:
-    weight: 1
+    weight: 2
     label: hidden
     settings:
       link_to_entity: false
@@ -52,7 +61,7 @@ content:
     type: string
     region: content
   field_media:
-    weight: 0
+    weight: 1
     label: hidden
     settings:
       link: true
@@ -61,7 +70,7 @@ content:
     type: entity_reference_entity_view
     region: content
   field_sub_heading:
-    weight: 2
+    weight: 3
     label: hidden
     settings:
       link_to_entity: false
@@ -78,6 +87,5 @@ content:
     type: entity_reference_revisions_entity_view
     region: content
 hidden:
-  field_anchor_menu_settings: true
   field_spacing_bottom: true
   field_spacing_top: true

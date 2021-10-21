@@ -37,21 +37,6 @@ content:
         hide_guidelines: '0'
     type: text_textarea
     region: content
-  field_card_link:
-    weight: 5
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_clickable:
-    weight: 4
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
   field_cta:
     weight: 2
     settings:
@@ -80,4 +65,6 @@ content:
     region: content
 hidden:
   created: true
+  field_card_link: true
+  field_clickable: true
   status: true

@@ -15,7 +15,7 @@ settings:
       label: Gold
     -
       value: highlight-black
-      label: Black
+      label: 'Gray 7'
   allowed_values_function: ''
 module: options
 locked: false

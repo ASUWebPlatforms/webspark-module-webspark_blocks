@@ -18,7 +18,7 @@ settings:
       label: Maroon
     -
       value: card-gray
-      label: 'Gray 4'
+      label: 'Gray 2'
     -
       value: card-dark
       label: 'Gray 7'
