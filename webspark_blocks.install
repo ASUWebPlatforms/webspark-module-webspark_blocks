@@ -11,7 +11,7 @@ function webspark_blocks_update_9001(&$sandbox) {
   $module = \Drupal::service('module_handler')
       ->getModule(basename(__FILE__, '.install'))
       ->getName();
-  
+
   // Unlock the configuration storage.
   \Drupal::state()->set('configuration_locked', FALSE);
   // Revert all configs from this module.
@@ -21,38 +21,27 @@ function webspark_blocks_update_9001(&$sandbox) {
 }
 
 /**
- * Removes the basic block entities and basic block entity type.
+ * Apply parallax related configuration.
  */
 function webspark_blocks_update_9002(&$sandbox) {
-  // Remove all the blocks of type basic.
-  $bids = \Drupal::entityQuery('block_content')->condition('type','basic')->execute();
-  $blocks = \Drupal\block_content\Entity\BlockContent::loadMultiple($bids);
-  foreach ($blocks as $block) {
-    $block->delete();
-  }
-  // Remove the block type basic.
-  $storage = \Drupal::entityTypeManager()->getStorage('block_content_type');
-  $block_type = $storage->load('basic');
-  if ($block_type) {
-    $block_type->delete();
-  }
-  //Revert all configurations from this module.
-  _revert_all_module_config();
+  _webspark_blocks_revert_module_config();
 }
 
 /**
- * Removes the basic block entities and basic block entity type.
+ * Remove Vimeo as an allowed video provider.
  */
 function webspark_blocks_update_9003(&$sandbox) {
-  //Revert all configurations from this module.
-  _revert_all_module_config();
+  _webspark_blocks_revert_module_config();
 }
 
-function _revert_all_module_config() {
+/**
+ * Reverts the module related configuration.
+ */
+function _webspark_blocks_revert_module_config() {
   // Get this module name.
   $module = \Drupal::service('module_handler')
-    ->getModule(basename(__FILE__, '.install'))
-    ->getName();
+      ->getModule(basename(__FILE__, '.install'))
+      ->getName();
 
   // Unlock the configuration storage.
   \Drupal::state()->set('configuration_locked', FALSE);
