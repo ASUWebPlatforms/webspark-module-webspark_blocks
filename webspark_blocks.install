@@ -49,6 +49,13 @@ function webspark_blocks_update_9003(&$sandbox) {
 }
 
 /**
+ * Apply latest updates.
+ */
+function webspark_blocks_update_9004(&$sandbox) {
+  _webspark_blocks_revert_module_config();
+}
+
+/**
  * Reverts the module related configuration.
  */
 function _webspark_blocks_revert_module_config() {
