@@ -21,7 +21,8 @@ function webspark_blocks_update_9001(&$sandbox) {
 }
 
 /**
- * Apply parallax related configuration.
+ * Removes the basic block entities and basic block entity type.
+ * Apply the latest updates.
  */
 function webspark_blocks_update_9002(&$sandbox) {
   // Remove all the blocks of type basic.
