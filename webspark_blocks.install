@@ -24,6 +24,19 @@ function webspark_blocks_update_9001(&$sandbox) {
  * Apply parallax related configuration.
  */
 function webspark_blocks_update_9002(&$sandbox) {
+  // Remove all the blocks of type basic.
+  $bids = \Drupal::entityQuery('block_content')->condition('type','basic')->execute();
+  $blocks = \Drupal\block_content\Entity\BlockContent::loadMultiple($bids);
+  foreach ($blocks as $block) {
+    $block->delete();
+  }
+  // Remove the block type basic.
+  $storage = \Drupal::entityTypeManager()->getStorage('block_content_type');
+  $block_type = $storage->load('basic');
+  if ($block_type) {
+    $block_type->delete();
+  }
+  // Revert all the configs.
   _webspark_blocks_revert_module_config();
 }
 
