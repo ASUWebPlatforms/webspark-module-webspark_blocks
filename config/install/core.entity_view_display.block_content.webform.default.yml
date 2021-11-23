@@ -8,15 +8,15 @@ dependencies:
     - field.field.block_content.webform.field_spacing_top
     - field.field.block_content.webform.field_webform
   module:
-    - block_field
     - entity_reference_revisions
+    - webform
 id: block_content.webform.default
 targetEntityType: block_content
 bundle: webform
 mode: default
 content:
   field_anchor_menu_settings:
-    weight: 0
+    weight: 1
     label: hidden
     settings:
       view_mode: default
@@ -25,11 +25,12 @@ content:
     type: entity_reference_revisions_entity_view
     region: content
   field_webform:
-    weight: 1
+    weight: 0
     label: hidden
-    settings: {  }
+    settings:
+      source_entity: true
     third_party_settings: {  }
-    type: block_field
+    type: webform_entity_reference_entity_view
     region: content
 hidden:
   field_spacing_bottom: true

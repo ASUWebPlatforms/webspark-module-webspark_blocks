@@ -5,7 +5,7 @@ dependencies:
     - block_content.type.webform
     - field.storage.block_content.field_webform
   module:
-    - block_field
+    - webform
 id: block_content.webform.field_webform
 field_name: field_webform
 entity_type: block_content
@@ -17,40 +17,8 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  selection: categories
-  selection_settings:
-    categories:
-      Webform: Webform
-      ASU: '0'
-      'ASU brand': '0'
-      'ASU Breadcrumb': '0'
-      'ASU Degrees and RFI': '0'
-      'ASU footer': '0'
-      Block: '0'
-      'Chaos Tools': '0'
-      'Comment fields': '0'
-      'Contact message fields': '0'
-      'Content fields': '0'
-      core: '0'
-      'Crop fields': '0'
-      Custom: '0'
-      'Custom block fields': '0'
-      'Custom menu link fields': '0'
-      'File fields': '0'
-      Forms: '0'
-      Help: '0'
-      'Inline blocks': '0'
-      'Lists (Views)': '0'
-      'Media fields': '0'
-      Menus: '0'
-      'Paragraph fields': '0'
-      'Redirect fields': '0'
-      'Shortcut link fields': '0'
-      System: '0'
-      'Taxonomy term fields': '0'
-      'URL alias fields': '0'
-      User: '0'
-      'User fields': '0'
-      'Webform submission fields': '0'
-      'Webspark blocks': '0'
-field_type: block_field
+  handler: 'default:webform'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: webform
