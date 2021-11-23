@@ -11,9 +11,6 @@ type: list_string
 settings:
   allowed_values:
     -
-      value: default
-      label: Default
-    -
       value: bg-white
       label: White
     -
