@@ -4,6 +4,7 @@ dependencies:
   config:
     - block_content.type.card_and_image
     - field.storage.block_content.field_media
+    - media.type.image
     - media.type.image_block_images
 id: block_content.card_and_image.field_media
 field_name: field_media
@@ -20,6 +21,7 @@ settings:
   handler_settings:
     target_bundles:
       image_block_images: image_block_images
+      image: image
     sort:
       field: _none
       direction: ASC
