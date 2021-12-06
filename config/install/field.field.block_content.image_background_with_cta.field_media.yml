@@ -10,7 +10,7 @@ field_name: field_media
 entity_type: block_content
 bundle: image_background_with_cta
 label: Image
-description: ''
+description: 'Recommended image size (W x H): 1920 x 469 px'
 required: false
 translatable: true
 default_value: {  }

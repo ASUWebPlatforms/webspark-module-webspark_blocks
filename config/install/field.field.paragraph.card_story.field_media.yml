@@ -11,7 +11,7 @@ field_name: field_media
 entity_type: paragraph
 bundle: card_story
 label: Media
-description: ''
+description: 'Recommended image size (W x H): 588 x 200 px'
 required: false
 translatable: true
 default_value: {  }

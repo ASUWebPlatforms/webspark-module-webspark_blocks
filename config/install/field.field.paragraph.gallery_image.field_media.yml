@@ -10,7 +10,7 @@ field_name: field_media
 entity_type: paragraph
 bundle: gallery_image
 label: Image
-description: ''
+description: 'Recommended image size (W x H): 996 x 562 px'
 required: false
 translatable: true
 default_value: {  }

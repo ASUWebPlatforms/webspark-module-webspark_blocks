@@ -10,7 +10,7 @@ field_name: field_media
 entity_type: block_content
 bundle: image_and_text_block
 label: Image
-description: ''
+description: 'Recommended image size (W x H): 600 x 558 px'
 required: false
 translatable: true
 default_value: {  }
