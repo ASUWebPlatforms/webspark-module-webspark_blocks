@@ -56,6 +56,35 @@ function webspark_blocks_update_9004(&$sandbox) {
 }
 
 /**
+ * Updates allowed values for field_background_color.
+ */
+function webspark_blocks_update_9005(&$sandbox) {
+  // Queries for relevant nodes already using that field.
+  $bids = \Drupal::entityQuery('block_content')
+    ->condition('type', 'tabbed_content')
+    ->condition('field_background_color', 'default')
+    ->execute();
+
+  $blocks = Drupal\block_content\Entity\BlockContent::loadMultiple($bids);
+  // Updates field_background_color values.
+  $updated_value_map = [
+    'default' => 'bg-white',
+  ];
+  foreach ($blocks as $block) {
+    $block
+      ->set('field_background_color', $updated_value_map[$block->field_background_color->value])
+      ->save();
+  }
+
+  // Unlock the configuration storage.
+  \Drupal::state()->set('configuration_locked', FALSE);
+  // Revert all configs from this module.
+  \Drupal::service('webspark.config_manager')->updateConfigFile('field.storage.block_content.field_background_color');
+  // Lock the configuration storage.
+  \Drupal::state()->set('configuration_locked', TRUE);
+}
+
+/**
  * Reverts the module related configuration.
  */
 function _webspark_blocks_revert_module_config() {
