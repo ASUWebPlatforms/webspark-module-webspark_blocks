@@ -10,7 +10,7 @@ field_name: field_media
 entity_type: paragraph
 bundle: blockquote
 label: Media
-description: ''
+description: 'Recommended image size: 182 x 182px'
 required: false
 translatable: true
 default_value: {  }

@@ -10,7 +10,7 @@ field_name: field_media
 entity_type: block_content
 bundle: testimonial_on_image_background
 label: 'Image Background'
-description: ''
+description: 'Recommended image size (W x H): 1920 x 512 px'
 required: false
 translatable: true
 default_value: {  }

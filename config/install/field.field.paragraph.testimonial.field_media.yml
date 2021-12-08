@@ -10,7 +10,7 @@ field_name: field_media
 entity_type: paragraph
 bundle: testimonial
 label: Image
-description: ''
+description: 'Recommended image size (W x H): 178 x 178 px'
 required: false
 translatable: true
 default_value: {  }
