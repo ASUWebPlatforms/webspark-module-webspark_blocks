@@ -6,6 +6,7 @@ dependencies:
     - image.style.thumbnail
     - media.type.cropped_image_sqare
   module:
+    - decorative_image_widget
     - image_widget_crop
     - path
 id: media.cropped_image_sqare.default
@@ -32,7 +33,9 @@ content:
         - '1_1'
       crop_types_required:
         - '1_1'
-    third_party_settings: {  }
+    third_party_settings:
+      decorative_image_widget:
+        use_decorative_checkbox: true
     type: image_widget_crop
     region: content
   name:

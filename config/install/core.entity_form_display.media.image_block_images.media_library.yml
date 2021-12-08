@@ -7,7 +7,8 @@ dependencies:
     - image.style.thumbnail
     - media.type.image_block_images
   module:
-    - image
+    - decorative_image_widget
+    - image_widget_crop
 id: media.image_block_images.media_library
 targetEntityType: media
 bundle: image_block_images
@@ -26,7 +27,9 @@ content:
         - images_block
       crop_types_required:
         - images_block
-    third_party_settings: {  }
+    third_party_settings:
+      decorative_image_widget:
+        use_decorative_checkbox: true
     type: image_widget_crop
     region: content
   name:

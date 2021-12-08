@@ -6,6 +6,7 @@ dependencies:
     - image.style.thumbnail
     - media.type.story_hero
   module:
+    - decorative_image_widget
     - image
     - path
 id: media.story_hero.default
@@ -24,7 +25,9 @@ content:
     settings:
       preview_image_style: thumbnail
       progress_indicator: throbber
-    third_party_settings: {  }
+    third_party_settings:
+      decorative_image_widget:
+        use_decorative_checkbox: true
     type: image_image
     region: content
   name:
