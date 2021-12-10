@@ -21,3 +21,4 @@ dependencies:
   - drupal:image_widget_crop
   - drupal:allowed_formats
   - drupal:crop
+  - drupal:block_field
