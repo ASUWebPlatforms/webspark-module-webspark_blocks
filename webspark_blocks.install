@@ -49,13 +49,6 @@ function webspark_blocks_update_9003(&$sandbox) {
 }
 
 /**
- * Apply latest updates.
- */
-function webspark_blocks_update_9004(&$sandbox) {
-  _webspark_blocks_revert_module_config();
-}
-
-/**
  * Updates allowed values for field_background_color.
  */
 function webspark_blocks_update_9005(&$sandbox) {
