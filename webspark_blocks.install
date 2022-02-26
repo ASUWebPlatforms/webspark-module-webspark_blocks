@@ -3,24 +3,6 @@
 use Drupal\Core\Config\FileStorage;
 
 /**
- * Implements hook_update_N().
- * Revert all configurations from this module.
- */
-function webspark_blocks_update_9001(&$sandbox) {
-  // Get this module name.
-  $module = \Drupal::service('module_handler')
-      ->getModule(basename(__FILE__, '.install'))
-      ->getName();
-
-  // Unlock the configuration storage.
-  \Drupal::state()->set('configuration_locked', FALSE);
-  // Revert all configs from this module.
-  \Drupal::service('webspark.config_manager')->revertAll($module);
-  // Lock the configuration storage.
-  \Drupal::state()->set('configuration_locked', TRUE);
-}
-
-/**
  * Removes the basic block entities and basic block entity type.
  * Apply the latest updates.
  */
@@ -37,15 +19,6 @@ function webspark_blocks_update_9002(&$sandbox) {
   if ($block_type) {
     $block_type->delete();
   }
-  // Revert all the configs.
-  _webspark_blocks_revert_module_config();
-}
-
-/**
- * Apply latest updates.
- */
-function webspark_blocks_update_9003(&$sandbox) {
-  _webspark_blocks_revert_module_config();
 }
 
 /**
