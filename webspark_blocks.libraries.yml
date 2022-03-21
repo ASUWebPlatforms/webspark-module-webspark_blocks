@@ -8,5 +8,4 @@ anchor_menu:
   dependencies:
     - asu_brand/components-library
   js:
-    js/anchor-menu.js: {}
-
+    js/anchor-menu.js: { weight: -1 }
