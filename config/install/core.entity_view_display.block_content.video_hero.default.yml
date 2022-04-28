@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - block_content.type.video_hero
+    - field.field.block_content.video_hero.field_background_image
     - field.field.block_content.video_hero.field_heading
     - field.field.block_content.video_hero.field_hero_unformatted_text
     - field.field.block_content.video_hero.field_media
@@ -50,5 +51,6 @@ content:
     type: entity_reference_revisions_entity_view
     region: content
 hidden:
+  field_background_image: true
   field_spacing_bottom: true
   field_spacing_top: true
