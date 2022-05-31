@@ -65,6 +65,13 @@ function webspark_blocks_update_9007(&$sandbox) {
 }
 
 /**
+ * Only allow 4:3 images in the Content Image Overlap block.
+ */
+function webspark_blocks_update_9008(&$sandbox) {
+  _webspark_blocks_revert_module_config();
+}
+
+/**
  * Reverts the module related configuration.
  */
 function _webspark_blocks_revert_module_config() {
