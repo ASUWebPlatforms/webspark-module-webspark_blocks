@@ -4,14 +4,13 @@ dependencies:
   config:
     - block_content.type.card_and_image
     - field.storage.block_content.field_media
-    - media.type.image
-    - media.type.image_block_images
+    - media.type.cropped_image_wide
 id: block_content.card_and_image.field_media
 field_name: field_media
 entity_type: block_content
 bundle: card_and_image
 label: Image
-description: 'Recommended image size (W x H): 1200 x 440 px'
+description: 'Recommended image size (W x H): 1400 x 600px'
 required: false
 translatable: true
 default_value: {  }
@@ -20,8 +19,7 @@ settings:
   handler: 'default:media'
   handler_settings:
     target_bundles:
-      image_block_images: image_block_images
-      image: image
+      cropped_image_wide: cropped_image_wide
     sort:
       field: _none
       direction: ASC

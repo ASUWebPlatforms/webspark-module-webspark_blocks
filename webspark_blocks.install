@@ -72,6 +72,13 @@ function webspark_blocks_update_9008(&$sandbox) {
 }
 
 /**
+ * Only allow 16:9 images in the Card and Image block.
+ */
+function webspark_blocks_update_9009(&$sandbox) {
+  _webspark_blocks_revert_module_config();
+}
+
+/**
  * Reverts the module related configuration.
  */
 function _webspark_blocks_revert_module_config() {
