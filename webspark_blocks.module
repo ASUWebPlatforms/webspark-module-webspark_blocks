@@ -157,7 +157,7 @@ function _webspark_blocks_preprocess_page_404(&$variables) {
 /**
  * Implements hook_config_readonly_whitelist_patterns();
  * Make all the config files from this module readonly.
- * @return type
+ * @return array
  */
 function webspark_blocks_config_readonly_whitelist_patterns() {
   
