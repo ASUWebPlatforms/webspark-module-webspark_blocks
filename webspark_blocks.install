@@ -72,6 +72,13 @@ function webspark_blocks_update_9008(&$sandbox) {
 }
 
 /**
+ * Remove the character limits from Cards.
+ */
+function webspark_blocks_update_9010(&$sandbox) {
+  _webspark_blocks_revert_module_config();
+}
+
+/**
  * Reverts the module related configuration.
  */
 function _webspark_blocks_revert_module_config() {
