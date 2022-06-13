@@ -73,6 +73,7 @@ function webspark_blocks_update_9008(&$sandbox) {
 
 /**
  * Only allow 16:9 images in the Card and Image block.
+ * And remove the character limits from Cards.
  */
 function webspark_blocks_update_9009(&$sandbox) {
   _webspark_blocks_revert_module_config();
