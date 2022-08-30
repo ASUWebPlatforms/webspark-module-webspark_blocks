@@ -10,7 +10,7 @@ field_name: field_media
 entity_type: block_content
 bundle: card_and_image
 label: Image
-description: 'Recommended image size (W x H): 1400 x 600px'
+description: "Recommended image size (W x H): 1400 x 600px.<br>\r\n<strong>This image will then be scaled down to 1200 x 466px.</strong><br>\r\n<strong>Please ensure all focal points are centrally located within that visible area.</strong>"
 required: false
 translatable: true
 default_value: {  }
