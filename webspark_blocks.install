@@ -80,6 +80,13 @@ function webspark_blocks_update_9009(&$sandbox) {
 }
 
 /**
+ * Add new fields to video hero to match hero options
+ */
+function webspark_blocks_update_9010(&$sandbox) {
+  _webspark_blocks_revert_module_config();
+}
+
+/**
  * Reverts the module related configuration.
  */
 function _webspark_blocks_revert_module_config() {
