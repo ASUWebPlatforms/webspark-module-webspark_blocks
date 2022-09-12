@@ -17,14 +17,11 @@ function webspark_blocks_theme_suggestions_block_alter(array &$suggestions, arra
 }
 
 function webspark_blocks_form_block_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-  _webspark_blocks_title($form);
+  $form['settings']['label']['#title'] = t('Block admin title');
 }
 
 function webspark_blocks_form_layout_builder_add_block_alter(&$form, FormStateInterface $form_state, $form_id) {
-  _webspark_blocks_title($form);
-}
-
-function _webspark_blocks_title(&$form){
+  // WS2-1279 - Placing default value of false for new blocks only
   $form['settings']['label_display']['#default_value'] = FALSE;
   $form['settings']['label']['#title'] = t('Block admin title');
 }
