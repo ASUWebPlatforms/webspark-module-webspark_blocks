@@ -30,7 +30,16 @@
           let navbar = document.getElementById('uds-anchor-menu');
 
           // Compensate for a fixed admin toolbar.
-          let offset = $('#toolbar-administration').length ? 78 : 0;
+          let offset = 0;
+
+          if ($('#toolbar-administration').length) {
+            if (window.innerWidth <= 768) {
+              offset = 39;
+            }
+            else {
+              offset = 78;
+            }
+          }
 
           initializeAnchorMenu(globalHeader, navbar, offset);
         }, 100);
@@ -69,7 +78,7 @@
         } else if (navbarY <= offset) {
           globalHeader.style.top = -globalHeader.offsetHeight + 'px';
           navbar.classList.add('uds-anchor-menu-sticky');
-          navbar.style.top = offset + 'px';
+          navbar.style.top = window.innerWidth < 768 ? globalHeader.offsetHeight + 'px' : offset + 'px';
         }
       }
       // If scrolling UP
