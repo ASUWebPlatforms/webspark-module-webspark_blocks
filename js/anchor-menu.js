@@ -36,12 +36,12 @@
 
         $('.uds-anchor-menu').show();
 
-
-        $('.toolbar-icon-menu').click(() => {
+        let $toolbarIconMenu = $('.toolbar-icon-menu');
+        $toolbarIconMenu.on('click', function(event) {
           setTimeout(() => {
             navbar.style.top = getAnchorMenuTop() + 'px';
           }, 100);
-        })
+        });
 
         window.addEventListener('resize', () => {
           navbar.style.top = getAnchorMenuTop() + 'px';
@@ -150,30 +150,28 @@
    * the position where the Anchor menu must be renderized.
    */
   function getAnchorMenuTop() {
-    let toolbarBar = document.getElementById('toolbar-bar');
-    let toolbarItemAdministrationTray = document.getElementById('toolbar-item-administration-tray');
-    let globalHeader = document.getElementById('global-header');
+    let $toolbarBar = $('#toolbar-bar');
+    let $toolbarItemAdministrationTray = $('#toolbar-item-administration-tray');
+    let $globalHeader = $('#global-header');
 
     // On mobile devices the Anchor Menu must be rendered after the global header.
-    if (window.innerWidth < 610) return globalHeader.offsetHeight;
-
+    if (window.innerWidth < 610) return $globalHeader.height();
     // If the Administration toolbar is not rendered
     // the Anchor menu must be rendered at the top of the page. 
-    if (!toolbarBar) return 0;
+    if (!$toolbarBar.length) return 0;
 
-    let navbar = document.getElementById('uds-anchor-menu');
-          
-    if (navbar && navbar.classList.contains('uds-anchor-menu-sticky') 
-      && toolbarItemAdministrationTray.classList.contains('is-active') 
-      && !toolbarItemAdministrationTray.classList.contains('toolbar-tray-vertical')) {
+    let $navbar = $('#uds-anchor-menu');          
+    if ($navbar.length && $navbar.hasClass('uds-anchor-menu-sticky') 
+      && $toolbarItemAdministrationTray.hasClass('is-active') 
+      && !$toolbarItemAdministrationTray.hasClass('toolbar-tray-vertical')) {
       // If the Administration toolbar and the Secondary Administration toolbar are rendered 
       // the Anchor menu must be rendered after the Secondary Administration toolbar.
-      return toolbarItemAdministrationTray.offsetHeight + toolbarBar.offsetHeight;
+      return $toolbarItemAdministrationTray.height() + $toolbarBar.height();
     }
     else {
       // If the Administration toolbar is rendered and the Secondary Administration toolbar is not rendered 
       // or when the Secondary toolbar is a sidebar the Anchor menu must be rendered after the Administration toolbar.
-      return toolbarBar.offsetHeight;
+      return $toolbarBar.height();
     }
   }
 
