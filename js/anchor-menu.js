@@ -3,7 +3,6 @@
   Drupal.behaviors.anchorMenu = {
     attach: function (context, settings) {
       if ($(context).find('#uds-anchor-menu').length) {
-
         let links = $('.webspark-anchor-link-data');
         if (!links.length) {
           return;
@@ -23,28 +22,31 @@
 
         $('#headerContainer header').attr('id', 'global-header');
 
-
         // We use setTimeout to compensate header built by react 🤦
+        let navbar = document.getElementById('uds-anchor-menu');
+
         setTimeout(function() {
           let globalHeader = document.getElementById('global-header');
-          let navbar = document.getElementById('uds-anchor-menu');
 
           // Compensate for a fixed admin toolbar.
-          let offset = 0;
-
-          if ($('#toolbar-administration').length) {
-            if (window.innerWidth <= 768) {
-              offset = 39;
-            }
-            else {
-              offset = 78;
-            }
-          }
+          let offset = getAnchorMenuTop();
 
           initializeAnchorMenu(globalHeader, navbar, offset);
         }, 100);
 
         $('.uds-anchor-menu').show();
+
+        let $toolbarIconMenu = $('.toolbar-icon-menu');
+        $toolbarIconMenu.on('click', function(event) {
+          setTimeout(() => {
+            navbar.style.top = getAnchorMenuTop() + 'px';
+          }, 100);
+        });
+
+        window.addEventListener('resize', () => {
+          navbar.style.top = getAnchorMenuTop() + 'px';
+        });
+
       } 
     }
   };
@@ -77,8 +79,8 @@
           globalHeader.style.top = -(headerHeight - navbarY) + 'px';
         } else if (navbarY <= offset) {
           globalHeader.style.top = -globalHeader.offsetHeight + 'px';
-          navbar.classList.add('uds-anchor-menu-sticky');
-          navbar.style.top = window.innerWidth < 768 ? globalHeader.offsetHeight + 'px' : offset + 'px';
+          navbar.classList.add('uds-anchor-menu-sticky');  
+          navbar.style.top = getAnchorMenuTop() + 'px';
         }
       }
       // If scrolling UP
@@ -140,6 +142,36 @@
 
         e.target.classList.add('active');
       });
+    }
+  }
+
+  /**
+   * This functions has the ability to calculate 
+   * the position where the Anchor menu must be renderized.
+   */
+  function getAnchorMenuTop() {
+    let $toolbarBar = $('#toolbar-bar');
+    let $toolbarItemAdministrationTray = $('#toolbar-item-administration-tray');
+    let $globalHeader = $('#global-header');
+
+    // On mobile devices the Anchor Menu must be rendered after the global header.
+    if (window.innerWidth < 610) return $globalHeader.height();
+    // If the Administration toolbar is not rendered
+    // the Anchor menu must be rendered at the top of the page. 
+    if (!$toolbarBar.length) return 0;
+
+    let $navbar = $('#uds-anchor-menu');          
+    if ($navbar.length && $navbar.hasClass('uds-anchor-menu-sticky') 
+      && $toolbarItemAdministrationTray.hasClass('is-active') 
+      && !$toolbarItemAdministrationTray.hasClass('toolbar-tray-vertical')) {
+      // If the Administration toolbar and the Secondary Administration toolbar are rendered 
+      // the Anchor menu must be rendered after the Secondary Administration toolbar.
+      return $toolbarItemAdministrationTray.height() + $toolbarBar.height();
+    }
+    else {
+      // If the Administration toolbar is rendered and the Secondary Administration toolbar is not rendered 
+      // or when the Secondary toolbar is a sidebar the Anchor menu must be rendered after the Administration toolbar.
+      return $toolbarBar.height();
     }
   }
 
