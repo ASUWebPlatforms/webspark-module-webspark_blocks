@@ -80,9 +80,16 @@ function webspark_blocks_update_9009(&$sandbox) {
 }
 
 /**
- * Add new fields to video hero to match hero options
+ * Add new fields to video hero to match hero options.
  */
 function webspark_blocks_update_9010(&$sandbox) {
+  _webspark_blocks_revert_module_config();
+}
+
+/**
+ * Change Testimonial paragraph type to only allow plain text and be required.
+ */
+function webspark_blocks_update_9011(&$sandbox) {
   _webspark_blocks_revert_module_config();
 }
 
