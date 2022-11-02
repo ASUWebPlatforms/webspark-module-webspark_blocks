@@ -4,7 +4,6 @@ use Drupal\block_content\BlockContentInterface;
 use  \Drupal\Core\Form\FormStateInterface;
 
 function webspark_blocks_theme_suggestions_block_alter(array &$suggestions, array $variables) {
-
   // Block suggestions for custom block bundles.
   if (isset($variables['elements']['content']['#block_content'])
     && $variables['elements']['content']['#block_content'] instanceof BlockContentInterface) {
@@ -108,7 +107,6 @@ function webspark_blocks_preprocess_page(&$variables)  {
  * Private function to preprocess the 404 page.
  */
 function _webspark_blocks_preprocess_page_404(&$variables) {
-
   // Remove the default behaviour.
   unset($variables['page']['content']['system_main']);
   // Create a wrapper, so we can add classes here.
@@ -157,17 +155,36 @@ function _webspark_blocks_preprocess_page_404(&$variables) {
  * @return array
  */
 function webspark_blocks_config_readonly_whitelist_patterns() {
-  
   // Get all the module configuration files.
-  $module = \Drupal::service('module_handler')
-      ->getModule(basename(__FILE__, '.module'))
-      ->getName();
-  $configs = \Drupal::service('webspark.config_manager')->getModuleConfigFiles($module);
-  // Lock all the configurations from this module.
-  if (\Drupal::state()->get('configuration_locked', TRUE)) {
-    return array_map(function ($item) { return '~' . $item; }, $configs);
-  }
-  else {
+  $module = Drupal::service('module_handler')->getModule(basename(__FILE__, '.module'))->getName();
+  $configs = Drupal::service('webspark.config_manager')->getModuleConfigFiles($module);
+
+  // Lock all the configurations from this module except those in the whitelist.
+  if (Drupal::state()->get('configuration_locked', true)) {
+    $map = array_map(function ($item) {
+      $whitelist = [
+        'media.type.audio',
+        'media.type.cropped_image_sqare', // Yes, this is spelled wrong.
+        'media.type.cropped_image_wide',
+        'media.type.document',
+        'media.type.image_block_images',
+        'media.type.image',
+        'media.type.remote_video',
+        'media.type.story_hero',
+        'media.type.video_poster_image_73_100',
+        'media.type.video',
+      ];
+
+      if (in_array($item, $whitelist)) {
+        return false;
+      } else {
+        return '~' . $item;
+      }
+    }, $configs);
+
+    // Remove all the false values from the array.
+    return array_filter($map);
+  } else {
     return [];
   }
 }
