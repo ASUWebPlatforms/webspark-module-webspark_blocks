@@ -156,11 +156,11 @@ function _webspark_blocks_preprocess_page_404(&$variables) {
  */
 function webspark_blocks_config_readonly_whitelist_patterns() {
   // Get all the module configuration files.
-  $module = Drupal::service('module_handler')->getModule(basename(__FILE__, '.module'))->getName();
-  $configs = Drupal::service('webspark.config_manager')->getModuleConfigFiles($module);
+  $module = \Drupal::service('module_handler')->getModule(basename(__FILE__, '.module'))->getName();
+  $configs = \Drupal::service('webspark.config_manager')->getModuleConfigFiles($module);
 
   // Lock all the configurations from this module except those in the whitelist.
-  if (Drupal::state()->get('configuration_locked', true)) {
+  if (\Drupal::state()->get('configuration_locked', true)) {
     $map = array_map(function ($item) {
       $whitelist = [
         'media.type.audio',
