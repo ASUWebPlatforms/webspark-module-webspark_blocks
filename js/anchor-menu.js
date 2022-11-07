@@ -20,7 +20,7 @@
         });
 
 
-        $('#headerContainer header').attr('id', 'global-header');
+        $('#ws2HeaderContainer header').attr('id', 'global-header');
 
         // We use setTimeout to compensate header built by react 🤦
         let navbar = document.getElementById('uds-anchor-menu');
@@ -160,9 +160,9 @@
     // the Anchor menu must be rendered at the top of the page. 
     if (!$toolbarBar.length) return 0;
 
-    let $navbar = $('#uds-anchor-menu');          
-    if ($navbar.length && $navbar.hasClass('uds-anchor-menu-sticky') 
-      && $toolbarItemAdministrationTray.hasClass('is-active') 
+    let $navbar = $('#uds-anchor-menu');       
+    if ($navbar.length && $navbar.hasClass('uds-anchor-menu-sticky')
+      && $toolbarItemAdministrationTray.hasClass('is-active')
       && !$toolbarItemAdministrationTray.hasClass('toolbar-tray-vertical')) {
       // If the Administration toolbar and the Secondary Administration toolbar are rendered 
       // the Anchor menu must be rendered after the Secondary Administration toolbar.
