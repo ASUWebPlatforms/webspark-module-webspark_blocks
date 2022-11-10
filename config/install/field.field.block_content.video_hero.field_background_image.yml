@@ -10,7 +10,7 @@ field_name: field_background_image
 entity_type: block_content
 bundle: video_hero
 label: Poster
-description: "Please add a poster image for image fall back in mobile devices.<br>\r\nFor best results, use an image that is at least 1000x750px."
+description: "Please add a poster image for image fall back in mobile devices.<br>\r\nRecommended image size: 375 x 512px."
 required: true
 translatable: true
 default_value: {  }
