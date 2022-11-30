@@ -94,6 +94,13 @@ function webspark_blocks_update_9011(&$sandbox) {
 }
 
 /**
+ * Remove markup on format switching in WYSIWYG.
+ */
+function webspark_blocks_update_9012(&$sandbox) {
+  _webspark_blocks_revert_module_config();
+}
+
+/**
  * Reverts the module related configuration.
  */
 function _webspark_blocks_revert_module_config() {
