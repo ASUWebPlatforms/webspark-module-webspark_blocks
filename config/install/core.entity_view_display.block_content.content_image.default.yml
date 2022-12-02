@@ -55,7 +55,7 @@ content:
     label: hidden
     settings:
       link: true
-      view_mode: default
+      view_mode: large
     third_party_settings: {  }
     type: entity_reference_entity_view
     region: content

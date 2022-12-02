@@ -10,7 +10,7 @@ field_name: field_media
 entity_type: block_content
 bundle: content_image
 label: Image
-description: 'Recommended image size (W x H): 818 x 616 px'
+description: 'Recommended image size (W x H): 1024 x 768px'
 required: false
 translatable: true
 default_value: {  }
