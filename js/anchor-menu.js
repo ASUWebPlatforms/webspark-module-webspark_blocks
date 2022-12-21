@@ -76,9 +76,9 @@
         !navbar.classList.contains('uds-anchor-menu-sticky')
       ) {
         if (navbarY > offset && navbarY < headerHeight + offset) {
-          globalHeader.style.top = -(headerHeight - navbarY) + 'px';
+          if (window.innerWidth > 610) { globalHeader.style.top = -(headerHeight - navbarY) + 'px' };
         } else if (navbarY <= offset) {
-          globalHeader.style.top = -globalHeader.offsetHeight + 'px';
+          if (window.innerWidth > 610) { globalHeader.style.top = -globalHeader.offsetHeight + 'px' };
           navbar.classList.add('uds-anchor-menu-sticky');  
           navbar.style.top = getAnchorMenuTop() + 'px';
         }
@@ -90,8 +90,7 @@
       ) {
         navbar.classList.remove('uds-anchor-menu-sticky');
         if (globalHeader.getBoundingClientRect().top < offset) {
-          const localOffset = globalHeader.getBoundingClientRect().top + navbarY + offset;
-          globalHeader.style.top = (localOffset + offset < 0 ? localOffset + offset : offset) + 'px';
+          globalHeader.style.top = getGlobalHeaderTop() + 'px';
         }
       }
 
@@ -175,4 +174,15 @@
     }
   }
 
+  function getGlobalHeaderTop() {
+    let $toolbarBar = $('#toolbar-bar');
+    let $toolbarItemAdministrationTray = $('#toolbar-item-administration-tray');
+    if (!$toolbarBar.length) return  0;
+
+    if ($toolbarItemAdministrationTray.hasClass('is-active') && !$toolbarItemAdministrationTray.hasClass('toolbar-tray-vertical')) {
+      return $toolbarItemAdministrationTray.height() + $toolbarBar.height();
+    }
+
+    return $toolbarBar.height();
+  }
 })(jQuery, Drupal, drupalSettings);
