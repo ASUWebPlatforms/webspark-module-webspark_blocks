@@ -102,6 +102,13 @@ function webspark_blocks_update_9012(&$sandbox) {
 }
 
 /**
+ * Add show borders field for card paragraphs.
+ */
+function webspark_blocks_update_9013(&$sandbox) {
+  _webspark_blocks_revert_module_config();
+}
+
+/**
  * Reverts the module related configuration.
  */
 function _webspark_blocks_revert_module_config() {

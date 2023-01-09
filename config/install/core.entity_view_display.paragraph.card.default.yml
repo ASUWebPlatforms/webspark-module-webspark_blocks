@@ -10,20 +10,21 @@ dependencies:
     - field.field.paragraph.card.field_heading
     - field.field.paragraph.card.field_link
     - field.field.paragraph.card.field_media
+    - field.field.paragraph.card.field_show_borders
     - field.field.paragraph.card.field_tags
     - paragraphs.paragraphs_type.card
+  module:
+    - link
   enforced:
     module:
       - webspark_blocks
-  module:
-    - link
 id: paragraph.card.default
 targetEntityType: paragraph
 bundle: card
 mode: default
 content:
   field_card_link:
-    weight: 1
+    type: link
     label: above
     settings:
       trim_length: 80
@@ -32,17 +33,17 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    weight: 1
     region: content
   field_clickable:
-    weight: 0
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 0
     region: content
 hidden:
   field_body: true
@@ -51,4 +52,5 @@ hidden:
   field_heading: true
   field_link: true
   field_media: true
+  field_show_borders: true
   field_tags: true
