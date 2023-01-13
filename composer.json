@@ -2,12 +2,6 @@
   "name": "asuwebplatforms/webspark-module-webspark_blocks",
   "description": "Provide custom block types",
   "type": "drupal-module",
-  "license": "GPL-2.0-or-later",
-  "authors": [
-    {
-      "name": "Daniela Duarte",
-      "email": "daniela.duarte@deptagency.com"
-    }
-  ],
+  "license": "MIT",
   "require": {}
 }
