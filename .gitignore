@@ -1,2 +1,14 @@
-.idea
-.DS_Store
+.history/
+.cache
+
+# Drupal/external libraries
+/vendor/
+
+# PHPStorm (IDE) configurations
+.idea/
+
+# Config management script output
+/config/_config_changes.diff
+/config/**/_diff_commands.bash
+*APPLY.patch
+.DS_Store*
