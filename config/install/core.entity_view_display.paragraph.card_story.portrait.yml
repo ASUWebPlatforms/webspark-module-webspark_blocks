@@ -13,14 +13,14 @@ dependencies:
     - field.field.paragraph.card_story.field_media
     - field.field.paragraph.card_story.field_tags
     - paragraphs.paragraphs_type.card_story
-  enforced:
-    module:
-      - webspark_blocks
   module:
     - entity_reference_revisions
     - layout_builder
     - link
     - text
+  enforced:
+    module:
+      - webspark_blocks
 third_party_settings:
   layout_builder:
     allow_custom: false

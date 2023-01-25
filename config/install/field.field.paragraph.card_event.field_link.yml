@@ -4,11 +4,11 @@ dependencies:
   config:
     - field.storage.paragraph.field_link
     - paragraphs.paragraphs_type.card_event
+  module:
+    - link
   enforced:
     module:
       - webspark_blocks
-  module:
-    - link
 id: paragraph.card_event.field_link
 field_name: field_link
 entity_type: paragraph

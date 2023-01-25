@@ -13,9 +13,6 @@ dependencies:
     - field.field.paragraph.card_degree.field_media
     - field.field.paragraph.card_degree.field_tags
     - paragraphs.paragraphs_type.card_degree
-  enforced:
-    module:
-      - webspark_blocks
   module:
     - allowed_formats
     - link
@@ -23,6 +20,9 @@ dependencies:
     - media_library
     - paragraphs
     - text
+  enforced:
+    module:
+      - webspark_blocks
 id: paragraph.card_degree.carousel_card
 targetEntityType: paragraph
 bundle: card_degree

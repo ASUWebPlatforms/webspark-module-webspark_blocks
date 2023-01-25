@@ -4,11 +4,11 @@ dependencies:
   config:
     - field.storage.paragraph.field_date
     - paragraphs.paragraphs_type.card_event
+  module:
+    - datetime
   enforced:
     module:
       - webspark_blocks
-  module:
-    - datetime
 id: paragraph.card_event.field_date
 field_name: field_date
 entity_type: paragraph

@@ -4,12 +4,12 @@ dependencies:
   config:
     - field.storage.paragraph.field_body
     - paragraphs.paragraphs_type.card_event
-  enforced:
-    module:
-      - webspark_blocks
   module:
     - allowed_formats
     - text
+  enforced:
+    module:
+      - webspark_blocks
 third_party_settings:
   allowed_formats:
     minimal_format: minimal_format

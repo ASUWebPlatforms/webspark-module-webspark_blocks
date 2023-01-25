@@ -12,11 +12,11 @@ dependencies:
     - field.field.paragraph.card_degree.field_media
     - field.field.paragraph.card_degree.field_tags
     - paragraphs.paragraphs_type.card_degree
+  module:
+    - link
   enforced:
     module:
       - webspark_blocks
-  module:
-    - link
 id: paragraph.card_degree.default
 targetEntityType: paragraph
 bundle: card_degree

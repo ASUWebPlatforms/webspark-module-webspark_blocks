@@ -12,11 +12,11 @@ dependencies:
     - field.field.paragraph.card_story.field_media
     - field.field.paragraph.card_story.field_tags
     - paragraphs.paragraphs_type.card_story
+  module:
+    - link
   enforced:
     module:
       - webspark_blocks
-  module:
-    - link
 id: paragraph.card_story.default
 targetEntityType: paragraph
 bundle: card_story

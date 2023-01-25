@@ -1,12 +1,12 @@
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - webspark_blocks
   module:
     - media
     - paragraphs
+  enforced:
+    module:
+      - webspark_blocks
 id: paragraph.field_media
 field_name: field_media
 entity_type: paragraph
