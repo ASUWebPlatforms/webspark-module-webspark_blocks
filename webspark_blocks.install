@@ -109,6 +109,13 @@ function webspark_blocks_update_9013(&$sandbox) {
 }
 
 /**
+ * Remove field card link and field clickable for card and card with icon paragraphs.
+ */
+function webspark_blocks_update_9014(&$sandbox) {
+  _webspark_blocks_revert_module_config();
+}
+
+/**
  * Reverts the module related configuration.
  */
 function _webspark_blocks_revert_module_config() {

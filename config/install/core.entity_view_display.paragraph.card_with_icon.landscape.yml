@@ -4,8 +4,6 @@ dependencies:
   config:
     - core.entity_view_mode.paragraph.landscape
     - field.field.paragraph.card_with_icon.field_body
-    - field.field.paragraph.card_with_icon.field_card_link
-    - field.field.paragraph.card_with_icon.field_clickable
     - field.field.paragraph.card_with_icon.field_cta
     - field.field.paragraph.card_with_icon.field_heading
     - field.field.paragraph.card_with_icon.field_icon
@@ -14,69 +12,46 @@ dependencies:
     - entity_reference_revisions
     - fontawesome
     - layout_builder
-    - link
     - text
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: false
+    allow_custom: false
 id: paragraph.card_with_icon.landscape
 targetEntityType: paragraph
 bundle: card_with_icon
 mode: landscape
 content:
   field_body:
-    weight: 1
+    type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 1
     region: content
-  field_card_link:
-    type: link
-    weight: 5
-    region: content
-    label: above
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-  field_clickable:
-    type: boolean
-    weight: 4
-    region: content
-    label: hidden
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
   field_cta:
-    weight: 2
+    type: entity_reference_revisions_entity_view
     label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    type: entity_reference_revisions_entity_view
+    weight: 2
     region: content
   field_heading:
-    weight: 0
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 0
     region: content
   field_icon:
-    weight: 3
+    type: fontawesome_icon_formatter
     label: hidden
     settings:
       layers: false
     third_party_settings: {  }
-    type: fontawesome_icon_formatter
+    weight: 3
     region: content
 hidden: {  }
