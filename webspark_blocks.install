@@ -116,6 +116,39 @@ function webspark_blocks_update_9014(&$sandbox) {
 }
 
 /**
+ * Updates Article content type with new fields + settings
+ */
+function webspark_blocks_update_9015(&$sandbox) {
+  // Queries for relevant nodes already using that field.
+  $bids = \Drupal::entityQuery('block_content')
+    ->condition('type', 'tabbed_content')
+    ->condition('field_background_color', 'default')
+    ->execute();
+
+  // Unlock the configuration storage.
+  \Drupal::state()->set('configuration_locked', FALSE);
+  $logger = \Drupal::logger('webspark_blocks');
+  // Import new configs from webspark profile
+  \Drupal::service('webspark.config_manager')->importConfigFile('core.base_field_override.node.article.promote');
+  \Drupal::service('webspark.config_manager')->importConfigFile('core.date_format.article_date');
+  \Drupal::service('webspark.config_manager')->importConfigFile('field.field.node.article.field_author');
+  \Drupal::service('webspark.config_manager')->importConfigFile('field.field.node.article.field_byline');
+  \Drupal::service('webspark.config_manager')->importConfigFile('field.field.node.article.field_date_published');
+  \Drupal::service('webspark.config_manager')->importConfigFile('field.storage.node.field_author');
+  \Drupal::service('webspark.config_manager')->importConfigFile('field.storage.node.field_byline');
+  \Drupal::service('webspark.config_manager')->importConfigFile('field.storage.node.field_date_published');
+  // Update existing configs from webspark profile
+  \Drupal::service('webspark.config_manager')->updateConfigFile('core.entity_form_display.node.article.default');
+  \Drupal::service('webspark.config_manager')->updateConfigFile('core.entity_view_display.node.article.default');
+  \Drupal::service('webspark.config_manager')->updateConfigFile('core.entity_view_display.node.article.rss');
+  \Drupal::service('webspark.config_manager')->updateConfigFile('core.entity_view_display.node.article.teaser');
+  \Drupal::service('webspark.config_manager')->updateConfigFile('node.type.article');
+  // Lock the configuration storage.
+  \Drupal::state()->set('configuration_locked', TRUE);
+  $logger->notice("Updated Article content type YMLs");
+}
+
+/**
  * Reverts the module related configuration.
  */
 function _webspark_blocks_revert_module_config() {
