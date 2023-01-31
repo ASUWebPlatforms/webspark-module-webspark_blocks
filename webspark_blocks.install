@@ -103,8 +103,16 @@ function webspark_blocks_update_9012(&$sandbox) {
 
 /**
  * Add show borders field for card paragraphs.
+ * Add media types for field_media in Paragraphs and custom Blocks.
  */
 function webspark_blocks_update_9013(&$sandbox) {
+  _webspark_blocks_revert_module_config();
+}
+
+/**
+ * Remove field card link and field clickable for card and card with icon paragraphs.
+ */
+function webspark_blocks_update_9014(&$sandbox) {
   _webspark_blocks_revert_module_config();
 }
 

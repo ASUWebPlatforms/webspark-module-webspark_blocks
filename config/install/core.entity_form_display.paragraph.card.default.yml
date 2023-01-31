@@ -3,8 +3,6 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.card.field_body
-    - field.field.paragraph.card.field_card_link
-    - field.field.paragraph.card.field_clickable
     - field.field.paragraph.card.field_cta
     - field.field.paragraph.card.field_cta_secondary
     - field.field.paragraph.card.field_heading

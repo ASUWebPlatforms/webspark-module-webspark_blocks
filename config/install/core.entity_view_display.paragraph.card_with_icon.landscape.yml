@@ -4,8 +4,6 @@ dependencies:
   config:
     - core.entity_view_mode.paragraph.landscape
     - field.field.paragraph.card_with_icon.field_body
-    - field.field.paragraph.card_with_icon.field_card_link
-    - field.field.paragraph.card_with_icon.field_clickable
     - field.field.paragraph.card_with_icon.field_cta
     - field.field.paragraph.card_with_icon.field_heading
     - field.field.paragraph.card_with_icon.field_icon
@@ -15,7 +13,6 @@ dependencies:
     - entity_reference_revisions
     - fontawesome
     - layout_builder
-    - link
     - text
 third_party_settings:
   layout_builder:

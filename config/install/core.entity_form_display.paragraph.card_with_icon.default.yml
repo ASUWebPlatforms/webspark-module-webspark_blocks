@@ -3,8 +3,6 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.card_with_icon.field_body
-    - field.field.paragraph.card_with_icon.field_card_link
-    - field.field.paragraph.card_with_icon.field_clickable
     - field.field.paragraph.card_with_icon.field_cta
     - field.field.paragraph.card_with_icon.field_heading
     - field.field.paragraph.card_with_icon.field_icon
@@ -13,7 +11,6 @@ dependencies:
   module:
     - allowed_formats
     - fontawesome_iconpicker_widget
-    - link
     - maxlength
     - paragraphs
     - text
