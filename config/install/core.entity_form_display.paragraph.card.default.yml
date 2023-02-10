@@ -42,21 +42,6 @@ content:
       allowed_formats:
         hide_help: '0'
         hide_guidelines: '0'
-  field_card_link:
-    type: link_default
-    weight: 8
-    region: content
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-  field_clickable:
-    type: boolean_checkbox
-    weight: 7
-    region: content
-    settings:
-      display_label: true
-    third_party_settings: {  }
   field_cta:
     type: entity_reference_paragraphs
     weight: 3
