@@ -117,6 +117,13 @@ function webspark_blocks_update_9014(&$sandbox) {
 }
 
 /**
+ *  Hide guideline text for formatted text field in Testimonial paragraph.
+ */
+function webspark_blocks_update_9015(&$sandbox) {
+  _webspark_blocks_revert_module_config();
+}
+
+/**
  * Reverts the module related configuration.
  */
 function _webspark_blocks_revert_module_config() {
