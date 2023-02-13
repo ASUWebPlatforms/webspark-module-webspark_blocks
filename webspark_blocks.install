@@ -102,6 +102,7 @@ function webspark_blocks_update_9012(&$sandbox) {
 }
 
 /**
+ * Add show borders field for card paragraphs.
  * Add media types for field_media in Paragraphs and custom Blocks.
  */
 function webspark_blocks_update_9013(&$sandbox) {

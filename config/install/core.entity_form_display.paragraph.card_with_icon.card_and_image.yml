@@ -7,6 +7,7 @@ dependencies:
     - field.field.paragraph.card_with_icon.field_cta
     - field.field.paragraph.card_with_icon.field_heading
     - field.field.paragraph.card_with_icon.field_icon
+    - field.field.paragraph.card_with_icon.field_show_borders
     - paragraphs.paragraphs_type.card_with_icon
   module:
     - allowed_formats
@@ -57,9 +58,16 @@ content:
     third_party_settings: {  }
   field_icon:
     type: fontawesome_iconpicker_widget
-    weight: 3
+    weight: 4
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_show_borders:
+    type: boolean_checkbox
+    weight: 3
+    region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
 hidden:
   created: true

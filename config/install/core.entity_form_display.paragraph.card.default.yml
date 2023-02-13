@@ -8,6 +8,7 @@ dependencies:
     - field.field.paragraph.card.field_heading
     - field.field.paragraph.card.field_link
     - field.field.paragraph.card.field_media
+    - field.field.paragraph.card.field_show_borders
     - field.field.paragraph.card.field_tags
     - paragraphs.paragraphs_type.card
   module:
@@ -87,6 +88,13 @@ content:
     region: content
     settings:
       media_types: {  }
+    third_party_settings: {  }
+  field_show_borders:
+    type: boolean_checkbox
+    weight: 9
+    region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
 hidden:
   created: true

@@ -8,8 +8,11 @@ dependencies:
     - field.field.paragraph.card.field_heading
     - field.field.paragraph.card.field_link
     - field.field.paragraph.card.field_media
+    - field.field.paragraph.card.field_show_borders
     - field.field.paragraph.card.field_tags
     - paragraphs.paragraphs_type.card
+  module:
+    - link
   enforced:
     module:
       - webspark_blocks
@@ -17,7 +20,7 @@ id: paragraph.card.default
 targetEntityType: paragraph
 bundle: card
 mode: default
-content: {  }
+content: { }
 hidden:
   field_body: true
   field_cta: true
@@ -25,4 +28,5 @@ hidden:
   field_heading: true
   field_link: true
   field_media: true
+  field_show_borders: true
   field_tags: true

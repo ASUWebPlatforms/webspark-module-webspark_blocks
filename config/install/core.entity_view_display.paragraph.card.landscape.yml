@@ -9,6 +9,7 @@ dependencies:
     - field.field.paragraph.card.field_heading
     - field.field.paragraph.card.field_link
     - field.field.paragraph.card.field_media
+    - field.field.paragraph.card.field_show_borders
     - field.field.paragraph.card.field_tags
     - paragraphs.paragraphs_type.card
   module:
@@ -90,4 +91,5 @@ content:
     third_party_settings: {  }
     weight: 5
     region: content
-hidden: {  }
+hidden:
+  field_show_borders: true

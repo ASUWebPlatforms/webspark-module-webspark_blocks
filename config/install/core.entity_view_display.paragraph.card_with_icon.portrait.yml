@@ -7,6 +7,7 @@ dependencies:
     - field.field.paragraph.card_with_icon.field_cta
     - field.field.paragraph.card_with_icon.field_heading
     - field.field.paragraph.card_with_icon.field_icon
+    - field.field.paragraph.card_with_icon.field_show_borders
     - paragraphs.paragraphs_type.card_with_icon
   module:
     - entity_reference_revisions
@@ -54,4 +55,5 @@ content:
     third_party_settings: {  }
     weight: 3
     region: content
-hidden: {  }
+hidden:
+  field_show_borders: true
