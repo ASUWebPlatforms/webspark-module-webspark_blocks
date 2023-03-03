@@ -14,6 +14,7 @@ effects:
     weight: 1
     data:
       crop_type: mobile_video_poster
+      automatic_crop_provider: null
   675ebd1f-0b5c-4040-8b98-11268d137f67:
     uuid: 675ebd1f-0b5c-4040-8b98-11268d137f67
     id: image_scale
