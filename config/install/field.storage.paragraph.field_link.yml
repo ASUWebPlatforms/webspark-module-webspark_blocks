@@ -1,12 +1,12 @@
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - webspark_blocks
   module:
     - link
     - paragraphs
+  enforced:
+    module:
+      - webspark_blocks
 id: paragraph.field_link
 field_name: field_link
 entity_type: paragraph

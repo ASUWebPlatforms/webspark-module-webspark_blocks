@@ -19,6 +19,8 @@ content:
     settings:
       image_style: block_image_16_9_sml
       image_link: ''
+      image_loading:
+        attribute: lazy
     weight: 0
     third_party_settings: {  }
     region: content

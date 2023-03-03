@@ -1,11 +1,11 @@
 langcode: en
 status: true
 dependencies:
+  module:
+    - media
   enforced:
     module:
       - webspark_blocks
-  module:
-    - media
 id: media.field_media_oembed_video
 field_name: field_media_oembed_video
 entity_type: media

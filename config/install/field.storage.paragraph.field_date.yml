@@ -1,12 +1,12 @@
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - webspark_blocks
   module:
     - datetime
     - paragraphs
+  enforced:
+    module:
+      - webspark_blocks
 id: paragraph.field_date
 field_name: field_date
 entity_type: paragraph

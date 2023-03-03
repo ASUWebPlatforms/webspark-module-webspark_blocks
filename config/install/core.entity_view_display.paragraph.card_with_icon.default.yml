@@ -12,7 +12,7 @@ id: paragraph.card_with_icon.default
 targetEntityType: paragraph
 bundle: card_with_icon
 mode: default
-content: { }
+content: {  }
 hidden:
   field_body: true
   field_cta: true

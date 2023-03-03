@@ -24,6 +24,8 @@ content:
     settings:
       image_style: block_image_lge
       image_link: ''
+      image_loading:
+        attribute: lazy
     third_party_settings: {  }
     type: image
     region: content
