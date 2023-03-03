@@ -1,12 +1,12 @@
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - webspark_blocks
   module:
     - paragraphs
     - taxonomy
+  enforced:
+    module:
+      - webspark_blocks
 id: paragraph.field_tags
 field_name: field_tags
 entity_type: paragraph

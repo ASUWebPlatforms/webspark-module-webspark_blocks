@@ -1,7 +1,6 @@
 langcode: en
 status: true
 dependencies: {  }
-
 id: images_block
 label: '4:3'
 description: 'Used for the images block in Layout Builder.'
