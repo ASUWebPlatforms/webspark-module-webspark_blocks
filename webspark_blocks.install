@@ -124,6 +124,13 @@ function webspark_blocks_update_9015(&$sandbox) {
 }
 
 /**
+ *  Adds new image style.
+ */
+function webspark_blocks_update_9016(&$sandbox) {
+  _webspark_blocks_revert_module_config();
+}
+
+/**
  * Reverts the module related configuration.
  */
 function _webspark_blocks_revert_module_config() {
