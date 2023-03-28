@@ -56,8 +56,8 @@ class WebsparkBlocksAsuSearchForm extends FormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $url_host = (Html::escape($_SERVER['HTTP_HOST'])) ?? '';
-    $keyword =  Html::escape($form_state->getValue('search')) ?? '';
-    $response = new TrustedRedirectResponse('https://search.asu.edu/?q=' . $keyword . '&url_host=' . $url_host . '&sort=date%3AD%3AL%3Ad1&search-tabs=all&gsc.tab=0&gsc.page=1&gsc.q=' . $keyword);
+    $keyword = $form_state->getValue('search') ?? ''; // Should be sanitized on search.asu.edu as output to avoid double-sanitizing issues
+    $response = new TrustedRedirectResponse('https://search.asu.edu/?q=' . $keyword . '&url_host=' . $url_host . '&sort=date%3AD%3AL%3Ad1&search-tabs=all');
     $form_state->setResponse($response);
   }
 }
