@@ -145,7 +145,7 @@ function webspark_blocks_update_9017() {
 
   foreach($cards as $card) {
     if ($card->get('field_show_borders')->value == NULL) {
-        $card->set('field_show_borders', "1");
+        $card->set('field_show_borders', '1');
         $card->save();
     }
   }
