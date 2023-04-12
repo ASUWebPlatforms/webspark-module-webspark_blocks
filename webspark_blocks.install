@@ -131,6 +131,27 @@ function webspark_blocks_update_9016(&$sandbox) {
 }
 
 /**
+ * Update 'Show borders' field on cards paragraphs to ensure it has a default value.
+ */
+function webspark_blocks_update_9017() {
+  $paragraph_storage = \Drupal::entityTypeManager()->getStorage('paragraph');
+  $query = $paragraph_storage->getQuery();
+
+  $query->condition('type', ['card', 'card_degree', 'card_story', 'card_with_icon'], 'IN');
+  $query->condition('status', 1);
+  $result = $query->execute();
+
+  $cards = $paragraph_storage->loadMultiple($result);
+
+  foreach ($cards as $card) {
+    if ($card->get('field_show_borders')->value == NULL) {
+        $card->set('field_show_borders', '1');
+        $card->save();
+    }
+  }
+}
+
+/**
  * Reverts the module related configuration.
  */
 function _webspark_blocks_revert_module_config() {
