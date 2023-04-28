@@ -9,9 +9,7 @@ namespace Drupal\webspark_blocks\Form;
 
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Form\FormBase;
-use Drupal\Core\Url;
 use Drupal\Core\Routing\TrustedRedirectResponse;
-use Drupal\Component\Utility\Html;
 
 /**
  * Class AsuUserAdminSettings
@@ -55,19 +53,19 @@ class WebsparkBlocksAsuSearchForm extends FormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    $keyword = $form_state->getValue('search') ?? ''; // Should be sanitized on search.asu.edu as output to avoid double-sanitizing issues
+    $keyword = $form_state->getValue('search') ?? '';
     if (\Drupal::moduleHandler()->moduleExists('asu_brand')) {
-      $search_config = \Drupal::config('asu_brand.settings');
-      $search_url = $search_config->get('asu_brand.asu_brand_search_url');
-      // Domain-specific results host
-      $local_search_url = $search_config->get('asu_brand.asu_brand_local_search_url') ?? \Drupal::request()->getHost();
-      // "opt-out" for use by ASU CMS, Integrated Search or with special dispensation
-      $url_host = ($local_search_url === 'opt-out') ? '' : $local_search_url;
+      (array)$urls = \Drupal::service('asu_brand.helper_functions')->getSearchHosts();
+      $keyword = \Drupal::service('asu_brand.helper_functions')->encodeURIComponent($keyword);
     } else {
-      $search_url = 'https://search.asu.edu/search'; // Default for ASU searches
-      $url_host = \Drupal::request()->getHost() ?? '';
+      $urls = [
+        'asu_search_url' => 'https://search.asu.edu/search',
+        'url_host' => (\Drupal::request()->getHost() ?? ''),
+      ];
+      $revert = array('%21'=>'!', '%2A'=>'*', '%28'=>'(', '%29'=>')');
+      $keyword = strtr(rawurlencode($keyword), $revert);
     }
-    $response = new TrustedRedirectResponse($search_url . '?q=' . $keyword . '&url_host=' . $url_host . '&sort=date%3AD%3AL%3Ad1&search-tabs=all');
+    $response = new TrustedRedirectResponse($urls['asu_search_url'] . '?q=' . $keyword . '&url_host=' . $urls['url_host'] . '&sort=date%3AD%3AL%3Ad1&search-tabs=all');
     $form_state->setResponse($response);
   }
 }
